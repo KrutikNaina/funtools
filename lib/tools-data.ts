@@ -349,6 +349,314 @@ export const TOOLS: Tool[] = [
         answer: "BMI is calculated by dividing weight in kilograms by height in meters squared (kg/m²)."
       }
     ]
+  },
+  {
+    id: "username-gen",
+    slug: "username-generator",
+    title: "Viral Username Generator",
+    subtitle: "Generate 50+ unique, aesthetic usernames for Instagram, TikTok & Discord",
+    description: "Create memorable usernames for social media and gaming handles with style selectors like Aesthetic, Gaming, Tech, Cute, and Anime.",
+    category: "social",
+    iconName: "Share2",
+    isPopular: true,
+    isTrending: true,
+    isFeatured: true,
+    rating: 4.93,
+    useCount: "310.4K",
+    gradient: "from-fuchsia-500 to-indigo-600",
+    tags: ["username generator", "aesthetic handles", "social media names", "gaming tags"],
+    features: [
+      "5 distinct style themes (Aesthetic, Cyber, Cute, Tech, Anime)",
+      "Instant 1-click clipboard copy",
+      "Prefix & Suffix custom keyword injectors",
+      "Social media availability checker hint"
+    ],
+    faq: [
+      {
+        question: "How do I generate unique usernames?",
+        answer: "Enter your favorite keyword, pick a style vibe, and click Generate to see 50+ creative variations."
+      }
+    ]
+  },
+  {
+    id: "password-gen",
+    slug: "password-generator",
+    title: "Strong Password Generator",
+    subtitle: "Create unhackable passwords with entropy strength scoring",
+    description: "Generate cryptographically secure passwords with custom length, uppercase, lowercase, numbers, and special symbols.",
+    category: "productivity",
+    iconName: "Zap",
+    isPopular: true,
+    isTrending: true,
+    isFeatured: true,
+    rating: 4.97,
+    useCount: "480.1K",
+    gradient: "from-emerald-500 to-cyan-600",
+    tags: ["password generator", "security", "random password", "cyber security"],
+    features: [
+      "Custom length selector from 8 to 64 characters",
+      "Entropy strength meter & crack time estimation",
+      "1-click copy with automatic memory wipe timer",
+      "100% client-side cryptographic generation"
+    ],
+    faq: [
+      {
+        question: "Is this password generator secure?",
+        answer: "Yes, all passwords are generated locally in your browser using crypto.getRandomValues(). No passwords touch a server."
+      }
+    ]
+  },
+  {
+    id: "date-calc",
+    slug: "date-calculator",
+    title: "Date Add & Subtract Calculator",
+    subtitle: "Add or subtract days, weeks, months & years to any date",
+    description: "Calculate future or past target dates instantly by adding or subtracting specific days, weeks, months, or years.",
+    category: "productivity",
+    iconName: "Clock",
+    isPopular: false,
+    isTrending: true,
+    isFeatured: true,
+    rating: 4.91,
+    useCount: "142.3K",
+    gradient: "from-amber-500 to-orange-500",
+    tags: ["date calculator", "add days to date", "subtract months", "calendar math"],
+    features: [
+      "Flexible addition & subtraction modes",
+      "Day of week calculation for final target date",
+      "Business days vs total days options",
+      "Quick preset buttons (+30 days, +90 days, +1 year)"
+    ],
+    faq: [
+      {
+        question: "Can I add business days only?",
+        answer: "Yes! Toggle the business days filter to skip weekends automatically."
+      }
+    ]
+  },
+  {
+    id: "date-diff-calc",
+    slug: "date-difference-calculator",
+    title: "Date Difference Calculator",
+    subtitle: "Calculate exact time span & days between any two dates",
+    description: "Find the precise difference between two calendar dates in years, months, weeks, days, hours, and total minutes.",
+    category: "age",
+    iconName: "Clock",
+    isPopular: true,
+    isTrending: false,
+    isFeatured: true,
+    rating: 4.94,
+    useCount: "265.8K",
+    gradient: "from-yellow-500 to-amber-600",
+    tags: ["date difference", "days between dates", "time span calculator", "duration"],
+    features: [
+      "Breakdown in total days, weeks, months, and years",
+      "Include or exclude end date toggle",
+      "Leap year adjustment accuracy",
+      "Real-time live comparison cards"
+    ],
+    faq: [
+      {
+        question: "How does the date difference calculator handle leap years?",
+        answer: "The calculator accounts for standard 365-day years and 366-day leap years automatically."
+      }
+    ]
+  },
+  {
+    id: "percentage-calc",
+    slug: "percentage-calculator",
+    title: "Ultimate Percentage Calculator",
+    subtitle: "Solve percentage increase, decrease & fraction math instantly",
+    description: "Multi-mode percentage calculator to solve % of a number, percentage change, markup/discount, and ratio percentages.",
+    category: "finance",
+    iconName: "Coins",
+    isPopular: true,
+    isTrending: true,
+    isFeatured: true,
+    rating: 4.96,
+    useCount: "389.2K",
+    gradient: "from-green-500 to-teal-600",
+    tags: ["percentage calculator", "math calculator", "discount percent", "increase decrease"],
+    features: [
+      "3 main calculation modes (What is X% of Y, Percentage change, X is what % of Y)",
+      "Instant real-time math results",
+      "Discount & sales tax fast preset mode",
+      "Step-by-step mathematical explanation"
+    ],
+    faq: [
+      {
+        question: "How do you calculate percentage increase?",
+        answer: "Subtract original from new value, divide by original value, and multiply by 100."
+      }
+    ]
+  },
+  {
+    id: "random-num-gen",
+    slug: "random-number-generator",
+    title: "Random Number Generator",
+    subtitle: "Generate random numbers, lottery picks & custom ranges",
+    description: "Generate single or multiple random numbers between any min and max limit with unique non-repeating filters and sorting.",
+    category: "random",
+    iconName: "Dices",
+    isPopular: true,
+    isTrending: true,
+    isFeatured: true,
+    rating: 4.92,
+    useCount: "298.6K",
+    gradient: "from-blue-500 to-indigo-600",
+    tags: ["random number", "number picker", "lottery generator", "rng"],
+    features: [
+      "Min and Max custom integer range bounds",
+      "Allow or disallow duplicate numbers toggle",
+      "Ascending/Descending sorting options",
+      "Animated 3D die roll animation effect"
+    ],
+    faq: [
+      {
+        question: "Is this random number generator truly random?",
+        answer: "Yes, it uses browser cryptographic random algorithms for maximum unbiased randomness."
+      }
+    ]
+  },
+  {
+    id: "qr-code-gen",
+    slug: "qr-code-generator",
+    title: "Free QR Code Generator",
+    subtitle: "Create downloadable HD QR codes for URLs, WiFi & Text",
+    description: "Generate custom styled QR codes for links, text messages, phone numbers, and WiFi networks with high resolution PNG download.",
+    category: "productivity",
+    iconName: "Zap",
+    isPopular: true,
+    isTrending: true,
+    isFeatured: true,
+    rating: 4.98,
+    useCount: "620.5K",
+    gradient: "from-indigo-500 to-purple-600",
+    tags: ["qr code generator", "free qr code", "wifi qr code", "url to qr"],
+    features: [
+      "Support for URLs, Plain Text, Email, and WiFi credentials",
+      "Custom foreground & background color picker",
+      "Instant high-res PNG & SVG download",
+      "Zero registration or expiration limits"
+    ],
+    faq: [
+      {
+        question: "Do generated QR codes expire?",
+        answer: "No! Static QR codes generated here never expire and work forever."
+      }
+    ]
+  },
+  {
+    id: "countdown-timer-tool",
+    slug: "countdown-timer",
+    title: "Event & Goal Countdown Timer",
+    subtitle: "Create live ticking countdown timers for any event",
+    description: "Set custom countdown timers for birthdays, product launches, holidays, or personal goals with live visual progress wheels.",
+    category: "productivity",
+    iconName: "Clock",
+    isPopular: false,
+    isTrending: true,
+    isFeatured: true,
+    rating: 4.89,
+    useCount: "118.9K",
+    gradient: "from-purple-500 to-rose-500",
+    tags: ["countdown timer", "event countdown", "timer online", "launch clock"],
+    features: [
+      "Days, Hours, Minutes, and Seconds live ticking clock",
+      "Custom event title & background card themes",
+      "Shareable countdown card link generation",
+      "Confetti explosion on countdown completion"
+    ],
+    faq: [
+      {
+        question: "Can I share my countdown timer with friends?",
+        answer: "Yes! Use the Share button to copy a direct link to your custom event countdown."
+      }
+    ]
+  },
+  {
+    id: "lucky-num-gen",
+    slug: "lucky-number-generator",
+    title: "Cosmic Lucky Number Generator",
+    subtitle: "Find your lucky numbers for lottery, astrology & daily picks",
+    description: "Generate personal lucky numbers based on your birth date, zodiac sign, or daily cosmic energy math.",
+    category: "random",
+    iconName: "Dices",
+    isPopular: true,
+    isTrending: true,
+    isFeatured: true,
+    rating: 4.93,
+    useCount: "235.4K",
+    gradient: "from-violet-500 to-pink-500",
+    tags: ["lucky numbers", "lottery numbers", "zodiac lucky number", "daily luck"],
+    features: [
+      "Birthdate numerology lucky number breakdown",
+      "Zodiac element energy sync calculator",
+      "Lottery mega ball & power ball generator preset",
+      "Shareable lucky aura card"
+    ],
+    faq: [
+      {
+        question: "How are lucky numbers calculated?",
+        answer: "We combine Pythagorean numerology date reduction with daily planetary cosmic algorithms."
+      }
+    ]
+  },
+  {
+    id: "nickname-gen",
+    slug: "nickname-generator",
+    title: "Cool Nickname Generator",
+    subtitle: "Generate 40+ epic nicknames for gaming, socials & alter-egos",
+    description: "Find epic aliases and cool nicknames for Discord, Roblox, Valorant, and social profiles with vibe filters.",
+    category: "social",
+    iconName: "Share2",
+    isPopular: true,
+    isTrending: true,
+    isFeatured: true,
+    rating: 4.94,
+    useCount: "340.2K",
+    gradient: "from-pink-500 to-rose-600",
+    tags: ["nickname generator", "gamer tags", "discord names", "cool nicknames"],
+    features: [
+      "4 distinct vibe modes (Cyberpunk, Mythic, Cute, VIP)",
+      "1-click copy with toast notifications",
+      "Name rating meter & popularity badges",
+      "Custom keyword blender"
+    ],
+    faq: [
+      {
+        question: "Can I use these nicknames on Discord and games?",
+        answer: "Yes! All generated nicknames are formatted for social media and gaming profiles."
+      }
+    ]
+  },
+  {
+    id: "death-calc",
+    slug: "death-calculator",
+    title: "Cosmic Death & Lifespan Calculator",
+    subtitle: "Fun entertainment life clock & humor lifespan estimator",
+    description: "Enter your daily habits (coffee, sleep, stress, humor) to calculate your estimated remaining days on Earth with funny longevity badges! (Entertainment Only)",
+    category: "personality",
+    iconName: "Smile",
+    isPopular: true,
+    isTrending: true,
+    isFeatured: true,
+    rating: 4.91,
+    useCount: "412.9K",
+    gradient: "from-slate-700 via-purple-900 to-slate-900",
+    tags: ["death calculator", "life expectancy", "fun quiz", "lifespan test"],
+    features: [
+      "Interactive habit sliders (Coffee intake, Sleep, Chaos level)",
+      "Live ticking remaining lifespan clock visualization",
+      "Funny longevity badges (Immortal Cactus, Cyber Zombie, Chill Sloth)",
+      "Clear entertainment disclaimer & shareable result card"
+    ],
+    faq: [
+      {
+        question: "Is the Death Calculator scientifically accurate?",
+        answer: "No! This tool is 100% created for fun, entertainment, and lighthearted humor."
+      }
+    ]
   }
 ];
 

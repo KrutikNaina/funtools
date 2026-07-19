@@ -11,6 +11,20 @@ import AIBioGenerator from "@/components/tools/AIBioGenerator";
 import TechArchetypeQuiz from "@/components/tools/TechArchetypeQuiz";
 import CosmicAgeClock from "@/components/tools/CosmicAgeClock";
 import BMICalculator from "@/components/tools/BMICalculator";
+
+// 11 New Tool Imports
+import UsernameGenerator from "@/components/tools/UsernameGenerator";
+import PasswordGenerator from "@/components/tools/PasswordGenerator";
+import DateCalculator from "@/components/tools/DateCalculator";
+import DateDifferenceCalculator from "@/components/tools/DateDifferenceCalculator";
+import PercentageCalculator from "@/components/tools/PercentageCalculator";
+import RandomNumberGenerator from "@/components/tools/RandomNumberGenerator";
+import QRCodeGenerator from "@/components/tools/QRCodeGenerator";
+import CountdownTimer from "@/components/tools/CountdownTimer";
+import LuckyNumberGenerator from "@/components/tools/LuckyNumberGenerator";
+import NicknameGenerator from "@/components/tools/NicknameGenerator";
+import DeathCalculator from "@/components/tools/DeathCalculator";
+
 import ShareModal from "@/components/ShareModal";
 import { Share2 } from "lucide-react";
 
@@ -37,6 +51,31 @@ export default function DynamicToolRenderer({ tool }: { tool: Tool }) {
         return <CosmicAgeClock />;
       case "bmi-calculator":
         return <BMICalculator />;
+
+      // 11 New Tool Switch Cases
+      case "username-generator":
+        return <UsernameGenerator />;
+      case "password-generator":
+        return <PasswordGenerator />;
+      case "date-calculator":
+        return <DateCalculator />;
+      case "date-difference-calculator":
+        return <DateDifferenceCalculator />;
+      case "percentage-calculator":
+        return <PercentageCalculator />;
+      case "random-number-generator":
+        return <RandomNumberGenerator />;
+      case "qr-code-generator":
+        return <QRCodeGenerator />;
+      case "countdown-timer":
+        return <CountdownTimer />;
+      case "lucky-number-generator":
+        return <LuckyNumberGenerator />;
+      case "nickname-generator":
+        return <NicknameGenerator />;
+      case "death-calculator":
+        return <DeathCalculator />;
+
       default:
         return <FancyFontGenerator />;
     }

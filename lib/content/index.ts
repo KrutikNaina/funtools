@@ -9,6 +9,19 @@ import { techArchetypeQuizContent } from "./tech-archetype-quiz";
 import { cosmicAgeClockContent } from "./cosmic-age-clock";
 import { bmiCalculatorContent } from "./bmi-calculator";
 
+// 11 New Tool Content Imports
+import { usernameGeneratorContent } from "./username-generator";
+import { passwordGeneratorContent } from "./password-generator";
+import { dateCalculatorContent } from "./date-calculator";
+import { dateDifferenceCalculatorContent } from "./date-difference-calculator";
+import { percentageCalculatorContent } from "./percentage-calculator";
+import { randomNumberGeneratorContent } from "./random-number-generator";
+import { qrCodeGeneratorContent } from "./qr-code-generator";
+import { countdownTimerContent } from "./countdown-timer";
+import { luckyNumberGeneratorContent } from "./lucky-number-generator";
+import { nicknameGeneratorContent } from "./nickname-generator";
+import { deathCalculatorContent } from "./death-calculator";
+
 export const DOMAIN_TOOLS_REPOSITORY: Record<string, DomainToolModule> = {
   "love-calculator": loveCalculatorContent,
   "fancy-font-generator": fancyFontGeneratorContent,
@@ -19,6 +32,19 @@ export const DOMAIN_TOOLS_REPOSITORY: Record<string, DomainToolModule> = {
   "tech-archetype-quiz": techArchetypeQuizContent,
   "cosmic-age-clock": cosmicAgeClockContent,
   "bmi-calculator": bmiCalculatorContent,
+
+  // 11 New Tool Modules
+  "username-generator": usernameGeneratorContent,
+  "password-generator": passwordGeneratorContent,
+  "date-calculator": dateCalculatorContent,
+  "date-difference-calculator": dateDifferenceCalculatorContent,
+  "percentage-calculator": percentageCalculatorContent,
+  "random-number-generator": randomNumberGeneratorContent,
+  "qr-code-generator": qrCodeGeneratorContent,
+  "countdown-timer": countdownTimerContent,
+  "lucky-number-generator": luckyNumberGeneratorContent,
+  "nickname-generator": nicknameGeneratorContent,
+  "death-calculator": deathCalculatorContent,
 };
 
 export function getToolContent(slug: string): DomainToolModule {
