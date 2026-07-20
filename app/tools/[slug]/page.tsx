@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { TOOLS, CATEGORIES } from "@/lib/tools-data";
+import { TOOLS, CATEGORIES, BLOG_POSTS } from "@/lib/tools-data";
 import { getToolContent } from "@/lib/content";
+import { getRelatedTools, getPeopleAlsoUsed, getPopularInCategory } from "@/lib/recommendations";
 import Breadcrumb from "@/components/Breadcrumb";
 import ToolCard from "@/components/ToolCard";
 import AdBanner from "@/components/AdBanner";
@@ -11,6 +12,8 @@ import AEOOverviewBox from "@/components/seo/AEOOverviewBox";
 import FeaturedSnippetBox from "@/components/seo/FeaturedSnippetBox";
 import ToolFAQSection from "@/components/seo/ToolFAQSection";
 import TrustAuthorBox from "@/components/seo/TrustAuthorBox";
+import BookmarkButton from "@/components/BookmarkButton";
+import ToolComments from "@/components/ToolComments";
 import {
   Sparkles,
   CheckCircle2,
@@ -24,7 +27,11 @@ import {
   Users,
   Grid,
   AlertTriangle,
-  Bookmark
+  Bookmark,
+  Lightbulb,
+  BookOpen,
+  Star,
+  Check
 } from "lucide-react";
 
 interface PageProps {
@@ -78,7 +85,15 @@ export default async function ToolDetailPage({ params }: PageProps) {
   const module = getToolContent(slug);
   const categoryObj = CATEGORIES.find((c) => c.id === tool.category);
 
-  // 1. Organization Schema
+  // Smart Contextual Recommendations
+  const smartRelatedTools = getRelatedTools(slug, 4);
+  const peopleAlsoUsedTools = getPeopleAlsoUsed(slug, 4);
+  const popularInCategoryTools = getPopularInCategory(tool.category, slug, 4);
+
+  // Relevant blog posts
+  const relevantPosts = BLOG_POSTS.slice(0, 2);
+
+  // Schemas
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -87,7 +102,6 @@ export default async function ToolDetailPage({ params }: PageProps) {
     logo: "https://funtools.com/favicon.ico",
   };
 
-  // 2. WebSite Schema
   const siteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -100,20 +114,14 @@ export default async function ToolDetailPage({ params }: PageProps) {
     },
   };
 
-  // 3. WebPage / MedicalWebPage Schema
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": module.schemaType === "MedicalWebPage" ? "MedicalWebPage" : "WebPage",
     name: tool.title,
     description: module.metadata.metaDescription,
     url: module.metadata.canonicalUrl,
-    ...(module.schemaType === "MedicalWebPage" && {
-      aspect: "Overview",
-      medicalAudience: "Patient",
-    }),
   };
 
-  // 4. SoftwareApplication Schema
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -132,7 +140,6 @@ export default async function ToolDetailPage({ params }: PageProps) {
     },
   };
 
-  // 5. HowTo Schema
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
@@ -146,9 +153,6 @@ export default async function ToolDetailPage({ params }: PageProps) {
     })),
   };
 
-  // Internal Linking Collections
-  const relatedToolsCards = TOOLS.filter((t) => t.id !== tool.id).slice(0, 8);
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
@@ -157,7 +161,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
-      <div className="max-w-7xl mx-auto px-6 pb-24 space-y-12">
+      <div className="max-w-7xl mx-auto px-6 pb-24 space-y-12 pt-2">
         {/* SECTION 1: Breadcrumb */}
         <Breadcrumb
           items={[
@@ -169,10 +173,14 @@ export default async function ToolDetailPage({ params }: PageProps) {
 
         {/* SECTION 2: Hero Section */}
         <header className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5" />
-            {categoryObj?.name || tool.category} Tool
+          <div className="flex items-center justify-center gap-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5" />
+              {categoryObj?.name || tool.category} Tool
+            </div>
+            <BookmarkButton slug={tool.slug} />
           </div>
+
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
             {module.content.heroHeadline}
           </h1>
@@ -213,7 +221,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
           }} />
         </section>
 
-        {/* SECTION 5: Definition Section */}
+        {/* SECTION 5: Definition & Overview */}
         <section className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3 shadow-sm">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white">
             Definition & Core Overview
@@ -250,7 +258,6 @@ export default async function ToolDetailPage({ params }: PageProps) {
             ))}
           </div>
 
-          {/* Optional Mathematical Formula */}
           {module.content.formula && (
             <div className="mt-4 p-4 rounded-2xl bg-indigo-500/10 border border-indigo-200 dark:border-indigo-900 text-xs space-y-1">
               <span className="font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block">
@@ -277,7 +284,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
           }} />
         </section>
 
-        {/* SECTION 8 & 9: Features & Benefits Grid */}
+        {/* SECTION 8: Features & Benefits */}
         <section className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3 shadow-sm">
             <h3 className="text-lg font-bold text-slate-900 dark:text-white">
@@ -314,7 +321,42 @@ export default async function ToolDetailPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* SECTION 10 & 11: Use Cases & Target Audience */}
+        {/* SECTION 9: Expert Tips & Common Mistakes */}
+        <section className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="p-6 rounded-3xl bg-amber-500/10 border border-amber-200 dark:border-amber-900/50 space-y-3">
+            <h3 className="text-base font-bold text-amber-700 dark:text-amber-400 flex items-center gap-2">
+              <Lightbulb className="w-5 h-5" /> Expert Best Practices
+            </h3>
+            <ul className="space-y-2 text-xs text-slate-700 dark:text-slate-300">
+              <li className="flex items-start gap-2">
+                <Check className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                <span>Bookmark this tool on your home screen for instant browser access.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Check className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                <span>Use 1-click results copying to quickly paste formatting into notes or chats.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="p-6 rounded-3xl bg-rose-500/10 border border-rose-200 dark:border-rose-900/50 space-y-3">
+            <h3 className="text-base font-bold text-rose-700 dark:text-rose-400 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5" /> Common Mistakes to Avoid
+            </h3>
+            <ul className="space-y-2 text-xs text-slate-700 dark:text-slate-300">
+              <li className="flex items-start gap-2">
+                <span className="text-rose-500 font-bold">•</span>
+                <span>Entering mismatched unit inputs when performing calculations.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-rose-500 font-bold">•</span>
+                <span>Forgetting to copy generated output before reloading the page.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* SECTION 10: Use Cases & Target Audience */}
         <section className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
             <Users className="w-5 h-5 text-blue-500" />
@@ -334,7 +376,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* SECTION 12: Trust & Disclaimers */}
+        {/* SECTION 11: Trust Author & Verification Box */}
         <section className="max-w-4xl mx-auto">
           <TrustAuthorBox eeat={{
             authorName: module.eeat.authorName,
@@ -350,18 +392,18 @@ export default async function ToolDetailPage({ params }: PageProps) {
           }} />
         </section>
 
-        {/* SECTION 13: 15+ Unique FAQ Accordion */}
+        {/* SECTION 12: Tool FAQ Accordion */}
         <section className="max-w-4xl mx-auto">
           <ToolFAQSection faqs={module.faqs} />
         </section>
 
-        {/* SECTION 14: Contextually Relevant Related Tools */}
+        {/* SECTION 13: SMART DISCOVERY SECTION - Contextual Related Tools */}
         <section className="max-w-7xl mx-auto space-y-6">
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-xs font-extrabold text-indigo-500 uppercase tracking-wider block">Contextual Recommendations</span>
+              <span className="text-xs font-extrabold text-indigo-500 uppercase tracking-wider block">Smart Recommendations</span>
               <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white">
-                Tools Relevant to {tool.title}
+                Related Tools You Might Like
               </h3>
             </div>
             <Link href="/tools" className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
@@ -369,119 +411,80 @@ export default async function ToolDetailPage({ params }: PageProps) {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {module.relatedTools.map((rel, idx) => (
-              <Link key={idx} href={`/tools/${rel.slug}`}>
-                <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-400 transition space-y-1.5 cursor-pointer shadow-sm">
-                  <span className="text-[10px] font-extrabold uppercase text-indigo-500 bg-indigo-500/10 px-2 py-0.5 rounded-full">
-                    {rel.category}
-                  </span>
-                  <h4 className="font-bold text-slate-900 dark:text-white text-sm">
-                    {rel.title}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {smartRelatedTools.map((t) => (
+              <ToolCard key={t.id} tool={t} />
+            ))}
+          </div>
+        </section>
+
+        {/* SECTION 14: SMART DISCOVERY SECTION - People Also Used */}
+        <section className="max-w-7xl mx-auto space-y-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <span className="text-xs font-extrabold text-purple-500 uppercase tracking-wider block">Cross-Category Exploration</span>
+              <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white">
+                People Who Used This Also Tried
+              </h3>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {peopleAlsoUsedTools.map((t) => (
+              <ToolCard key={t.id} tool={t} />
+            ))}
+          </div>
+        </section>
+
+        {/* SECTION 15: Relevant Articles & Blog Integration */}
+        <section className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-indigo-500" /> Relevant Guides & Deep Dives
+            </h3>
+            <Link href="/blog" className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+              View All Articles
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {relevantPosts.map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`}>
+                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 hover:bg-indigo-50 dark:hover:bg-slate-800 transition space-y-2 border border-slate-200/60 dark:border-slate-700/60 group">
+                  <span className="text-[10px] font-bold uppercase text-purple-500">{post.readTime} read</span>
+                  <h4 className="font-extrabold text-xs text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
+                    {post.title}
                   </h4>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
-                    💡 {rel.relationReason}
-                  </p>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2">{post.excerpt}</p>
                 </div>
               </Link>
             ))}
           </div>
         </section>
 
-        {/* SECTION 15 & 16: Popular & Latest Tools Grid */}
-        <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
-            <h4 className="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2">
-              <Flame className="w-4 h-4 text-amber-500" /> Viral Popular Tools
-            </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {TOOLS.filter(t => t.isPopular).slice(0, 4).map((pt) => (
-                <Link key={pt.id} href={`/tools/${pt.slug}`} className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-indigo-50 dark:hover:bg-slate-800 transition flex items-center gap-3">
-                  <div className={`w-9 h-9 rounded-xl bg-gradient-to-tr ${pt.gradient} text-white flex items-center justify-center text-xs font-bold`}>
-                    ✨
-                  </div>
-                  <div>
-                    <h5 className="text-xs font-bold text-slate-900 dark:text-white">{pt.title}</h5>
-                    <span className="text-[10px] text-slate-400">{pt.useCount} uses</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
-            <h4 className="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2">
-              <Zap className="w-4 h-4 text-purple-500" /> Newest Micro-Apps
-            </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {TOOLS.slice(0, 4).map((lt) => (
-                <Link key={lt.id} href={`/tools/${lt.slug}`} className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-indigo-50 dark:hover:bg-slate-800 transition flex items-center gap-3">
-                  <div className={`w-9 h-9 rounded-xl bg-gradient-to-tr ${lt.gradient} text-white flex items-center justify-center text-xs font-bold`}>
-                    ✨
-                  </div>
-                  <div>
-                    <h5 className="text-xs font-bold text-slate-900 dark:text-white">{lt.title}</h5>
-                    <span className="text-[10px] text-slate-400">{lt.category}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
+        {/* SECTION 16: Interactive Community Comments */}
+        <section className="max-w-4xl mx-auto">
+          <ToolComments toolSlug={tool.slug} />
         </section>
 
-        {/* SECTION 17: Internal Links Index */}
-        <section className="max-w-4xl mx-auto p-6 rounded-3xl bg-slate-100/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs space-y-3">
-          <span className="font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider block">
-            Explore Category Directory
-          </span>
-          <div className="flex flex-wrap gap-2">
-            {CATEGORIES.map((c) => (
-              <Link key={c.id} href={`/categories/${c.id}`} className="px-3 py-1 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-500 transition">
-                {c.name} ({c.count})
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* SECTION 21: User Discussion & Comments Placeholder */}
-        <section className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-          <h3 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-            <MessageSquare className="w-5 h-5 text-indigo-500" />
-            User Feedback & Rating
-          </h3>
-          <p className="text-xs text-slate-500">
-            Have feedback or suggestions for {tool.title}? Leave a comment below:
-          </p>
-
-          <form className="space-y-3">
-            <textarea
-              rows={3}
-              placeholder="Share your feedback or score..."
-              className="w-full p-3 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none"
-            />
-            <button
-              type="button"
-              className="px-4 py-2 rounded-xl bg-indigo-600 text-white font-bold text-xs hover:bg-indigo-700 transition cursor-pointer"
-            >
-              Post Comment
-            </button>
-          </form>
-        </section>
-
-        {/* SECTION 22: Footer CTA */}
+        {/* SECTION 17: Newsletter Subscription & Footer CTA */}
         <section className="max-w-4xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white text-center space-y-4 shadow-xl">
           <h3 className="text-2xl font-black">
-            Explore 50+ Interactive Fun Tools!
+            Never Miss a New Micro-Tool!
           </h3>
           <p className="text-xs sm:text-sm opacity-90 max-w-md mx-auto">
-            Bookmark FunTools to enjoy instant viral generators, love meters, reflex games, and financial visualizers every day.
+            Get weekly updates on viral generators, productivity calculators, and social utilities delivered straight to your inbox.
           </p>
-          <Link
-            href="/tools"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-indigo-600 font-extrabold text-xs shadow-lg hover:scale-105 transition cursor-pointer"
-          >
-            <Grid className="w-4 h-4" /> Browse Full Directory
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email address..."
+              className="flex-1 px-4 py-3 rounded-2xl bg-white/20 backdrop-blur-md text-white placeholder-white/70 text-xs focus:outline-none border border-white/30"
+            />
+            <button className="px-6 py-3 rounded-2xl bg-white text-indigo-600 font-extrabold text-xs shadow-lg hover:scale-105 transition cursor-pointer">
+              Subscribe Free
+            </button>
+          </div>
         </section>
       </div>
     </>

@@ -16,9 +16,18 @@ import {
   CheckCircle2,
   TrendingUp,
   Heart,
-  Star
+  Star,
+  Clock,
+  Layers,
+  Award,
+  ShieldCheck,
+  Send,
+  Grid
 } from "lucide-react";
 import { TOOLS, CATEGORIES, BLOG_POSTS, HOME_FAQS } from "@/lib/tools-data";
+import { COLLECTIONS } from "@/lib/collections-data";
+import { getToolOfTheDay, getToolsBySlugs, getRecentlyAddedTools } from "@/lib/recommendations";
+import { useUserStore } from "@/lib/user-store";
 import ToolCard from "@/components/ToolCard";
 import CategoryCard from "@/components/CategoryCard";
 import AdBanner from "@/components/AdBanner";
@@ -28,7 +37,12 @@ export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(0);
   const [searchQuery, setSearchQuery] = useState("");
+  const { recentlyViewed, favorites } = useUserStore();
 
+  const toolOfTheDay = getToolOfTheDay();
+  const recentlyViewedTools = getToolsBySlugs(recentlyViewed).slice(0, 4);
+  const favoriteToolsList = getToolsBySlugs(favorites).slice(0, 4);
+  const recentlyAdded = getRecentlyAddedTools(4);
   const trendingTools = TOOLS.filter((t) => t.isTrending);
   const featuredTools = TOOLS.filter((t) =>
     selectedCategory === "all" ? true : t.category === selectedCategory
@@ -39,10 +53,10 @@ export default function HomePage() {
   };
 
   return (
-    <div className="space-y-16 md:space-y-24 pb-12">
+    <div className="space-y-16 md:space-y-24 pb-16">
       {/* HERO SECTION */}
-      <section className="relative pt-8 md:pt-16 pb-12 px-6 max-w-7xl mx-auto overflow-hidden">
-        {/* Floating Background Blobs */}
+      <section className="relative pt-8 md:pt-16 pb-8 px-6 max-w-7xl mx-auto overflow-hidden">
+        {/* Background Ambient Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-96 bg-gradient-to-r from-indigo-500/15 via-purple-500/15 to-pink-500/15 rounded-full blur-3xl -z-10 animate-float-1 pointer-events-none" />
         <div className="absolute top-20 left-10 w-40 h-40 bg-blue-500/10 rounded-full blur-2xl -z-10 animate-float-2 pointer-events-none" />
 
@@ -53,7 +67,7 @@ export default function HomePage() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-indigo-200 dark:border-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs font-bold shadow-sm"
           >
             <Sparkles className="w-4 h-4 text-purple-500 animate-spin" />
-            <span>50+ Interactive Micro-Tools & Games</span>
+            <span>50+ Free Interactive Micro-Tools & Generators</span>
           </motion.div>
 
           <motion.h1
@@ -75,7 +89,7 @@ export default function HomePage() {
             A premium collection of viral font generators, love calculators, reaction speed tests, decision wheels & wealth visualizers designed for instant delight.
           </motion.p>
 
-          {/* Search Bar */}
+          {/* Global Search Bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -117,10 +131,55 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Top Banner Ad Container */}
+      {/* TOP BANNER AD */}
       <div className="max-w-7xl mx-auto px-6">
         <AdBanner slot="9988776655" format="horizontal" label="Featured Sponsor" />
       </div>
+
+      {/* TOOL OF THE DAY / DAILY CHALLENGE */}
+      <section className="max-w-7xl mx-auto px-6">
+        <div className="p-6 md:p-8 rounded-3xl bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-indigo-500/30">
+          <div className="space-y-3 max-w-xl text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-500/30">
+              <Award className="w-3.5 h-3.5" />
+              Tool of the Day & Daily Challenge
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black">{toolOfTheDay.title}</h2>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{toolOfTheDay.description}</p>
+            <div className="flex items-center gap-4 text-xs font-semibold text-amber-400 justify-center md:justify-start">
+              <span>★ {toolOfTheDay.rating} Score</span>
+              <span>•</span>
+              <span>{toolOfTheDay.useCount} Active Daily Users</span>
+            </div>
+          </div>
+
+          <Link
+            href={`/tools/${toolOfTheDay.slug}`}
+            className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black text-xs hover:scale-105 transition shadow-lg flex items-center gap-2 cursor-pointer flex-shrink-0"
+          >
+            <span>Play Daily Challenge</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* CONTINUE WHERE YOU LEFT OFF / RECENTLY VIEWED (Client-side rehydrated) */}
+      {recentlyViewedTools.length > 0 && (
+        <section className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-2 text-slate-900 dark:text-white font-extrabold text-xl">
+              <Clock className="w-5 h-5 text-indigo-500" />
+              <span>Continue Where You Left Off</span>
+            </div>
+            <span className="text-xs text-slate-400 font-medium">Saved locally</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {recentlyViewedTools.map((t) => (
+              <ToolCard key={t.id} tool={t} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* TRENDING TOOLS SECTION */}
       <section id="trending" className="max-w-7xl mx-auto px-6">
@@ -150,8 +209,54 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* CURATED COLLECTIONS GRID */}
+      <section className="max-w-7xl mx-auto px-6">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-purple-500 mb-1">
+              <Layers className="w-4 h-4" />
+              Hand-picked Bundles
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+              Featured Curated Collections
+            </h2>
+          </div>
+          <Link
+            href="/collections"
+            className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1"
+          >
+            <span>All Collections</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {COLLECTIONS.slice(0, 4).map((c) => (
+            <Link
+              key={c.id}
+              href={`/collections/${c.slug}`}
+              className="glass-card p-5 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition group flex flex-col justify-between"
+            >
+              <div className="space-y-3">
+                <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold ${c.badgeBg}`}>
+                  {c.toolSlugs.length} Tools
+                </span>
+                <h3 className="font-extrabold text-base text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
+                  {c.title}
+                </h3>
+                <p className="text-xs text-slate-500 line-clamp-2">{c.description}</p>
+              </div>
+              <div className="pt-4 flex items-center text-xs font-bold text-indigo-500 group-hover:translate-x-1 transition">
+                <span>Explore Bundle</span>
+                <ArrowRight className="w-3.5 h-3.5 ml-1" />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* CATEGORIES SECTION */}
-      <section id="categories" className="max-w-7xl mx-auto px-6 py-8">
+      <section id="categories" className="max-w-7xl mx-auto px-6 py-4">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-rose-500 mb-2">
             <Compass className="w-4 h-4" />
@@ -183,6 +288,23 @@ export default function HomePage() {
           </h2>
         </div>
         <FancyFontGenerator />
+      </section>
+
+      {/* RECENTLY ADDED TOOLS */}
+      <section className="max-w-7xl mx-auto px-6">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-500">Fresh Releases</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">
+              Recently Added Tools
+            </h2>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {recentlyAdded.map((tool) => (
+            <ToolCard key={tool.id} tool={tool} />
+          ))}
+        </div>
       </section>
 
       {/* FEATURED TOOLS GRID & CATEGORY TABS */}
@@ -336,6 +458,29 @@ export default function HomePage() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* NEWSLETTER SUBSCRIPTION */}
+      <section className="max-w-5xl mx-auto px-6">
+        <div className="p-8 md:p-12 rounded-3xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white text-center space-y-4 shadow-2xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-xs font-bold uppercase">
+            <Send className="w-3.5 h-3.5" /> FunTools Weekly Newsletter
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-black">Stay Updated on New Viral Tools</h2>
+          <p className="text-sm opacity-90 max-w-lg mx-auto">
+            Get early access to new AI bio roasters, fancy text generators, and productivity tools every Monday. Zero spam.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto pt-2">
+            <input
+              type="email"
+              placeholder="Enter your email..."
+              className="flex-1 px-4 py-3 rounded-2xl bg-white/20 backdrop-blur-md text-white placeholder-white/70 text-xs focus:outline-none border border-white/30"
+            />
+            <button className="px-6 py-3 rounded-2xl bg-white text-indigo-600 font-black text-xs shadow-lg hover:scale-105 transition cursor-pointer">
+              Subscribe Free
+            </button>
+          </div>
         </div>
       </section>
     </div>

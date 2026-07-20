@@ -105,6 +105,18 @@ export default function Header() {
             </Link>
 
             <Link
+              href="/collections"
+              className={`px-4 py-2 rounded-full text-xs font-bold transition flex items-center gap-1.5 ${
+                pathname.startsWith("/collections")
+                  ? "bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm"
+                  : "text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+              }`}
+            >
+              <Zap className="w-3.5 h-3.5 text-purple-500" />
+              Collections
+            </Link>
+
+            <Link
               href="/blog"
               className={`px-4 py-2 rounded-full text-xs font-bold transition flex items-center gap-1.5 ${
                 pathname.startsWith("/blog")
