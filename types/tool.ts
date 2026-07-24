@@ -8,7 +8,8 @@ export type CategoryId =
   | "finance"
   | "personality"
   | "quiz"
-  | "productivity";
+  | "productivity"
+  | "text";
 
 export interface Category {
   id: CategoryId;

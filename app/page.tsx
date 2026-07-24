@@ -96,18 +96,18 @@ export default function HomePage() {
             transition={{ delay: 0.3 }}
             className="max-w-xl mx-auto pt-2"
           >
-            <div className="relative glass-card p-2 rounded-3xl border border-indigo-200 dark:border-indigo-900 shadow-xl flex items-center gap-2">
-              <Search className="w-5 h-5 ml-3 text-indigo-500" />
+            <div className="relative glass-card p-1.5 sm:p-2 rounded-2xl sm:rounded-3xl border border-indigo-200 dark:border-indigo-900 shadow-xl flex items-center gap-1.5 sm:gap-2">
+              <Search className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3 text-indigo-500 shrink-0" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="What tool do you want to explore today?"
-                className="flex-1 bg-transparent py-2.5 px-2 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none"
+                className="flex-1 min-w-0 bg-transparent py-2 sm:py-2.5 px-1.5 sm:px-2 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none"
               />
               <Link
                 href={searchQuery ? `/tools?q=${encodeURIComponent(searchQuery)}` : "/tools"}
-                className="px-5 py-3 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-xs hover:opacity-95 transition shadow-md flex items-center gap-1.5 cursor-pointer"
+                className="px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-xs hover:opacity-95 transition shadow-md flex items-center gap-1.5 shrink-0 cursor-pointer"
               >
                 <span>Search</span>
                 <ArrowRight className="w-3.5 h-3.5" />

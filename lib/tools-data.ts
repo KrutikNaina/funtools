@@ -91,6 +91,15 @@ export const CATEGORIES: Category[] = [
     badgeBg: "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-200 dark:border-yellow-800",
     count: 16,
   },
+  {
+    id: "text",
+    name: "Text Tools",
+    description: "Text multipliers, font generators & unicode converters",
+    iconName: "Type",
+    gradient: "from-indigo-500 via-blue-500 to-cyan-500",
+    badgeBg: "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-800",
+    count: 4,
+  },
 ];
 
 export const TOOLS: Tool[] = [
@@ -655,6 +664,34 @@ export const TOOLS: Tool[] = [
       {
         question: "Is the Death Calculator scientifically accurate?",
         answer: "No! This tool is 100% created for fun, entertainment, and lighthearted humor."
+      }
+    ]
+  },
+  {
+    id: "text-repeater-tool",
+    slug: "text-repeater",
+    title: "Text Repeater Generator",
+    subtitle: "Repeat any text up to 10,000 times instantly",
+    description: "Multiply words, sentences, or emojis thousands of times with custom separators like spaces or new lines.",
+    category: "text",
+    iconName: "Type",
+    isPopular: true,
+    isTrending: true,
+    isFeatured: true,
+    rating: 4.90,
+    useCount: "128.4K",
+    gradient: "from-indigo-500 to-blue-600",
+    tags: ["text repeater", "repeat text", "string multiplier", "text spammer"],
+    features: [
+      "Up to 10,000 text repetitions instantly",
+      "Custom separators (Space, New Line, Custom)",
+      "Live character counter for platform limits",
+      "1-click fast clipboard copy"
+    ],
+    faq: [
+      {
+        question: "Is there a limit to how much text I can repeat?",
+        answer: "The tool is limited to 10,000 repetitions at once to ensure your browser remains fast and responsive."
       }
     ]
   }

@@ -21,7 +21,7 @@ import { countdownTimerContent } from "./countdown-timer";
 import { luckyNumberGeneratorContent } from "./lucky-number-generator";
 import { nicknameGeneratorContent } from "./nickname-generator";
 import { deathCalculatorContent } from "./death-calculator";
-
+import { textRepeaterContent } from "./text-repeater";
 export const DOMAIN_TOOLS_REPOSITORY: Record<string, DomainToolModule> = {
   "love-calculator": loveCalculatorContent,
   "fancy-font-generator": fancyFontGeneratorContent,
@@ -45,6 +45,7 @@ export const DOMAIN_TOOLS_REPOSITORY: Record<string, DomainToolModule> = {
   "lucky-number-generator": luckyNumberGeneratorContent,
   "nickname-generator": nicknameGeneratorContent,
   "death-calculator": deathCalculatorContent,
+  "text-repeater": textRepeaterContent,
 };
 
 export function getToolContent(slug: string): DomainToolModule {

@@ -24,6 +24,7 @@ import CountdownTimer from "@/components/tools/CountdownTimer";
 import LuckyNumberGenerator from "@/components/tools/LuckyNumberGenerator";
 import NicknameGenerator from "@/components/tools/NicknameGenerator";
 import DeathCalculator from "@/components/tools/DeathCalculator";
+import TextRepeater from "@/components/tools/TextRepeater";
 
 import ShareModal from "@/components/ShareModal";
 import { Share2 } from "lucide-react";
@@ -75,6 +76,8 @@ export default function DynamicToolRenderer({ tool }: { tool: Tool }) {
         return <NicknameGenerator />;
       case "death-calculator":
         return <DeathCalculator />;
+      case "text-repeater":
+        return <TextRepeater />;
 
       default:
         return <FancyFontGenerator />;
