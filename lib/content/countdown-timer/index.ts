@@ -22,12 +22,12 @@ export const countdownTimerContent: DomainToolModule = {
     metaTitle: "Countdown Timer - Live Ticking Event & Launch Clock",
     metaDescription: "Create custom live ticking countdown timers for product launches, birthdays, holidays, and personal goals. Displays days, hours, minutes, and seconds.",
     slug: "countdown-timer",
-    canonicalUrl: "https://funtools.com/tools/countdown-timer",
+    canonicalUrl: "https://getfuntools.app/tools/countdown-timer",
     robots: "index, follow",
     openGraph: {
       title: "Event & Goal Countdown Timer | Live Ticking Clock",
       description: "Track time remaining until your next birthday, launch, or holiday.",
-      url: "https://funtools.com/tools/countdown-timer",
+      url: "https://getfuntools.app/tools/countdown-timer",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const countdownTimerContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Countdown Timer creates live ticking countdown clocks for events, product launches, birthdays, and holidays.",
-    twoSentence: "The FunTools Countdown Timer measures time remaining until a specified future date and time. It renders a real-time animated display showing remaining days, hours, minutes, and seconds.",
-    summary50: "The FunTools Countdown Timer is a free online event clock that tracks time remaining until any future date. Features include real-time ticking displays for days, hours, minutes, and seconds with customizable event titles.",
-    summary100: "The FunTools Countdown Timer offers precision event tracking for milestones, product releases, vacations, and celebrations. Users input an event title and select a future target date and time to generate a live, updating visual display of remaining temporal units.",
-    summary200: "The FunTools Countdown Timer is a visually engaging milestone clock built for content creators, event hosts, product managers, and personal goal tracking. Powered by browser JavaScript interval timers, it calculates real-time time differences down to the second. Users can enter a custom title (e.g. 'New Year 2027 Celebration' or 'App Store Launch') and select a target date. The tool renders four responsive glassmorphism countdown cards displaying Days, Hours, Minutes, and Seconds. With shareable link capabilities and clean mobile responsiveness, it is an ideal tool for tracking anticipation.",
+    oneSentence: "The GetFunTools Countdown Timer creates live ticking countdown clocks for events, product launches, birthdays, and holidays.",
+    twoSentence: "The GetFunTools Countdown Timer measures time remaining until a specified future date and time. It renders a real-time animated display showing remaining days, hours, minutes, and seconds.",
+    summary50: "The GetFunTools Countdown Timer is a free online event clock that tracks time remaining until any future date. Features include real-time ticking displays for days, hours, minutes, and seconds with customizable event titles.",
+    summary100: "The GetFunTools Countdown Timer offers precision event tracking for milestones, product releases, vacations, and celebrations. Users input an event title and select a future target date and time to generate a live, updating visual display of remaining temporal units.",
+    summary200: "The GetFunTools Countdown Timer is a visually engaging milestone clock built for content creators, event hosts, product managers, and personal goal tracking. Powered by browser JavaScript interval timers, it calculates real-time time differences down to the second. Users can enter a custom title (e.g. 'New Year 2027 Celebration' or 'App Store Launch') and select a target date. The tool renders four responsive glassmorphism countdown cards displaying Days, Hours, Minutes, and Seconds. With shareable link capabilities and clean mobile responsiveness, it is an ideal tool for tracking anticipation.",
     bulletSummary: [
       "Displays live ticking Days, Hours, Minutes, and Seconds.",
       "Supports custom event title and target date input.",
@@ -56,7 +56,7 @@ export const countdownTimerContent: DomainToolModule = {
       { label: "Cost", value: "100% Free" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools Countdown Timer", "Static Date Displays"],
+      header: ["Feature", "GetFunTools Countdown Timer", "Static Date Displays"],
       rows: [
         ["Live Ticking", "Updates every second", "Static (Requires Refresh)"],
         ["Granularity", "Days, Hours, Mins, Secs", "Days Only"],
@@ -120,7 +120,7 @@ export const countdownTimerContent: DomainToolModule = {
       { title: "Custom Title Builder", description: "Personalize your countdown header." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Countdown", "Basic Timers"],
+      headers: ["Feature", "GetFunTools Countdown", "Basic Timers"],
       rows: [
         ["Real-Time Refresh", "1-Second Interval Ticking", "Manual Page Refresh"],
         ["Multi-Card Layout", "Glassmorphism Responsive Grid", "Plain Text Counter"]
@@ -139,11 +139,11 @@ export const countdownTimerContent: DomainToolModule = {
     { question: "Is the Countdown Timer free to use?", answer: "Yes, 100% free with unlimited countdown timers." },
     { question: "Can I share my countdown timer link with friends?", answer: "Yes! Use the Share button to copy a direct link to your countdown." },
     { question: "What happens when the countdown reaches zero?", answer: "All counters display zero and indicate that your milestone event has arrived." },
-    { question: "Does this timer work on mobile phones?", answer: "Yes, FunTools is fully responsive for mobile screens." },
+    { question: "Does this timer work on mobile phones?", answer: "Yes, GetFunTools is fully responsive for mobile screens." },
     { question: "Can I set a countdown for a date next year?", answer: "Yes, you can set target dates as far into the future as you wish." },
     { question: "What temporal units are displayed?", answer: "The timer displays Days, Hours, Minutes, and Seconds." },
     { question: "Does the timer account for time zones?", answer: "Calculations use your device's local system time zone settings." },
-    { question: "Does FunTools store my event details?", answer: "No, event parameters are stored in your browser session with zero server tracking." },
+    { question: "Does GetFunTools store my event details?", answer: "No, event parameters are stored in your browser session with zero server tracking." },
     { question: "Can I embed this countdown on another site?", answer: "You can share the direct URL link to your custom countdown card." },
     { question: "Why is a visual countdown helpful for goals?", answer: "Visual countdowns create a healthy sense of urgency and steady motivation." },
     { question: "How many countdown timers can I create?", answer: "You can create unlimited event countdowns." },

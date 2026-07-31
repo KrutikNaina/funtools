@@ -22,26 +22,26 @@ export const aiBioGeneratorContent: DomainToolModule = {
     metaTitle: "AI Bio & Roast Generator - Create Viral Social Media Bios Instantly",
     metaDescription: "Generate punchy, hilarious, or professional social media bios for Instagram, X, TikTok, and LinkedIn. Pick your vibe (Gen-Z Roast, Tech Founder, Aesthetic Chic, Executive) and get instant clout ratings.",
     slug: "ai-bio-generator",
-    canonicalUrl: "https://funtools.com/tools/ai-bio-generator",
+    canonicalUrl: "https://getfuntools.app/tools/ai-bio-generator",
     robots: "index, follow",
     openGraph: {
       title: "AI Bio & Roast Generator | Viral Profile Copy Tool",
       description: "Create viral, hilariously accurate social bios with clout ratings & 1-click copy.",
-      url: "https://funtools.com/tools/ai-bio-generator",
+      url: "https://getfuntools.app/tools/ai-bio-generator",
       type: "website"
     },
     twitterCard: {
       card: "summary_large_image",
-      title: "AI Bio & Roast Generator | FunTools",
+      title: "AI Bio & Roast Generator | GetFunTools",
       description: "Generate punchy bios for Instagram, Twitter X, and LinkedIn in seconds."
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools AI Bio & Roast Generator creates customized social media bios across 4 distinct persona styles with clout ratings.",
-    twoSentence: "The FunTools AI Bio & Roast Generator generates short, punchy bios tailored for Instagram, X (Twitter), TikTok, and LinkedIn. Users select persona vibes—Sarcastic Gen-Z, Tech Visionary, Aesthetic Chic, or Executive Boss—and receive copyable bio formatted text alongside a clout rating.",
-    summary50: "The FunTools AI Bio & Roast Generator is a free social media copy tool that crafts viral bios and profile headlines. Featuring 4 persona styles (Gen-Z Roast, Tech Visionary, Aesthetic Chic, Executive) and clout score evaluations, it delivers formatted text ready to copy with one click.",
-    summary100: "The FunTools AI Bio & Roast Generator assists creators, professionals, and students in crafting memorable digital profiles. By selecting a target persona style and adding optional specialty keywords, the tool generates short-form social media bios optimized for platform character limits. It evaluates profile clout with an instant score (85-99/100) and provides 1-click clipboard copy functionality.",
-    summary200: "The FunTools AI Bio & Roast Generator provides an intuitive content solution for personal branding. Designed with sleek glassmorphism and real-time generation logic, the tool features four specialized vibe presets: Sarcastic Gen-Z (dry humor & pop culture), Tech Visionary (disruptor & builder energy), Aesthetic Chic (minimalist & golden hour vibes), and Executive Boss (high-growth leadership & scaling). Users can input custom roles or specialty keywords to personalize the generated text. In addition to formatted bio copy with emojis, the tool measures profile impact using an automated Clout Rating index (85-99/100). All text formats fit standard social media bio length constraints and copy directly to device clipboards.",
+    oneSentence: "The GetFunTools AI Bio & Roast Generator creates customized social media bios across 4 distinct persona styles with clout ratings.",
+    twoSentence: "The GetFunTools AI Bio & Roast Generator generates short, punchy bios tailored for Instagram, X (Twitter), TikTok, and LinkedIn. Users select persona vibes—Sarcastic Gen-Z, Tech Visionary, Aesthetic Chic, or Executive Boss—and receive copyable bio formatted text alongside a clout rating.",
+    summary50: "The GetFunTools AI Bio & Roast Generator is a free social media copy tool that crafts viral bios and profile headlines. Featuring 4 persona styles (Gen-Z Roast, Tech Visionary, Aesthetic Chic, Executive) and clout score evaluations, it delivers formatted text ready to copy with one click.",
+    summary100: "The GetFunTools AI Bio & Roast Generator assists creators, professionals, and students in crafting memorable digital profiles. By selecting a target persona style and adding optional specialty keywords, the tool generates short-form social media bios optimized for platform character limits. It evaluates profile clout with an instant score (85-99/100) and provides 1-click clipboard copy functionality.",
+    summary200: "The GetFunTools AI Bio & Roast Generator provides an intuitive content solution for personal branding. Designed with sleek glassmorphism and real-time generation logic, the tool features four specialized vibe presets: Sarcastic Gen-Z (dry humor & pop culture), Tech Visionary (disruptor & builder energy), Aesthetic Chic (minimalist & golden hour vibes), and Executive Boss (high-growth leadership & scaling). Users can input custom roles or specialty keywords to personalize the generated text. In addition to formatted bio copy with emojis, the tool measures profile impact using an automated Clout Rating index (85-99/100). All text formats fit standard social media bio length constraints and copy directly to device clipboards.",
     bulletSummary: [
       "Generates short, punchy bios for Instagram, X, TikTok, and LinkedIn.",
       "Offers 4 persona modes: Sarcastic Gen-Z, Tech Visionary, Aesthetic Chic, Executive.",
@@ -126,7 +126,7 @@ export const aiBioGeneratorContent: DomainToolModule = {
       { title: "1-Click Clipboard Copy", description: "Copies ready-to-paste text with proper emojis." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools AI Bio Generator", "Basic Text Generators"],
+      headers: ["Feature", "GetFunTools AI Bio Generator", "Basic Text Generators"],
       rows: [
         ["Persona Diversity", "4 Curated Culture Styles", "Single generic output"],
         ["Clout Rating", "Automated Profile Clout Index", "None"],
@@ -164,7 +164,7 @@ export const aiBioGeneratorContent: DomainToolModule = {
     { question: "Is my text saved or logged?", answer: "No. All text processing runs locally in your browser. We never log or store your bio inputs." },
     { question: "Can I use these bios for LinkedIn?", answer: "Yes! Select the 'Executive Boss' persona style for professional LinkedIn headlines and summaries." },
     { question: "How many bio styles are available?", answer: "4 distinct styles: Sarcastic Gen-Z, Tech Visionary, Aesthetic Chic, and Executive Boss." },
-    { question: "Does the tool support mobile phones?", answer: "Yes, FunTools is fully mobile-optimized for iOS and Android web browsers." },
+    { question: "Does the tool support mobile phones?", answer: "Yes, GetFunTools is fully mobile-optimized for iOS and Android web browsers." },
     { question: "Do I need to sign up for an account?", answer: "No account or registration is required." },
     { question: "Can I copy the bio with 1-click?", answer: "Yes, tap the 'Copy Bio Text' button to copy the bio formatted with emojis to your clipboard." },
     { question: "What are common mistakes when writing social bios?", answer: "Writing overly long paragraphs, omitting emojis, or failing to state what you do." },

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!post) return {};
 
   return {
-    title: `${post.title} - FunTools Blog`,
+    title: `${post.title} - GetFunTools Blog`,
     description: post.excerpt,
     openGraph: {
       title: post.title,

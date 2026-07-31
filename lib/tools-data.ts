@@ -740,12 +740,12 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export const HOME_FAQS = [
   {
-    question: "What is FunTools?",
-    answer: "FunTools is a premium, lightweight platform of interactive micro-apps, fun calculators, personality quizzes, AI prompt tools, and utility games designed for entertainment and quick answers."
+    question: "What is GetFunTools?",
+    answer: "GetFunTools is a premium, lightweight platform of interactive micro-apps, fun calculators, personality quizzes, AI prompt tools, and utility games designed for entertainment and quick answers."
   },
   {
-    question: "Are all tools on FunTools free?",
-    answer: "Yes! Every single tool on FunTools is 100% free with unlimited usage, no registration required, and no hidden fees."
+    question: "Are all tools on GetFunTools free?",
+    answer: "Yes! Every single tool on GetFunTools is 100% free with unlimited usage, no registration required, and no hidden fees."
   },
   {
     question: "Is my data private when using tools?",

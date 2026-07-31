@@ -22,12 +22,12 @@ export const randomNumberGeneratorContent: DomainToolModule = {
     metaTitle: "Random Number Generator - Custom Range & Non-Repeating RNG",
     metaDescription: "Generate single or multiple random numbers within any min and max limit. Features non-repeating filters, sorting options, and 3D die roll animation.",
     slug: "random-number-generator",
-    canonicalUrl: "https://funtools.com/tools/random-number-generator",
+    canonicalUrl: "https://getfuntools.app/tools/random-number-generator",
     robots: "index, follow",
     openGraph: {
       title: "Random Number Generator | Unbiased RNG Picker",
       description: "Generate random numbers, lottery picks, and raffle winners with custom limits.",
-      url: "https://funtools.com/tools/random-number-generator",
+      url: "https://getfuntools.app/tools/random-number-generator",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const randomNumberGeneratorContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Random Number Generator creates unbiased random integers within user-defined minimum and maximum ranges.",
-    twoSentence: "The FunTools Random Number Generator produces single or multiple random numbers between custom numerical limits. Featuring toggles for duplicate suppression and sorting, it ensures 100% fair RNG outputs for raffles, games, and lotteries.",
-    summary50: "The FunTools Random Number Generator is a free online RNG utility that generates random integers between any min and max limit. It supports duplicate number filtering, list sorting, and 1-click output copying.",
-    summary100: "The FunTools Random Number Generator provides cryptographically safe random number generation for games, raffles, statistical sampling, and giveaways. Users can specify minimum and maximum integer bounds, set quantity counts up to 100 numbers, filter out duplicate values, and copy results instantly.",
-    summary200: "The FunTools Random Number Generator is an essential decision-making and raffle utility designed for total fairness and zero bias. Utilizing browser cryptographic pseudo-random generation, it evaluates user-defined Minimum and Maximum numerical bounds. Users can generate up to 100 numbers simultaneously, toggle 'Allow duplicate numbers' off for non-repeating lottery draws, and sort results in ascending or descending order. The tool features an animated die roll simulation and 1-click clipboard copying, making it ideal for classroom picks, contest drawings, gaming dice rolls, and scientific sampling.",
+    oneSentence: "The GetFunTools Random Number Generator creates unbiased random integers within user-defined minimum and maximum ranges.",
+    twoSentence: "The GetFunTools Random Number Generator produces single or multiple random numbers between custom numerical limits. Featuring toggles for duplicate suppression and sorting, it ensures 100% fair RNG outputs for raffles, games, and lotteries.",
+    summary50: "The GetFunTools Random Number Generator is a free online RNG utility that generates random integers between any min and max limit. It supports duplicate number filtering, list sorting, and 1-click output copying.",
+    summary100: "The GetFunTools Random Number Generator provides cryptographically safe random number generation for games, raffles, statistical sampling, and giveaways. Users can specify minimum and maximum integer bounds, set quantity counts up to 100 numbers, filter out duplicate values, and copy results instantly.",
+    summary200: "The GetFunTools Random Number Generator is an essential decision-making and raffle utility designed for total fairness and zero bias. Utilizing browser cryptographic pseudo-random generation, it evaluates user-defined Minimum and Maximum numerical bounds. Users can generate up to 100 numbers simultaneously, toggle 'Allow duplicate numbers' off for non-repeating lottery draws, and sort results in ascending or descending order. The tool features an animated die roll simulation and 1-click clipboard copying, making it ideal for classroom picks, contest drawings, gaming dice rolls, and scientific sampling.",
     bulletSummary: [
       "Generates random integers within custom min and max bounds.",
       "Supports unique non-repeating number generation for raffles.",
@@ -56,7 +56,7 @@ export const randomNumberGeneratorContent: DomainToolModule = {
       { label: "Cost", value: "100% Free" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools RNG Generator", "Physical Dice / Slips"],
+      header: ["Feature", "GetFunTools RNG Generator", "Physical Dice / Slips"],
       rows: [
         ["Speed", "Instant Generation (100 Numbers)", "Time-Consuming Manual Draw"],
         ["Fairness", "Cryptographically Unbiased", "Physical Wear & Bias Risk"],
@@ -120,7 +120,7 @@ export const randomNumberGeneratorContent: DomainToolModule = {
       { title: "Batch Generation", description: "Generate up to 100 numbers per click." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools RNG", "Basic Wheel Spinner"],
+      headers: ["Feature", "GetFunTools RNG", "Basic Wheel Spinner"],
       rows: [
         ["Batch Quantity", "Up to 100 Numbers", "1 Result at a Time"],
         ["Non-Repeating Mode", "Supported", "Not Supported"]
@@ -143,7 +143,7 @@ export const randomNumberGeneratorContent: DomainToolModule = {
     { question: "Can I use this as a lottery number generator?", answer: "Yes, set Min to 1, Max to 69 (or your lottery limit), set Count to 6, and uncheck duplicates." },
     { question: "What happens if Count is larger than the Min-Max range?", answer: "If duplicate numbers are disallowed, the generator will cap results to the maximum available unique integers." },
     { question: "Does this tool store generated results?", answer: "No, all calculations execute locally in your web browser with zero server data storage." },
-    { question: "Does it work on mobile phones?", answer: "Yes, FunTools is fully responsive for iPhone, Android, and mobile browsers." },
+    { question: "Does it work on mobile phones?", answer: "Yes, GetFunTools is fully responsive for iPhone, Android, and mobile browsers." },
     { question: "Can I sort the generated numbers in order?", answer: "Yes, results can be formatted in ascending or descending numeric order." },
     { question: "What is RNG in gaming?", answer: "RNG stands for Random Number Generation, which determines random loot drops, critical hits, and game outcomes." },
     { question: "Can I use this for secret Santa or name drawing?", answer: "Yes! Assign each participant a ticket number and use the RNG to draw numbers." },

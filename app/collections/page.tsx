@@ -8,12 +8,12 @@ import AdBanner from "@/components/AdBanner";
 import { Sparkles, ArrowRight, Layers, Compass, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Curated Tool Collections | FunTools",
+  title: "Curated Tool Collections | GetFunTools",
   description: "Browse hand-picked micro-tool collections for students, Instagram creators, developers, designers, and productivity power users.",
   openGraph: {
-    title: "Curated Tool Collections | FunTools",
+    title: "Curated Tool Collections | GetFunTools",
     description: "Hand-picked collections of top micro-tools, calculators, generators, and fun games.",
-    url: "https://funtools.com/collections",
+    url: "https://getfuntools.app/collections",
   },
 };
 

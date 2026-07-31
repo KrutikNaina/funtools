@@ -22,26 +22,26 @@ export const techArchetypeQuizContent: DomainToolModule = {
     metaTitle: "Which Tech Archetype Are You? - Fun 60-Second Personality Quiz",
     metaDescription: "Uncover your digital alter-ego in 4 quick questions! Are you a Keyboard Ninja, AI Prompt Whisperer, Pixel Perfectionist, or Midnight Debugger? Includes custom badges & shareable reports.",
     slug: "tech-archetype-quiz",
-    canonicalUrl: "https://funtools.com/tools/tech-archetype-quiz",
+    canonicalUrl: "https://getfuntools.app/tools/tech-archetype-quiz",
     robots: "index, follow",
     openGraph: {
       title: "Which Tech Archetype Are You? | Interactive Quiz",
       description: "Discover your digital alter-ego with custom result badges and superpower reports.",
-      url: "https://funtools.com/tools/tech-archetype-quiz",
+      url: "https://getfuntools.app/tools/tech-archetype-quiz",
       type: "website"
     },
     twitterCard: {
       card: "summary_large_image",
-      title: "Tech Archetype Quiz | FunTools",
+      title: "Tech Archetype Quiz | GetFunTools",
       description: "Find out if you are a Keyboard Ninja, Prompt Whisperer, or Pixel Perfectionist!"
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Tech Archetype Quiz determines your digital alter-ego across four developer and creator personas in 60 seconds.",
-    twoSentence: "The FunTools Tech Archetype Quiz is a 4-question interactive personality assessment. By evaluating user choices regarding workplace setup, bug troubleshooting, tools, and perfection benchmarks, it classifies participants into four archetypes: Keyboard Ninja, AI Prompt Whisperer, Pixel Perfectionist, or Midnight Debugger.",
-    summary50: "The FunTools Tech Archetype Quiz is a free 60-second interactive personality test. Evaluating 4 multiple-choice questions on work habits and tech preferences, it classifies users into developer archetypes (Ninja, Whisperer, Designer, Debugger) and delivers custom badges.",
-    summary100: "The FunTools Tech Archetype Quiz is a lightweight personality test designed for developers, designers, product managers, and tech enthusiasts. Through 4 interactive multiple-choice questions, the quiz measures preferences for keyboard shortcuts, AI prompt engineering, visual aesthetics, or deep-dive logic. Upon completion, users receive a custom result badge, superpower breakdown, and shareable summary.",
-    summary200: "The FunTools Tech Archetype Quiz provides a gamified personality assessment tailored for digital creators and engineers. Designed with smooth card transitions, animated progress indicators, and vibrant gradients, the quiz poses 4 strategic questions covering desk setup, bug resolution tactics, favorite tools, and product perfection standards. The scoring engine tallies user responses to determine their primary alter-ego: Keyboard Ninja (10x speed & shortcuts), AI Prompt Whisperer (generative AI mastery), Pixel Perfectionist (aesthetic UX & micro-interactions), or Midnight Debugger (rock-solid logic & deep focus). Each result screen includes a custom badge, superpower summary, and instant quiz restart options.",
+    oneSentence: "The GetFunTools Tech Archetype Quiz determines your digital alter-ego across four developer and creator personas in 60 seconds.",
+    twoSentence: "The GetFunTools Tech Archetype Quiz is a 4-question interactive personality assessment. By evaluating user choices regarding workplace setup, bug troubleshooting, tools, and perfection benchmarks, it classifies participants into four archetypes: Keyboard Ninja, AI Prompt Whisperer, Pixel Perfectionist, or Midnight Debugger.",
+    summary50: "The GetFunTools Tech Archetype Quiz is a free 60-second interactive personality test. Evaluating 4 multiple-choice questions on work habits and tech preferences, it classifies users into developer archetypes (Ninja, Whisperer, Designer, Debugger) and delivers custom badges.",
+    summary100: "The GetFunTools Tech Archetype Quiz is a lightweight personality test designed for developers, designers, product managers, and tech enthusiasts. Through 4 interactive multiple-choice questions, the quiz measures preferences for keyboard shortcuts, AI prompt engineering, visual aesthetics, or deep-dive logic. Upon completion, users receive a custom result badge, superpower breakdown, and shareable summary.",
+    summary200: "The GetFunTools Tech Archetype Quiz provides a gamified personality assessment tailored for digital creators and engineers. Designed with smooth card transitions, animated progress indicators, and vibrant gradients, the quiz poses 4 strategic questions covering desk setup, bug resolution tactics, favorite tools, and product perfection standards. The scoring engine tallies user responses to determine their primary alter-ego: Keyboard Ninja (10x speed & shortcuts), AI Prompt Whisperer (generative AI mastery), Pixel Perfectionist (aesthetic UX & micro-interactions), or Midnight Debugger (rock-solid logic & deep focus). Each result screen includes a custom badge, superpower summary, and instant quiz restart options.",
     bulletSummary: [
       "Assesses digital alter-ego through 4 quick multiple-choice questions.",
       "Classifies users into 4 archetypes: Keyboard Ninja, AI Whisperer, Pixel Perfectionist, Midnight Debugger.",
@@ -163,7 +163,7 @@ export const techArchetypeQuizContent: DomainToolModule = {
     { question: "Can I retake the quiz?", answer: "Yes! Click the 'Retake Archetype Quiz' button at any time to try again." },
     { question: "Is my quiz data saved on your servers?", answer: "No. All quiz scoring processes locally inside your browser." },
     { question: "Can I share my result badge?", answer: "Yes! Take a screenshot or share your superpower summary with friends." },
-    { question: "Does the quiz work on mobile devices?", answer: "Yes, FunTools is fully responsive for iPhone, Android, and desktop devices." },
+    { question: "Does the quiz work on mobile devices?", answer: "Yes, GetFunTools is fully responsive for iPhone, Android, and desktop devices." },
     { question: "What if I get a tie between two archetypes?", answer: "The engine selects the highest frequency match based on your recent choice." },
     { question: "Do I need to sign up for an account?", answer: "No account or sign-up is required." },
     { question: "What is the Keyboard Ninja archetype?", answer: "Keyboard Ninjas prioritize 10x speed, keyboard shortcuts, and terminal commands." },

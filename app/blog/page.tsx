@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { BookOpen, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog & Articles - FunTools",
+  title: "Blog & Articles - GetFunTools",
   description: "Read viral social media tips, font formatting guides, and fun wealth calculators.",
 };
 
@@ -17,7 +17,7 @@ export default function BlogHubPage() {
       <div className="text-center max-w-2xl mx-auto space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold uppercase tracking-wider">
           <BookOpen className="w-3.5 h-3.5" />
-          FunTools Insights
+          GetFunTools Insights
         </div>
         <h1 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white">
           Blog & Digital Tips

@@ -17,7 +17,7 @@ export default function ShareModal({ isOpen, onClose, title, url }: ShareModalPr
   if (!isOpen) return null;
 
   const encodedUrl = encodeURIComponent(url);
-  const encodedText = encodeURIComponent(`Check out ${title} on FunTools! 🔥`);
+  const encodedText = encodeURIComponent(`Check out ${title} on GetFunTools! 🔥`);
 
   const twitterUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`;
   const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}%20${encodedUrl}`;

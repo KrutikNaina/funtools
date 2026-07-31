@@ -22,12 +22,12 @@ export const textRepeaterContent: DomainToolModule = {
     metaTitle: "Text Repeater - Repeat Text Up to 10,000 Times Instantly",
     metaDescription: "Free online text repeater tool. Multiply any word, sentence, or string up to 10,000 times instantly with custom separators. 1-click copy for WhatsApp, Discord, and more.",
     slug: "text-repeater",
-    canonicalUrl: "https://funtools.com/tools/text-repeater",
+    canonicalUrl: "https://getfuntools.app/tools/text-repeater",
     robots: "index, follow",
     openGraph: {
       title: "Text Repeater Generator | Multiply Text Instantly",
       description: "Repeat words or sentences up to 10,000 times with custom separators. 100% free with instant copy.",
-      url: "https://funtools.com/tools/text-repeater",
+      url: "https://getfuntools.app/tools/text-repeater",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const textRepeaterContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Text Repeater allows users to instantly multiply any text string up to 10,000 times with custom separators like spaces or new lines.",
-    twoSentence: "The FunTools Text Repeater is a free online utility that duplicates words or sentences up to 10,000 times instantly. Users can apply custom separators between repetitions and copy the final output with a single click for use in messages or testing.",
-    summary50: "The FunTools Text Repeater is a fast, client-side web tool that duplicates any text up to 10,000 times. It features customizable separators (spaces, new lines, custom strings) and a 1-click copy button, making it perfect for generating filler text or sending repetitive messages.",
-    summary100: "The FunTools Text Repeater is a powerful browser-based utility designed to multiply text strings effortlessly. Users can input any word, sentence, or emoji, set a repetition count up to 10,000, and choose from various separators including spaces, new lines, or custom characters. The tool processes everything instantly on the client side, ensuring privacy and speed. With a built-in character counter and 1-click clipboard copying, it's ideal for developers needing placeholder data, social media users, or anyone looking to duplicate text quickly without manual copying and pasting.",
-    summary200: "The FunTools Text Repeater provides a seamless solution for multiplying text strings, emojis, or sentences up to 10,000 times instantly. Operating entirely within your browser, this tool ensures that your inputs remain private and are processed with zero latency. Users can customize their output by selecting predefined separators like spaces and new lines, or by defining a custom string to insert between each repetition. \n\nWhether you need to generate extensive filler text for web development, create repetitive message blocks for social media, or simply test character limits, the Text Repeater handles it effortlessly. The interface includes a real-time output preview, a character length counter to help you stay within platform limits, and a 1-click copy button with toast notifications for an optimized user experience. Compatible across all devices, it requires no downloads or sign-ups, making it a reliable and accessible utility for everyday text generation needs.",
+    oneSentence: "The GetFunTools Text Repeater allows users to instantly multiply any text string up to 10,000 times with custom separators like spaces or new lines.",
+    twoSentence: "The GetFunTools Text Repeater is a free online utility that duplicates words or sentences up to 10,000 times instantly. Users can apply custom separators between repetitions and copy the final output with a single click for use in messages or testing.",
+    summary50: "The GetFunTools Text Repeater is a fast, client-side web tool that duplicates any text up to 10,000 times. It features customizable separators (spaces, new lines, custom strings) and a 1-click copy button, making it perfect for generating filler text or sending repetitive messages.",
+    summary100: "The GetFunTools Text Repeater is a powerful browser-based utility designed to multiply text strings effortlessly. Users can input any word, sentence, or emoji, set a repetition count up to 10,000, and choose from various separators including spaces, new lines, or custom characters. The tool processes everything instantly on the client side, ensuring privacy and speed. With a built-in character counter and 1-click clipboard copying, it's ideal for developers needing placeholder data, social media users, or anyone looking to duplicate text quickly without manual copying and pasting.",
+    summary200: "The GetFunTools Text Repeater provides a seamless solution for multiplying text strings, emojis, or sentences up to 10,000 times instantly. Operating entirely within your browser, this tool ensures that your inputs remain private and are processed with zero latency. Users can customize their output by selecting predefined separators like spaces and new lines, or by defining a custom string to insert between each repetition. \n\nWhether you need to generate extensive filler text for web development, create repetitive message blocks for social media, or simply test character limits, the Text Repeater handles it effortlessly. The interface includes a real-time output preview, a character length counter to help you stay within platform limits, and a 1-click copy button with toast notifications for an optimized user experience. Compatible across all devices, it requires no downloads or sign-ups, making it a reliable and accessible utility for everyday text generation needs.",
     bulletSummary: [
       "Instantly repeats any text, word, or emoji up to 10,000 times.",
       "Offers customizable separators including spaces, new lines, and custom strings.",
@@ -56,7 +56,7 @@ export const textRepeaterContent: DomainToolModule = {
       { label: "Cost & Limits", value: "Free, Unlimited Usage" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools Text Repeater", "Basic Repeaters"],
+      header: ["Feature", "GetFunTools Text Repeater", "Basic Repeaters"],
       rows: [
         ["Custom Separators", "Yes (Any custom string)", "Limited (Space/Newline only)"],
         ["Character Counter", "Live real-time counting", "None"],
@@ -127,7 +127,7 @@ export const textRepeaterContent: DomainToolModule = {
       { title: "Live Character Count", description: "Monitor the exact length of your generated text to stay within app limits." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Text Repeater", "Standard Tools"],
+      headers: ["Feature", "GetFunTools Text Repeater", "Standard Tools"],
       rows: [
         ["Speed", "Instant Client-Side", "Can be slow/server-based"],
         ["Separators", "Space, Newline, Custom", "Usually just Space"],
@@ -158,7 +158,7 @@ export const textRepeaterContent: DomainToolModule = {
   faqs: [
     { question: "What is a Text Repeater?", answer: "A Text Repeater is an online tool that takes your input text and duplicates it a specific number of times, allowing you to add separators between each repeat." },
     { question: "How many times can I repeat text?", answer: "You can repeat your text up to 10,000 times in a single click using this tool." },
-    { question: "Is it free to use?", answer: "Yes, the FunTools Text Repeater is completely free with unlimited usage." },
+    { question: "Is it free to use?", answer: "Yes, the GetFunTools Text Repeater is completely free with unlimited usage." },
     { question: "Can I add new lines between the repeated text?", answer: "Yes! Simply select 'New Line' from the Separator dropdown menu." },
     { question: "What does the custom separator do?", answer: "The custom separator allows you to define a specific character or string (like a dash, comma, or emoji) to be placed between each repeated text." },
     { question: "Is my text data safe?", answer: "Absolutely. All text processing is done locally on your device's browser. We do not store or track any text you generate." },

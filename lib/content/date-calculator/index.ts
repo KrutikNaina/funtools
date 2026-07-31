@@ -22,12 +22,12 @@ export const dateCalculatorContent: DomainToolModule = {
     metaTitle: "Date Calculator - Add & Subtract Days, Weeks, Months to Any Date",
     metaDescription: "Calculate future or past target dates instantly by adding or subtracting specific days, weeks, months, or years. Includes leap year accuracy.",
     slug: "date-calculator",
-    canonicalUrl: "https://funtools.com/tools/date-calculator",
+    canonicalUrl: "https://getfuntools.app/tools/date-calculator",
     robots: "index, follow",
     openGraph: {
       title: "Date Add & Subtract Calculator | Instant Calendar Math",
       description: "Find future or past dates by adding or subtracting days, weeks, and months.",
-      url: "https://funtools.com/tools/date-calculator",
+      url: "https://getfuntools.app/tools/date-calculator",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const dateCalculatorContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Date Calculator calculates future or past target dates by adding or subtracting days, weeks, months, and years.",
-    twoSentence: "The FunTools Date Calculator provides calendar arithmetic for project planning, deadlines, and personal milestones. Users select a base date and input specific day, week, or year offsets to receive the target date with day-of-week details.",
-    summary50: "The FunTools Date Calculator is a free online calendar tool that allows users to add or subtract days, weeks, months, and years from any starting date. Features include instant target date computation, day-of-week display, and full leap year accuracy.",
-    summary100: "The FunTools Date Calculator simplifies complex calendar calculations for contract deadlines, event planning, and medical scheduling. By selecting a starting calendar date and specifying offset parameters (years, months, weeks, days), the tool accurately factors in variable month lengths and leap years to return the exact destination date.",
-    summary200: "The FunTools Date Calculator is an essential calendar utility designed for project managers, legal professionals, students, and event planners. Built on native JavaScript Date object arithmetic, it computes future or past target dates without complex manual counting. Users can toggle between Add and Subtract modes, enter custom offset values across multiple units (e.g. +1 year, +3 months, +14 days), and view the resulting calendar date formatted with day-of-week indicators (e.g. Wednesday, November 18, 2026). The tool automatically handles Gregorian calendar nuances, including 28, 30, and 31-day month boundaries and leap year leap-day adjustments.",
+    oneSentence: "The GetFunTools Date Calculator calculates future or past target dates by adding or subtracting days, weeks, months, and years.",
+    twoSentence: "The GetFunTools Date Calculator provides calendar arithmetic for project planning, deadlines, and personal milestones. Users select a base date and input specific day, week, or year offsets to receive the target date with day-of-week details.",
+    summary50: "The GetFunTools Date Calculator is a free online calendar tool that allows users to add or subtract days, weeks, months, and years from any starting date. Features include instant target date computation, day-of-week display, and full leap year accuracy.",
+    summary100: "The GetFunTools Date Calculator simplifies complex calendar calculations for contract deadlines, event planning, and medical scheduling. By selecting a starting calendar date and specifying offset parameters (years, months, weeks, days), the tool accurately factors in variable month lengths and leap years to return the exact destination date.",
+    summary200: "The GetFunTools Date Calculator is an essential calendar utility designed for project managers, legal professionals, students, and event planners. Built on native JavaScript Date object arithmetic, it computes future or past target dates without complex manual counting. Users can toggle between Add and Subtract modes, enter custom offset values across multiple units (e.g. +1 year, +3 months, +14 days), and view the resulting calendar date formatted with day-of-week indicators (e.g. Wednesday, November 18, 2026). The tool automatically handles Gregorian calendar nuances, including 28, 30, and 31-day month boundaries and leap year leap-day adjustments.",
     bulletSummary: [
       "Adds or subtracts years, months, weeks, and days.",
       "Displays full weekday name for target date.",
@@ -56,7 +56,7 @@ export const dateCalculatorContent: DomainToolModule = {
       { label: "Cost", value: "100% Free" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools Date Calculator", "Manual Counting"],
+      header: ["Feature", "GetFunTools Date Calculator", "Manual Counting"],
       rows: [
         ["Speed", "Instant (0 ms)", "Prone to manual errors"],
         ["Leap Years", "Automatically Handled", "Often forgotten"],
@@ -120,7 +120,7 @@ export const dateCalculatorContent: DomainToolModule = {
       { title: "Add/Subtract Toggle", description: "Calculate past or future target dates." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Date Calculator", "Generic Converters"],
+      headers: ["Feature", "GetFunTools Date Calculator", "Generic Converters"],
       rows: [
         ["Multi-Unit Offsets", "Supported (Y/M/W/D)", "Single Unit Only"],
         ["Leap Year Calculation", "Automatic", "Manual Adjustment Needed"]
@@ -144,7 +144,7 @@ export const dateCalculatorContent: DomainToolModule = {
     { question: "Can I calculate prescription or warranty expiration dates?", answer: "Yes, this is an ideal tool for calculating 30, 60, or 90-day warranty periods." },
     { question: "What is the maximum number of years I can add?", answer: "You can add hundreds of years forward or backward in time." },
     { question: "Does this tool store my entered dates?", answer: "No, all calculations run in your browser and zero data is saved." },
-    { question: "Does it work on smartphones?", answer: "Yes, FunTools is fully responsive for iPhone, Android, and tablets." },
+    { question: "Does it work on smartphones?", answer: "Yes, GetFunTools is fully responsive for iPhone, Android, and tablets." },
     { question: "What is the difference between total days and business days?", answer: "Total days includes all 7 days of the week, while business days skip Saturdays and Sundays." },
     { question: "How do I calculate 6 months from today?", answer: "Set Months to 6 and leave Days at 0 to find the exact target date in 6 months." },
     { question: "Why is calendar math difficult to do manually?", answer: "Because months vary in length (28-31 days) and leap years add an extra day every 4 years." }

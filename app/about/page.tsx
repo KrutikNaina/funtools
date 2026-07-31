@@ -8,10 +8,10 @@ export default function AboutPage() {
 
       <div className="space-y-4">
         <h1 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white">
-          About FunTools
+          About GetFunTools
         </h1>
         <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
-          FunTools is a modern, privacy-first consumer platform dedicated to crafting delightful, interactive micro-tools, generators, decision spinners, and calculators.
+          GetFunTools is a modern, privacy-first consumer platform dedicated to crafting delightful, interactive micro-tools, generators, decision spinners, and calculators.
         </p>
       </div>
 

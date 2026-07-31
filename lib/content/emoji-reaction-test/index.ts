@@ -22,26 +22,26 @@ export const emojiReactionTestContent: DomainToolModule = {
     metaTitle: "Emoji Reaction Speed Test - Measure Your Reflexes in Milliseconds",
     metaDescription: "Test your visual reaction speed and reflexes in milliseconds with our free Reaction Speed Test. Compare your score to global human benchmarks and discover your gamer rank.",
     slug: "emoji-reaction-test",
-    canonicalUrl: "https://funtools.com/tools/emoji-reaction-test",
+    canonicalUrl: "https://getfuntools.app/tools/emoji-reaction-test",
     robots: "index, follow",
     openGraph: {
       title: "Emoji Reaction Speed Test - How Fast Are Your Reflexes?",
       description: "Measure reaction speed in milliseconds with gamer ranks & high scores.",
-      url: "https://funtools.com/tools/emoji-reaction-test",
+      url: "https://getfuntools.app/tools/emoji-reaction-test",
       type: "website"
     },
     twitterCard: {
       card: "summary_large_image",
-      title: "Reaction Speed Test Online | FunTools",
+      title: "Reaction Speed Test Online | GetFunTools",
       description: "Test your reflex speed in milliseconds and compete for top gamer ranks."
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Emoji Reaction Speed Test measures visual response time in milliseconds and compares user scores to human reaction benchmarks.",
-    twoSentence: "The FunTools Emoji Reaction Speed Test evaluates motor reaction speed by tracking the exact milliseconds elapsed when a user taps the screen upon a color change. Scores are categorized into gamer ranks such as Cyber Ninja, Pro Gamer, or Chill Sloth.",
-    summary50: "The FunTools Emoji Reaction Speed Test is a free online reflex testing application. By measuring millisecond response times when screen visual states change to green, it ranks users against global human averages and saves personal best high scores in local browser storage.",
-    summary100: "The FunTools Emoji Reaction Speed Test provides a millisecond-precise reflex testing environment for esports gamers, athletes, and casual players. By measuring the delay between a visual cue (screen turning green) and user tap input, the tool calculates visual response latency. It tracks personal best scores using local browser storage and assigns performance ranks based on average human benchmarks (200-250ms).",
-    summary200: "The FunTools Emoji Reaction Speed Test is an interactive performance micro-app designed to benchmark visual reaction times. Operating with high-precision JavaScript timing listeners, the tool initiates a randomized delay before changing the screen state to green. When the user taps or clicks, the system calculates the exact millisecond differential. Clicking prematurely triggers a 'Too Early' alert, ensuring measurement integrity. Performance results are mapped into distinct rank brackets: Godlike Cyber Ninja (<180ms), Pro Gamer (180-230ms), Swift Human (230-280ms), and Chill Sloth (>280ms). Personal high scores persist in localStorage, allowing players to track reflex improvements over time.",
+    oneSentence: "The GetFunTools Emoji Reaction Speed Test measures visual response time in milliseconds and compares user scores to human reaction benchmarks.",
+    twoSentence: "The GetFunTools Emoji Reaction Speed Test evaluates motor reaction speed by tracking the exact milliseconds elapsed when a user taps the screen upon a color change. Scores are categorized into gamer ranks such as Cyber Ninja, Pro Gamer, or Chill Sloth.",
+    summary50: "The GetFunTools Emoji Reaction Speed Test is a free online reflex testing application. By measuring millisecond response times when screen visual states change to green, it ranks users against global human averages and saves personal best high scores in local browser storage.",
+    summary100: "The GetFunTools Emoji Reaction Speed Test provides a millisecond-precise reflex testing environment for esports gamers, athletes, and casual players. By measuring the delay between a visual cue (screen turning green) and user tap input, the tool calculates visual response latency. It tracks personal best scores using local browser storage and assigns performance ranks based on average human benchmarks (200-250ms).",
+    summary200: "The GetFunTools Emoji Reaction Speed Test is an interactive performance micro-app designed to benchmark visual reaction times. Operating with high-precision JavaScript timing listeners, the tool initiates a randomized delay before changing the screen state to green. When the user taps or clicks, the system calculates the exact millisecond differential. Clicking prematurely triggers a 'Too Early' alert, ensuring measurement integrity. Performance results are mapped into distinct rank brackets: Godlike Cyber Ninja (<180ms), Pro Gamer (180-230ms), Swift Human (230-280ms), and Chill Sloth (>280ms). Personal high scores persist in localStorage, allowing players to track reflex improvements over time.",
     bulletSummary: [
       "Measures visual response time in precise milliseconds.",
       "Uses randomized delay intervals to prevent anticipation click cheating.",
@@ -126,7 +126,7 @@ export const emojiReactionTestContent: DomainToolModule = {
       { title: "Touch & Click Compatible", description: "Works on desktop mice, laptop trackpads, and mobile touchscreens." }
     ],
     comparisonTable: {
-      headers: ["Metric", "FunTools Reaction Test", "Generic Reaction Tools"],
+      headers: ["Metric", "GetFunTools Reaction Test", "Generic Reaction Tools"],
       rows: [
         ["Timing Engine", "High-precision Date.now() / Performance API", "Approximate timer"],
         ["Score Persistence", "Saved in LocalStorage", "Lost on page refresh"],

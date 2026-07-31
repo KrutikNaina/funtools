@@ -30,12 +30,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!category) return {};
 
   return {
-    title: `${category.name} Micro-Tools & Calculators | FunTools`,
+    title: `${category.name} Micro-Tools & Calculators | GetFunTools`,
     description: `${category.description}. Discover free, fast, interactive tools in the ${category.name} category.`,
     openGraph: {
-      title: `${category.name} Tools | FunTools`,
+      title: `${category.name} Tools | GetFunTools`,
       description: category.description,
-      url: `https://funtools.com/categories/${category.id}`,
+      url: `https://getfuntools.app/categories/${category.id}`,
     },
   };
 }

@@ -22,26 +22,26 @@ export const cosmicAgeClockContent: DomainToolModule = {
     metaTitle: "Cosmic Age & Life Stats Clock - Live Age in Seconds, Heartbeats & Mars Years",
     metaDescription: "Calculate your exact live ticking age in seconds, estimated heartbeats, next birthday countdown, and what age you would be on Mars, Venus & Jupiter with our free Cosmic Clock.",
     slug: "cosmic-age-clock",
-    canonicalUrl: "https://funtools.com/tools/cosmic-age-clock",
+    canonicalUrl: "https://getfuntools.app/tools/cosmic-age-clock",
     robots: "index, follow",
     openGraph: {
       title: "Cosmic Age Clock | Live Seconds, Heartbeats & Space Age",
       description: "Discover your live ticking age down to seconds, heartbeats & planetary orbital years.",
-      url: "https://funtools.com/tools/cosmic-age-clock",
+      url: "https://getfuntools.app/tools/cosmic-age-clock",
       type: "website"
     },
     twitterCard: {
       card: "summary_large_image",
-      title: "Cosmic Age & Space Stats Clock | FunTools",
+      title: "Cosmic Age & Space Stats Clock | GetFunTools",
       description: "Find out how old you are in seconds, heartbeats, and Mars years!"
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Cosmic Age Clock calculates your exact live ticking age in seconds, total heartbeats, and planetary orbital years across the solar system.",
-    twoSentence: "The FunTools Cosmic Age Clock evaluates your date of birth against astronomical orbital periods. It displays a live ticking clock showing exact seconds lived, estimated human heartbeats, next birthday countdown, and planetary ages on Mars, Venus, and Jupiter.",
-    summary50: "The FunTools Cosmic Age Clock is a free astronomical age and life stats calculator. Enter your birthdate to reveal your live ticking age in seconds, estimated total heartbeats, next birthday countdown, and orbital ages on Mars, Venus, and Jupiter.",
-    summary100: "The FunTools Cosmic Age Clock provides a fascinating astronomical breakdown of human life metrics. By processing your date of birth against real-time Unix timestamps and planetary orbital periods (such as Mars taking 687 Earth days to orbit the Sun), the tool calculates your exact age in seconds, total estimated heartbeats, and planetary ages with live precision counters.",
-    summary200: "The FunTools Cosmic Age Clock connects human longevity with solar system astronomy. Built with real-time JavaScript clock intervals, the tool accepts your date of birth and computes your exact chronological age down to the second. It calculates total accumulated human heartbeats based on average resting cardiovascular rates (~70 beats per minute) and provides a countdown to your next birthday. Crucially, the clock recalculates your age for other solar system bodies by dividing Earth days lived by planetary orbital periods—revealing your exact age on Venus (224.7 Earth days/year), Mars (687 Earth days/year), and Jupiter (4,333 Earth days/year). The entire tool runs locally in your browser with zero latency.",
+    oneSentence: "The GetFunTools Cosmic Age Clock calculates your exact live ticking age in seconds, total heartbeats, and planetary orbital years across the solar system.",
+    twoSentence: "The GetFunTools Cosmic Age Clock evaluates your date of birth against astronomical orbital periods. It displays a live ticking clock showing exact seconds lived, estimated human heartbeats, next birthday countdown, and planetary ages on Mars, Venus, and Jupiter.",
+    summary50: "The GetFunTools Cosmic Age Clock is a free astronomical age and life stats calculator. Enter your birthdate to reveal your live ticking age in seconds, estimated total heartbeats, next birthday countdown, and orbital ages on Mars, Venus, and Jupiter.",
+    summary100: "The GetFunTools Cosmic Age Clock provides a fascinating astronomical breakdown of human life metrics. By processing your date of birth against real-time Unix timestamps and planetary orbital periods (such as Mars taking 687 Earth days to orbit the Sun), the tool calculates your exact age in seconds, total estimated heartbeats, and planetary ages with live precision counters.",
+    summary200: "The GetFunTools Cosmic Age Clock connects human longevity with solar system astronomy. Built with real-time JavaScript clock intervals, the tool accepts your date of birth and computes your exact chronological age down to the second. It calculates total accumulated human heartbeats based on average resting cardiovascular rates (~70 beats per minute) and provides a countdown to your next birthday. Crucially, the clock recalculates your age for other solar system bodies by dividing Earth days lived by planetary orbital periods—revealing your exact age on Venus (224.7 Earth days/year), Mars (687 Earth days/year), and Jupiter (4,333 Earth days/year). The entire tool runs locally in your browser with zero latency.",
     bulletSummary: [
       "Calculates live ticking age down to individual seconds.",
       "Estimates total lifetime heartbeats based on average cardiovascular rates.",
@@ -132,7 +132,7 @@ export const cosmicAgeClockContent: DomainToolModule = {
       { title: "Birthday Countdown", description: "Displays exact days remaining until your next birthday party." }
     ],
     comparisonTable: {
-      headers: ["Metric", "FunTools Cosmic Clock", "Standard Age Calculators"],
+      headers: ["Metric", "GetFunTools Cosmic Clock", "Standard Age Calculators"],
       rows: [
         ["Live Ticking", "Updates seconds live every 1000ms", "Static number"],
         ["Space Ages", "Includes Venus, Mars, & Jupiter years", "Earth years only"],
@@ -170,7 +170,7 @@ export const cosmicAgeClockContent: DomainToolModule = {
     { question: "How are total heartbeats estimated?", answer: "The tool multiplies total seconds lived by ~1.15 beats per second (reflecting the average 70 beats per minute resting heart rate)." },
     { question: "Is my birthdate stored on your server?", answer: "No. All calculations run locally in your web browser. We never log or store personal birthdates." },
     { question: "Does the tool include a birthday countdown?", answer: "Yes! It calculates the exact number of days remaining until your next birthday." },
-    { question: "Can I use the tool on mobile phones?", answer: "Yes, FunTools is fully mobile responsive on iOS and Android devices." },
+    { question: "Can I use the tool on mobile phones?", answer: "Yes, GetFunTools is fully mobile responsive on iOS and Android devices." },
     { question: "Do I need to sign up for an account?", answer: "No sign-up or account creation is required." },
     { question: "Why do planetary ages differ across planets?", answer: "Planets closer to the Sun (like Venus) orbit faster, while outer planets (like Mars and Jupiter) take much longer to complete one solar orbit." },
     { question: "What are common mistakes when calculating space age?", answer: "Confusing planetary day length (rotation) with planetary year length (solar orbit)." },

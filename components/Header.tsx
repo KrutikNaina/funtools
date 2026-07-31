@@ -68,7 +68,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="font-black text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
-                FunTools<span className="text-pink-500">.</span>
+                GetFunTools<span className="text-pink-500">.</span>
               </span>
               <span className="text-[8px] sm:text-[9px] uppercase tracking-widest text-slate-400 font-extrabold -mt-1">
                 Play & Explore

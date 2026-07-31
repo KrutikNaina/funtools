@@ -22,12 +22,12 @@ export const passwordGeneratorContent: DomainToolModule = {
     metaTitle: "Strong Password Generator - Cryptographically Secure & 100% Private",
     metaDescription: "Generate unhackable, cryptographically secure random passwords with entropy strength scoring. 100% local browser processing for total privacy.",
     slug: "password-generator",
-    canonicalUrl: "https://funtools.com/tools/password-generator",
+    canonicalUrl: "https://getfuntools.app/tools/password-generator",
     robots: "index, follow",
     openGraph: {
       title: "Strong Password Generator | Cryptographically Secure Tool",
       description: "Create unhackable random passwords locally in your browser with zero server transmission.",
-      url: "https://funtools.com/tools/password-generator",
+      url: "https://getfuntools.app/tools/password-generator",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const passwordGeneratorContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Password Generator creates cryptographically secure, random passwords locally in your browser.",
-    twoSentence: "The FunTools Password Generator utilizes browser cryptographic API functions to generate randomized strings containing uppercase letters, numbers, and symbols. All calculations occur client-side, ensuring complete privacy.",
-    summary50: "The FunTools Password Generator is a free cybersecurity utility that creates cryptographically secure random passwords from 8 to 64 characters. Featuring real-time entropy security scoring and 100% local client-side processing, no passwords ever leave your device.",
-    summary100: "The FunTools Password Generator provides cryptographic password generation designed for privacy-conscious users. Utilizing window.crypto.getRandomValues(), it generates randomized character strings combining uppercase, lowercase, numeric, and special characters. Users can adjust password length up to 64 characters and evaluate password strength using a live entropy meter, complete with 1-click clipboard copying.",
-    summary200: "The FunTools Password Generator is a zero-knowledge security tool that protects digital accounts against brute-force attacks. Built entirely with client-side JavaScript, it generates random passwords without server calls or data logging. Users can customize password parameters including length (8 to 64 characters) and character set toggles (uppercase, lowercase, numbers, symbols). The integrated strength meter computes real-time entropy to display security ratings from Weak to Very Strong. With instant clipboard copy buttons and toast notifications, users can secure email accounts, password managers, and financial logins effortlessly.",
+    oneSentence: "The GetFunTools Password Generator creates cryptographically secure, random passwords locally in your browser.",
+    twoSentence: "The GetFunTools Password Generator utilizes browser cryptographic API functions to generate randomized strings containing uppercase letters, numbers, and symbols. All calculations occur client-side, ensuring complete privacy.",
+    summary50: "The GetFunTools Password Generator is a free cybersecurity utility that creates cryptographically secure random passwords from 8 to 64 characters. Featuring real-time entropy security scoring and 100% local client-side processing, no passwords ever leave your device.",
+    summary100: "The GetFunTools Password Generator provides cryptographic password generation designed for privacy-conscious users. Utilizing window.crypto.getRandomValues(), it generates randomized character strings combining uppercase, lowercase, numeric, and special characters. Users can adjust password length up to 64 characters and evaluate password strength using a live entropy meter, complete with 1-click clipboard copying.",
+    summary200: "The GetFunTools Password Generator is a zero-knowledge security tool that protects digital accounts against brute-force attacks. Built entirely with client-side JavaScript, it generates random passwords without server calls or data logging. Users can customize password parameters including length (8 to 64 characters) and character set toggles (uppercase, lowercase, numbers, symbols). The integrated strength meter computes real-time entropy to display security ratings from Weak to Very Strong. With instant clipboard copy buttons and toast notifications, users can secure email accounts, password managers, and financial logins effortlessly.",
     bulletSummary: [
       "Generates cryptographically random passwords up to 64 characters.",
       "100% client-side execution using window.crypto.getRandomValues().",
@@ -56,7 +56,7 @@ export const passwordGeneratorContent: DomainToolModule = {
       { label: "Cost", value: "100% Free Forever" }
     ],
     comparisonSummary: {
-      header: ["Security Feature", "FunTools Password Gen", "Basic Online Generators"],
+      header: ["Security Feature", "GetFunTools Password Gen", "Basic Online Generators"],
       rows: [
         ["RNG Source", "window.crypto.getRandomValues()", "Math.random() (Predictable)"],
         ["Privacy Guarantee", "100% Local Execution", "Server Transmission Risk"],
@@ -120,7 +120,7 @@ export const passwordGeneratorContent: DomainToolModule = {
       { title: "Entropy Rating Meter", description: "Visual strength feedback." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Password Gen", "Generic Tools"],
+      headers: ["Feature", "GetFunTools Password Gen", "Generic Tools"],
       rows: [
         ["Entropy Pool", "Cryptographic API", "Basic Pseudo-Random"],
         ["Privacy", "Zero Network Transmission", "Server-Side Processing"]
@@ -130,13 +130,13 @@ export const passwordGeneratorContent: DomainToolModule = {
     limitations: ["Users must store generated passwords in a secure password manager."],
     bestPractices: ["Use a minimum of 16 characters for critical accounts like email and banking."],
     expertTips: ["Never reuse the same password across multiple online services."],
-    disclaimer: { type: "general", text: "Passwords are generated locally in your browser memory and are never saved or transmitted by FunTools." }
+    disclaimer: { type: "general", text: "Passwords are generated locally in your browser memory and are never saved or transmitted by GetFunTools." }
   },
   faqs: [
     { question: "Is this password generator secure?", answer: "Yes! All passwords are generated locally in your browser using window.crypto.getRandomValues(). No data ever leaves your device." },
     { question: "Why should I use a random password generator?", answer: "Human-created passwords often contain predictable patterns. Random generators eliminate predictability, protecting accounts against brute-force attacks." },
     { question: "What is a good password length?", answer: "Cybersecurity experts recommend a minimum of 12 to 16 characters combining uppercase, lowercase, numbers, and symbols." },
-    { question: "Does FunTools save my generated passwords?", answer: "No. FunTools has zero server storage for generated passwords. Once you refresh or leave the page, the memory is cleared." },
+    { question: "Does GetFunTools save my generated passwords?", answer: "No. GetFunTools has zero server storage for generated passwords. Once you refresh or leave the page, the memory is cleared." },
     { question: "What is cryptographic entropy?", answer: "Entropy measures the randomness and unpredictability of a password. Higher entropy means more difficulty for hacker cracking tools." },
     { question: "Can I use special symbols in my password?", answer: "Yes, including special symbols increases password entropy exponentially." },
     { question: "How often should I change my passwords?", answer: "Update passwords immediately if an account service reports a security breach, or every 6-12 months for sensitive accounts." },

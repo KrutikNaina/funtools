@@ -21,11 +21,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "FunTools | Premium Consumer Micro-Tools & Games",
-    template: "%s | FunTools",
+    default: "GetFunTools – Free Online Tools, AI Tools, Calculators & Generators",
+    template: "%s | GetFunTools",
   },
   description:
-    "Explore modern, playful micro-apps, love calculators, viral font generators, reaction speed tests, decision wheels & wealth calculators built for endless fun.",
+    "GetFunTools offers free online calculators, generators, converters, AI tools, image tools, developer utilities, productivity tools, and fun interactive tools. Fast, secure, mobile-friendly, and free to use.",
   keywords: [
     "fun tools",
     "love calculator",
@@ -36,21 +36,43 @@ export const metadata: Metadata = {
     "ai bio generator",
     "personality quiz",
   ],
-  authors: [{ name: "FunTools Team" }],
-  metadataBase: new URL("https://funtools.com"),
+  authors: [{ name: "GetFunTools Team" }],
+  metadataBase: new URL("https://getfuntools.app"),
+  applicationName: "GetFunTools",
+  generator: "Next.js",
+  publisher: "GetFunTools",
+  creator: "GetFunTools Team",
+  category: "Tools and Utilities",
+  alternates: {
+    canonical: "https://getfuntools.app",
+    languages: {
+      "en-US": "https://getfuntools.app",
+    },
+  },
   openGraph: {
-    title: "FunTools | Play, Explore & Create Modern Micro-Tools",
-    description:
-      "Modern consumer platform for interactive micro-tools, creative generators, personality quizzes, and fun calculators.",
-    url: "https://funtools.com",
-    siteName: "FunTools",
+    title: "GetFunTools – Free Online Tools, AI Tools, Calculators & Generators",
+    description: "GetFunTools offers free online calculators, generators, converters, AI tools, image tools, developer utilities, productivity tools, and fun interactive tools. Fast, secure, mobile-friendly, and free to use.",
+    url: "https://getfuntools.app",
+    siteName: "GetFunTools",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://getfuntools.app/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "GetFunTools",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FunTools | Premium Consumer Micro-Tools",
-    description: "Explore interactive fun tools, calculators & generators.",
+    title: "GetFunTools – Free Online Tools, AI Tools, Calculators & Generators",
+    description: "GetFunTools offers free online calculators, generators, converters, AI tools, image tools, developer utilities, productivity tools, and fun interactive tools.",
+    images: ["https://getfuntools.app/og-image.jpg"],
+  },
+  verification: {
+    google: "cafc85c2be785fc6",
   },
   robots: {
     index: true,
@@ -69,15 +91,30 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "FunTools",
-    url: "https://funtools.com",
-    description: "Modern consumer platform for interactive micro-tools, creative generators, personality quizzes, and fun calculators.",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://funtools.com/tools?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://getfuntools.app/#organization",
+        name: "GetFunTools",
+        url: "https://getfuntools.app",
+        logo: "https://getfuntools.app/logo.png",
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://getfuntools.app/#website",
+        name: "GetFunTools",
+        url: "https://getfuntools.app",
+        description: "GetFunTools offers free online calculators, generators, converters, AI tools, image tools, developer utilities, productivity tools, and fun interactive tools. Fast, secure, mobile-friendly, and free to use.",
+        publisher: {
+          "@id": "https://getfuntools.app/#organization",
+        },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://getfuntools.app/search?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      }
+    ]
   };
 
   return (

@@ -22,26 +22,26 @@ export const coffeeToWealthContent: DomainToolModule = {
     metaTitle: "Coffee to Wealth Calculator - See How Daily $5 Splurges Grow into Wealth",
     metaDescription: "Calculate how skipping a daily $5 coffee or boba habit transforms into thousands of dollars through compound interest. Visualize wealth milestones like iPhones, trips & EVs.",
     slug: "coffee-to-wealth",
-    canonicalUrl: "https://funtools.com/tools/coffee-to-wealth",
+    canonicalUrl: "https://getfuntools.app/tools/coffee-to-wealth",
     robots: "index, follow",
     openGraph: {
       title: "Coffee to Wealth Calculator - The Latte Factor Math",
       description: "Visualize what daily habit savings turn into over 5, 10, or 20 years with compound interest.",
-      url: "https://funtools.com/tools/coffee-to-wealth",
+      url: "https://getfuntools.app/tools/coffee-to-wealth",
       type: "website"
     },
     twitterCard: {
       card: "summary_large_image",
-      title: "Coffee to Wealth Calculator | FunTools",
+      title: "Coffee to Wealth Calculator | GetFunTools",
       description: "See how daily $5 coffee savings grow into a Tesla or dream vacation!"
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Coffee to Wealth Calculator visualizes how small daily habit savings grow over time through compound interest into major assets.",
-    twoSentence: "The FunTools Coffee to Wealth Calculator demonstrates the compound growth of daily expenses (such as $5 lattes or boba). By adjusting daily cost, time horizon, and return rate, users see total future portfolio values alongside visual milestones like iPhones, vacations, or electric vehicles.",
-    summary50: "The FunTools Coffee to Wealth Calculator is a fun financial visualizer that calculates how daily splurges (like $5 coffee or takeout) grow over 1 to 30 years using compound interest. It translates monetary growth into relatable rewards such as tech gadgets, trips, and EV cars.",
-    summary100: "The FunTools Coffee to Wealth Calculator demonstrates the power of compound interest applied to modest daily expenditures. Users adjust interactive sliders for daily habit cost ($2 to $25), investment timeline (1 to 30 years), and expected annual return (2% to 14%). The engine computes total out-of-pocket contributions versus compound interest earned, displaying equivalent real-world rewards like iPhones, vacations, or electric cars.",
-    summary200: "The FunTools Coffee to Wealth Calculator brings financial literacy to life through engaging interactive visualizations. Known in personal finance as the 'Latte Factor,' the tool models what happens when small recurring expenses are invested into index funds or compound savings accounts instead. Users adjust daily cost, investment horizon, and expected rate of return (defaulting to 8%, reflecting historical S&P 500 averages). The application calculates monthly contributions ($P$), total out-of-pocket principal, interest earned, and final future portfolio value ($FV$). To make numbers tangible, the calculator dynamically converts future wealth into milestone equivalents—showing exactly how many flagship smartphones, international vacations, or electric vehicles your daily habit savings represent over time. All calculations run in-browser with zero financial sign-ups or data retention.",
+    oneSentence: "The GetFunTools Coffee to Wealth Calculator visualizes how small daily habit savings grow over time through compound interest into major assets.",
+    twoSentence: "The GetFunTools Coffee to Wealth Calculator demonstrates the compound growth of daily expenses (such as $5 lattes or boba). By adjusting daily cost, time horizon, and return rate, users see total future portfolio values alongside visual milestones like iPhones, vacations, or electric vehicles.",
+    summary50: "The GetFunTools Coffee to Wealth Calculator is a fun financial visualizer that calculates how daily splurges (like $5 coffee or takeout) grow over 1 to 30 years using compound interest. It translates monetary growth into relatable rewards such as tech gadgets, trips, and EV cars.",
+    summary100: "The GetFunTools Coffee to Wealth Calculator demonstrates the power of compound interest applied to modest daily expenditures. Users adjust interactive sliders for daily habit cost ($2 to $25), investment timeline (1 to 30 years), and expected annual return (2% to 14%). The engine computes total out-of-pocket contributions versus compound interest earned, displaying equivalent real-world rewards like iPhones, vacations, or electric cars.",
+    summary200: "The GetFunTools Coffee to Wealth Calculator brings financial literacy to life through engaging interactive visualizations. Known in personal finance as the 'Latte Factor,' the tool models what happens when small recurring expenses are invested into index funds or compound savings accounts instead. Users adjust daily cost, investment horizon, and expected rate of return (defaulting to 8%, reflecting historical S&P 500 averages). The application calculates monthly contributions ($P$), total out-of-pocket principal, interest earned, and final future portfolio value ($FV$). To make numbers tangible, the calculator dynamically converts future wealth into milestone equivalents—showing exactly how many flagship smartphones, international vacations, or electric vehicles your daily habit savings represent over time. All calculations run in-browser with zero financial sign-ups or data retention.",
     bulletSummary: [
       "Calculates compound growth from small daily habit savings ($2 - $25/day).",
       "Allows customizable investment timelines from 1 to 30 years.",
@@ -130,7 +130,7 @@ export const coffeeToWealthContent: DomainToolModule = {
       { title: "Preset Expense Sliders", description: "Quick markers for $2 Espresso, $6 Boba/Latte, $10 Lunch, and $25 Splurge." }
     ],
     comparisonTable: {
-      headers: ["Metric", "FunTools Wealth Math", "Basic Bank Savings"],
+      headers: ["Metric", "GetFunTools Wealth Math", "Basic Bank Savings"],
       rows: [
         ["Annual Return", "8% Historical Index Average", "0.05% Traditional Bank Account"],
         ["10-Yr Value ($6/day)", "$33,425", "$21,940"],
@@ -169,7 +169,7 @@ export const coffeeToWealthContent: DomainToolModule = {
     { question: "Does this tool account for taxes and inflation?", answer: "This simplified educational calculator focuses on nominal growth. Real purchasing power depends on inflation and individual tax brackets." },
     { question: "Can I adjust the time horizon?", answer: "Yes! You can adjust the timeline slider anywhere from 1 year to 30 years." },
     { question: "Can I adjust the daily habit cost?", answer: "Yes, set the daily cost anywhere between $2 (espresso) and $25 (fine dining splurge)." },
-    { question: "Works on mobile phones?", answer: "Yes, FunTools is fully responsive with fluid touch sliders for mobile screens." },
+    { question: "Works on mobile phones?", answer: "Yes, GetFunTools is fully responsive with fluid touch sliders for mobile screens." },
     { question: "Do I need to sign up for an account?", answer: "No account or registration is required to use the calculator." },
     { question: "What is the difference between simple interest and compound interest?", answer: "Simple interest pays returns only on principal, whereas compound interest pays returns on both principal AND past earned interest, causing exponential growth over time." },
     { question: "What are common mistakes when calculating savings?", answer: "Underestimating how small daily splurges add up over time or keeping long-term savings in zero-interest checking accounts." },

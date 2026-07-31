@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: module.metadata.openGraph.description,
       url: module.metadata.openGraph.url,
       type: "website",
-      siteName: "FunTools",
+      siteName: "GetFunTools",
     },
     twitter: {
       card: "summary_large_image",
@@ -97,19 +97,19 @@ export default async function ToolDetailPage({ params }: PageProps) {
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "FunTools",
-    url: "https://funtools.com",
-    logo: "https://funtools.com/favicon.ico",
+    name: "GetFunTools",
+    url: "https://getfuntools.app",
+    logo: "https://getfuntools.app/favicon.ico",
   };
 
   const siteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "FunTools",
-    url: "https://funtools.com",
+    name: "GetFunTools",
+    url: "https://getfuntools.app",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://funtools.com/tools?q={search_term_string}",
+      target: "https://getfuntools.app/tools?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };

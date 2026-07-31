@@ -22,12 +22,12 @@ export const dateDifferenceCalculatorContent: DomainToolModule = {
     metaTitle: "Date Difference Calculator - Days, Weeks & Months Between Two Dates",
     metaDescription: "Calculate the exact duration and total days between any two calendar dates. Displays breakdown in days, weeks, months, years, and total hours.",
     slug: "date-difference-calculator",
-    canonicalUrl: "https://funtools.com/tools/date-difference-calculator",
+    canonicalUrl: "https://getfuntools.app/tools/date-difference-calculator",
     robots: "index, follow",
     openGraph: {
       title: "Date Difference Calculator | Days Between Two Dates",
       description: "Find the exact duration in days, weeks, and months between two dates.",
-      url: "https://funtools.com/tools/date-difference-calculator",
+      url: "https://getfuntools.app/tools/date-difference-calculator",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const dateDifferenceCalculatorContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Date Difference Calculator computes the exact time span, total days, weeks, and months between two calendar dates.",
-    twoSentence: "The FunTools Date Difference Calculator analyzes the duration between a start date and an end date. It provides comprehensive results formatted in total days, weeks, months, years, and total hours with optional end-day inclusion.",
-    summary50: "The FunTools Date Difference Calculator is a free online tool that calculates the exact difference between two dates. It provides instant results in total days, full weeks, approximate months, and total hours with leap year accuracy.",
-    summary100: "The FunTools Date Difference Calculator provides precise temporal interval analysis for event planning, legal counting, and project management. Users enter a start and end date to generate a complete breakdown of elapsed time, including total days, weeks, months, years, and total hours, with a toggle for including or excluding the end date.",
-    summary200: "The FunTools Date Difference Calculator is a powerful calendar analysis utility designed to measure time intervals between any two points in history or the future. Built using high-precision UTC timestamp conversions, it calculates the exact elapsed time between a Start Date and an End Date. The output cards display multi-unit breakdowns: total calendar days, total weeks with remaining days, total months, years, and total calculated hours. Users can toggle the 'Include end date' checkbox to add an inclusive final day (+1 day) according to specific legal or billing requirements. The tool automatically factors in variable month lengths and leap-year intercalary days.",
+    oneSentence: "The GetFunTools Date Difference Calculator computes the exact time span, total days, weeks, and months between two calendar dates.",
+    twoSentence: "The GetFunTools Date Difference Calculator analyzes the duration between a start date and an end date. It provides comprehensive results formatted in total days, weeks, months, years, and total hours with optional end-day inclusion.",
+    summary50: "The GetFunTools Date Difference Calculator is a free online tool that calculates the exact difference between two dates. It provides instant results in total days, full weeks, approximate months, and total hours with leap year accuracy.",
+    summary100: "The GetFunTools Date Difference Calculator provides precise temporal interval analysis for event planning, legal counting, and project management. Users enter a start and end date to generate a complete breakdown of elapsed time, including total days, weeks, months, years, and total hours, with a toggle for including or excluding the end date.",
+    summary200: "The GetFunTools Date Difference Calculator is a powerful calendar analysis utility designed to measure time intervals between any two points in history or the future. Built using high-precision UTC timestamp conversions, it calculates the exact elapsed time between a Start Date and an End Date. The output cards display multi-unit breakdowns: total calendar days, total weeks with remaining days, total months, years, and total calculated hours. Users can toggle the 'Include end date' checkbox to add an inclusive final day (+1 day) according to specific legal or billing requirements. The tool automatically factors in variable month lengths and leap-year intercalary days.",
     bulletSummary: [
       "Calculates total days, weeks, months, years, and hours between two dates.",
       "Supports 'Include end date' toggle (+1 day inclusive counting).",
@@ -56,7 +56,7 @@ export const dateDifferenceCalculatorContent: DomainToolModule = {
       { label: "Cost", value: "100% Free" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools Date Difference", "Basic Counters"],
+      header: ["Feature", "GetFunTools Date Difference", "Basic Counters"],
       rows: [
         ["Multi-Unit Breakdown", "Days, Weeks, Months, Hours", "Total Days Only"],
         ["Inclusive End Date", "Supported Toggle (+1 Day)", "Not Supported"],
@@ -120,7 +120,7 @@ export const dateDifferenceCalculatorContent: DomainToolModule = {
       { title: "Real-Time Calculations", description: "Instant updates on date picker change." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Date Diff", "Basic Date Tools"],
+      headers: ["Feature", "GetFunTools Date Diff", "Basic Date Tools"],
       rows: [
         ["Multi-Unit Results", "Days, Weeks, Months, Hours", "Days Only"],
         ["Include End Date", "Supported Toggle", "Not Available"]
@@ -143,7 +143,7 @@ export const dateDifferenceCalculatorContent: DomainToolModule = {
     { question: "How does the calculator estimate months?", answer: "Months are calculated using an average Gregorian month length of 30.4375 days." },
     { question: "Can I use this tool for project timeline management?", answer: "Yes! It is ideal for determining total sprint days and delivery intervals." },
     { question: "Does the tool store my selected dates?", answer: "No, all calculations run locally in your web browser with zero data logging." },
-    { question: "Does it work on mobile phones?", answer: "Yes, FunTools is fully responsive for mobile touchscreens." },
+    { question: "Does it work on mobile phones?", answer: "Yes, GetFunTools is fully responsive for mobile touchscreens." },
     { question: "What is the difference between total days and work days?", answer: "Total days counts all calendar days, whereas work days excludes weekends." },
     { question: "Why do some online date tools give different results?", answer: "Differences occur if one tool includes the end date while another excludes it." },
     { question: "How many weeks are in 90 days?", answer: "90 days equals 12 weeks and 6 days." },

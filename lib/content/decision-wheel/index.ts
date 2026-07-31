@@ -22,26 +22,26 @@ export const decisionWheelContent: DomainToolModule = {
     metaTitle: "Ultimate Decision Wheel & 3D Coin Flip - Free Random Choice Picker",
     metaDescription: "Can't decide? Spin the customizable Decision Wheel or flip a 3D coin online. Pick what to eat, weekend plans, game modes, or truth or dare with confetti celebrations.",
     slug: "decision-wheel",
-    canonicalUrl: "https://funtools.com/tools/decision-wheel",
+    canonicalUrl: "https://getfuntools.app/tools/decision-wheel",
     robots: "index, follow",
     openGraph: {
-      title: "Ultimate Decision Wheel & Coin Flip | FunTools",
+      title: "Ultimate Decision Wheel & Coin Flip | GetFunTools",
       description: "Spin the wheel of fortune or flip 3D coin for instant random decisions.",
-      url: "https://funtools.com/tools/decision-wheel",
+      url: "https://getfuntools.app/tools/decision-wheel",
       type: "website"
     },
     twitterCard: {
       card: "summary_large_image",
-      title: "Decision Wheel & 3D Coin Flip | FunTools",
+      title: "Decision Wheel & 3D Coin Flip | GetFunTools",
       description: "Spin custom wheels or flip 3D coins for fair, random choices."
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Decision Wheel is a free random choice spinner and 3D coin flip tool that eliminates decision fatigue.",
-    twoSentence: "The FunTools Decision Wheel combines physics-based spinning wheel animations with a 3D coin flipper. It uses cryptographic browser randomizers to make unbiased choices for food, games, chores, or truth or dare.",
-    summary50: "The FunTools Decision Wheel is an interactive choice randomizer offering customizable spinning wheels and 3D coin flips. Featuring built-in presets (What to Eat, Weekend Plan, Truth or Dare) and confetti victory animations, it delivers fast, unbiased choices for groups and individuals.",
-    summary100: "The FunTools Decision Wheel is a multi-mode choice randomizer engineered to solve decision paralysis. Users can input up to 12 custom options onto a colorful spinning wheel or switch to 3D coin toss mode for quick heads or tails decisions. Built with cubic-bezier physics animations, sound toggles, and cryptographic random selection algorithms, the tool runs 100% in-browser with zero cost or registration.",
-    summary200: "The FunTools Decision Wheel combines aesthetic animation with mathematical randomness to help individuals and groups make decisions effortlessly. Designed with smooth CSS transform physics, the spinning wheel features customizable slice segments with distinct color gradients. Users can choose from popular preset templates (such as 'What to Eat', 'Weekend Plan', or 'Truth or Dare') or add up to 12 custom entries using the live item editor. Upon spinning, the wheel rotates through multiple full revolutions before settling precisely on a randomly selected winner, accompanied by a confetti particle explosion. For binary choices, the tool offers a 3D coin flip mode with smooth rotational flips for Heads or Tails. Everything operates locally inside the client browser, offering zero lag and complete privacy.",
+    oneSentence: "The GetFunTools Decision Wheel is a free random choice spinner and 3D coin flip tool that eliminates decision fatigue.",
+    twoSentence: "The GetFunTools Decision Wheel combines physics-based spinning wheel animations with a 3D coin flipper. It uses cryptographic browser randomizers to make unbiased choices for food, games, chores, or truth or dare.",
+    summary50: "The GetFunTools Decision Wheel is an interactive choice randomizer offering customizable spinning wheels and 3D coin flips. Featuring built-in presets (What to Eat, Weekend Plan, Truth or Dare) and confetti victory animations, it delivers fast, unbiased choices for groups and individuals.",
+    summary100: "The GetFunTools Decision Wheel is a multi-mode choice randomizer engineered to solve decision paralysis. Users can input up to 12 custom options onto a colorful spinning wheel or switch to 3D coin toss mode for quick heads or tails decisions. Built with cubic-bezier physics animations, sound toggles, and cryptographic random selection algorithms, the tool runs 100% in-browser with zero cost or registration.",
+    summary200: "The GetFunTools Decision Wheel combines aesthetic animation with mathematical randomness to help individuals and groups make decisions effortlessly. Designed with smooth CSS transform physics, the spinning wheel features customizable slice segments with distinct color gradients. Users can choose from popular preset templates (such as 'What to Eat', 'Weekend Plan', or 'Truth or Dare') or add up to 12 custom entries using the live item editor. Upon spinning, the wheel rotates through multiple full revolutions before settling precisely on a randomly selected winner, accompanied by a confetti particle explosion. For binary choices, the tool offers a 3D coin flip mode with smooth rotational flips for Heads or Tails. Everything operates locally inside the client browser, offering zero lag and complete privacy.",
     bulletSummary: [
       "Offers 2 decision modes: Spinning Wheel of Fortune and 3D Coin Toss.",
       "Includes popular preset choice lists (What to Eat, Weekend Plan, Truth/Dare).",
@@ -56,7 +56,7 @@ export const decisionWheelContent: DomainToolModule = {
       { label: "Animation Style", value: "Cubic-Bezier Physics & Confetti" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools Decision Wheel", "Basic Choice Randomizers"],
+      header: ["Feature", "GetFunTools Decision Wheel", "Basic Choice Randomizers"],
       rows: [
         ["Dual Modes", "Spinning Wheel + 3D Coin Flip", "Wheel only"],
         ["Preset Libraries", "Food, Weekend, Truth/Dare Presets", "None"],
@@ -126,7 +126,7 @@ export const decisionWheelContent: DomainToolModule = {
       { title: "Confetti Victory Celebration", description: "Particle confetti animations celebrate every selection." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Decision Wheel", "Basic Choice Spinners"],
+      headers: ["Feature", "GetFunTools Decision Wheel", "Basic Choice Spinners"],
       rows: [
         ["Spin Physics", "Smooth Cubic-Bezier rotational transition", "Instant jump"],
         ["3D Coin Flip", "Includes interactive coin tossing mode", "None"],
@@ -163,7 +163,7 @@ export const decisionWheelContent: DomainToolModule = {
     { question: "How does 3D Coin Flip mode work?", answer: "Switch to 3D Coin Flip mode to flip a realistic 3D coin for binary decisions (Heads or Tails)." },
     { question: "Can I remove options from the wheel?", answer: "Yes, click the trash icon next to any option to remove it from the active list." },
     { question: "Does the wheel trigger confetti?", answer: "Yes! Every winning spin or coin toss is celebrated with particle confetti." },
-    { question: "Can I use the Decision Wheel on mobile phones?", answer: "Yes, FunTools is fully responsive and touch-friendly on iOS and Android devices." },
+    { question: "Can I use the Decision Wheel on mobile phones?", answer: "Yes, GetFunTools is fully responsive and touch-friendly on iOS and Android devices." },
     { question: "Do I need to download an app?", answer: "No app download is needed; it runs directly inside any web browser." },
     { question: "Can I save my custom wheel entries?", answer: "Custom choices persist during your active browser session so you can spin multiple times." },
     { question: "What is the maximum number of choices allowed on the wheel?", answer: "You can add up to 12 choices on the spinning wheel for clear visual slice rendering." },

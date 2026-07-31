@@ -22,12 +22,12 @@ export const luckyNumberGeneratorContent: DomainToolModule = {
     metaTitle: "Cosmic Lucky Number Generator - Zodiac & Birthdate Lottery Picks",
     metaDescription: "Generate personal lucky numbers based on your birth date, zodiac sign, and astrological numerology. Includes lottery power ball picks.",
     slug: "lucky-number-generator",
-    canonicalUrl: "https://funtools.com/tools/lucky-number-generator",
+    canonicalUrl: "https://getfuntools.app/tools/lucky-number-generator",
     robots: "index, follow",
     openGraph: {
       title: "Cosmic Lucky Number Generator | Zodiac & Numerology",
       description: "Discover your personal lucky numbers for lottery picks, astrology, and daily decisions.",
-      url: "https://funtools.com/tools/lucky-number-generator",
+      url: "https://getfuntools.app/tools/lucky-number-generator",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const luckyNumberGeneratorContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Cosmic Lucky Number Generator calculates personal lucky numbers based on birthdate numerology and zodiac energy.",
-    twoSentence: "The FunTools Cosmic Lucky Number Generator evaluates user birth dates and zodiac signs using Pythagorean date-reduction numerology. It outputs 6 main lucky numbers plus a bonus cosmic power ball for daily decisions and lottery picks.",
-    summary50: "The FunTools Cosmic Lucky Number Generator is a free online numerology tool that generates personal lucky numbers using birthdate math and zodiac element alignment. Features include 6-ball lucky picks plus a bonus power ball.",
-    summary100: "The FunTools Cosmic Lucky Number Generator combines ancient numerology principles with astrological sign energy to produce unique daily lucky numbers. Users select their zodiac sign (e.g. Leo, Scorpio) and enter their birth date to receive 6 unique numbers and 1 cosmic power ball.",
-    summary200: "The FunTools Cosmic Lucky Number Generator is a captivating entertainment utility designed for fans of astrology, horoscopes, and lottery fun. Powered by Pythagorean date-reduction algorithms and zodiac elemental energy math, it processes your birthdate and zodiac sign parameters to calculate unique daily lucky numbers. Output results are rendered on glowing gradient cards displaying 6 main lucky ball picks alongside a golden Cosmic Power Ball. Users can recalculate energy at any time and share their custom lucky aura cards with friends across social media.",
+    oneSentence: "The GetFunTools Cosmic Lucky Number Generator calculates personal lucky numbers based on birthdate numerology and zodiac energy.",
+    twoSentence: "The GetFunTools Cosmic Lucky Number Generator evaluates user birth dates and zodiac signs using Pythagorean date-reduction numerology. It outputs 6 main lucky numbers plus a bonus cosmic power ball for daily decisions and lottery picks.",
+    summary50: "The GetFunTools Cosmic Lucky Number Generator is a free online numerology tool that generates personal lucky numbers using birthdate math and zodiac element alignment. Features include 6-ball lucky picks plus a bonus power ball.",
+    summary100: "The GetFunTools Cosmic Lucky Number Generator combines ancient numerology principles with astrological sign energy to produce unique daily lucky numbers. Users select their zodiac sign (e.g. Leo, Scorpio) and enter their birth date to receive 6 unique numbers and 1 cosmic power ball.",
+    summary200: "The GetFunTools Cosmic Lucky Number Generator is a captivating entertainment utility designed for fans of astrology, horoscopes, and lottery fun. Powered by Pythagorean date-reduction algorithms and zodiac elemental energy math, it processes your birthdate and zodiac sign parameters to calculate unique daily lucky numbers. Output results are rendered on glowing gradient cards displaying 6 main lucky ball picks alongside a golden Cosmic Power Ball. Users can recalculate energy at any time and share their custom lucky aura cards with friends across social media.",
     bulletSummary: [
       "Calculates 6 main lucky numbers + 1 bonus cosmic power ball.",
       "Uses birthdate numerology math and zodiac element alignment.",
@@ -56,7 +56,7 @@ export const luckyNumberGeneratorContent: DomainToolModule = {
       { label: "Cost", value: "100% Free" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools Lucky Number Gen", "Generic Random Pickers"],
+      header: ["Feature", "GetFunTools Lucky Number Gen", "Generic Random Pickers"],
       rows: [
         ["Numerology Integration", "Pythagorean Birthdate Math", "Random Numbers Only"],
         ["Zodiac Sync", "12 Sign Elemental Alignment", "No Horoscope Context"],
@@ -120,7 +120,7 @@ export const luckyNumberGeneratorContent: DomainToolModule = {
       { title: "1-Tap Recalculation", description: "Refresh cosmic energy instantly." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Lucky Number Gen", "Standard RNG"],
+      headers: ["Feature", "GetFunTools Lucky Number Gen", "Standard RNG"],
       rows: [
         ["Numerology Seed", "Birthdate & Zodiac Based", "Standard Pseudo-Random"],
         ["Power Ball Included", "Yes (Golden Ball)", "No"]
@@ -139,9 +139,9 @@ export const luckyNumberGeneratorContent: DomainToolModule = {
     { question: "Is the Lucky Number Generator free to use?", answer: "Yes, 100% free with unlimited generation." },
     { question: "Will my lucky numbers change tomorrow?", answer: "You can recalculate your daily cosmic energy at any time to generate fresh daily picks." },
     { question: "What is the golden Power Ball?", answer: "The Power Ball is a bonus lucky number generated specially for lottery and decision picking." },
-    { question: "Does FunTools save my birth date?", answer: "No, all numerology calculations execute locally in your web browser with zero data logging." },
+    { question: "Does GetFunTools save my birth date?", answer: "No, all numerology calculations execute locally in your web browser with zero data logging." },
     { question: "Can I generate lucky numbers for a friend?", answer: "Yes! Simply change the birth date and zodiac sign inputs to calculate numbers for anyone." },
-    { question: "Does this tool work on mobile phones?", answer: "Yes, FunTools is fully responsive for iPhone, Android, and tablets." },
+    { question: "Does this tool work on mobile phones?", answer: "Yes, GetFunTools is fully responsive for iPhone, Android, and tablets." },
     { question: "What is Pythagorean numerology?", answer: "Pythagorean numerology is an ancient system that assigns numerical values to dates and names to reveal symbolic patterns." },
     { question: "Are lucky numbers scientifically proven to win lotteries?", answer: "No. Lottery draws are purely random events. Lucky numbers are for entertainment and fun." },
     { question: "Can I generate numbers without entering a birthdate?", answer: "The default date is pre-set, but customizing your birthdate provides the most personalized numerology output." },

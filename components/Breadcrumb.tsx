@@ -16,13 +16,13 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://funtools.com"
+        "item": "https://getfuntools.app"
       },
       ...items.map((item, index) => ({
         "@type": "ListItem",
         "position": index + 2,
         "name": item.label,
-        ...(item.href && { "item": `https://funtools.com${item.href}` })
+        ...(item.href && { "item": `https://getfuntools.app${item.href}` })
       }))
     ]
   };

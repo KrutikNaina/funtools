@@ -48,8 +48,8 @@ export const TOOLS_SEO_DATABASE: Record<string, ToolSEOData> = {
       { title: "Party Hosts", desc: "Looking for instant icebreaker mini-games.", icon: "Smile" }
     ],
     aeoSummaries: {
-      oneSentence: "The FunTools Love Calculator uses name numerology algorithms and cosmic vibe selectors to generate an instant love compatibility percentage.",
-      twoSentence: "The FunTools Love Calculator analyzes the letter values and energetic frequency between two names. Users receive an instant percentage match score, custom relationship advice, and a shareable badge.",
+      oneSentence: "The GetFunTools Love Calculator uses name numerology algorithms and cosmic vibe selectors to generate an instant love compatibility percentage.",
+      twoSentence: "The GetFunTools Love Calculator analyzes the letter values and energetic frequency between two names. Users receive an instant percentage match score, custom relationship advice, and a shareable badge.",
       bulletAnswer: [
         "Analyzes two names using acoustic & numerological algorithms.",
         "Allows users to select relationship modes (Cosmic, Spicy, Bestie, Chaos).",
@@ -62,9 +62,9 @@ export const TOOLS_SEO_DATABASE: Record<string, ToolSEOData> = {
         { col1: "Data Privacy", col2: "100% Client-Side (No data saved)" },
         { col1: "Cost", col2: "Free with unlimited recalculations" }
       ],
-      summary50: "The FunTools Love Calculator is a free online tool that computes relationship compatibility between two names. Featuring dynamic vibe selectors, animated score gauges, and confetti celebrations, it gives users an instant percentage score and relationship breakdown perfect for sharing on social media.",
-      summary100: "The FunTools Love Calculator is an interactive consumer tool designed to measure romantic and social synergy between any two names. By evaluating letter frequencies, numerological values, and user-selected relationship vibes (such as Cosmic Soulmates or Spicy Banter), the calculator produces an animated percentage score alongside custom relationship insights. It runs 100% locally inside the browser for complete privacy, requires no user registration, and enables 1-click copying for WhatsApp, Instagram, and Twitter sharing.",
-      summary200: "The FunTools Love Calculator provides a modern, playful approach to relationship compatibility testing. Designed with vibrant HSL colors, smooth glassmorphism, and Framer Motion micro-interactions, the tool allows users to enter two names and select from four relationship modes: Cosmic Soulmates, Spicy & Playful, Bestie Chemistry, or Pure Chaotic Fun. Once submitted, a mathematical algorithm computes a score between 65% and 100%, rendering a glowing SVG circular progress gauge. High-scoring matches (>75%) trigger interactive particle confetti. Beyond the percentage, the calculator delivers a tailored relationship breakdown and actionable advice. The entire experience is lightweight, zero-latency, and optimized for mobile devices and desktop screens without storing or logging personal user data."
+      summary50: "The GetFunTools Love Calculator is a free online tool that computes relationship compatibility between two names. Featuring dynamic vibe selectors, animated score gauges, and confetti celebrations, it gives users an instant percentage score and relationship breakdown perfect for sharing on social media.",
+      summary100: "The GetFunTools Love Calculator is an interactive consumer tool designed to measure romantic and social synergy between any two names. By evaluating letter frequencies, numerological values, and user-selected relationship vibes (such as Cosmic Soulmates or Spicy Banter), the calculator produces an animated percentage score alongside custom relationship insights. It runs 100% locally inside the browser for complete privacy, requires no user registration, and enables 1-click copying for WhatsApp, Instagram, and Twitter sharing.",
+      summary200: "The GetFunTools Love Calculator provides a modern, playful approach to relationship compatibility testing. Designed with vibrant HSL colors, smooth glassmorphism, and Framer Motion micro-interactions, the tool allows users to enter two names and select from four relationship modes: Cosmic Soulmates, Spicy & Playful, Bestie Chemistry, or Pure Chaotic Fun. Once submitted, a mathematical algorithm computes a score between 65% and 100%, rendering a glowing SVG circular progress gauge. High-scoring matches (>75%) trigger interactive particle confetti. Beyond the percentage, the calculator delivers a tailored relationship breakdown and actionable advice. The entire experience is lightweight, zero-latency, and optimized for mobile devices and desktop screens without storing or logging personal user data."
     },
     featuredSnippets: {
       paragraphSnippet: "A Love Calculator is a digital entertainment tool that compares two names to produce a numerical relationship compatibility percentage. It uses letter frequency algorithms and numerological values to determine cosmic, romantic, or friendship synergy.",
@@ -92,7 +92,7 @@ export const TOOLS_SEO_DATABASE: Record<string, ToolSEOData> = {
       }
     },
     comparisonMatrix: {
-      headers: ["Feature", "FunTools Love Calculator", "Generic Love Tests"],
+      headers: ["Feature", "GetFunTools Love Calculator", "Generic Love Tests"],
       rows: [
         ["Visual Gauge", "Interactive Animated SVG Gauge", "Static text display"],
         ["Vibe Selector", "4 Modes (Cosmic, Spicy, Bestie, Chaos)", "Single fixed algorithm"],
@@ -125,7 +125,7 @@ export const TOOLS_SEO_DATABASE: Record<string, ToolSEOData> = {
     faqs: [
       {
         question: "What is the Love Calculator?",
-        answer: "The FunTools Love Calculator is a free online tool designed to calculate a compatibility percentage score between two names using numerology algorithms, letter frequencies, and relationship vibes."
+        answer: "The GetFunTools Love Calculator is a free online tool designed to calculate a compatibility percentage score between two names using numerology algorithms, letter frequencies, and relationship vibes."
       },
       {
         question: "How does the Love Calculator calculate compatibility?",
@@ -145,7 +145,7 @@ export const TOOLS_SEO_DATABASE: Record<string, ToolSEOData> = {
       },
       {
         question: "Can I use the Love Calculator on mobile phones?",
-        answer: "Yes! FunTools is built with mobile-first responsive design and works seamlessly on iPhone, Android, iPads, laptops, and desktop computers."
+        answer: "Yes! GetFunTools is built with mobile-first responsive design and works seamlessly on iPhone, Android, iPads, laptops, and desktop computers."
       },
       {
         question: "Can I share my Love Compatibility score with friends?",
@@ -232,8 +232,8 @@ export const TOOLS_SEO_DATABASE: Record<string, ToolSEOData> = {
       { title: "Digital Marketers", desc: "Enhancing promotional posts with decorative text.", icon: "Zap" }
     ],
     aeoSummaries: {
-      oneSentence: "The FunTools Fancy Font Generator transforms plain text into over 20 copy-paste Unicode font styles for Instagram, TikTok, and Discord bios.",
-      twoSentence: "The FunTools Fancy Font Generator maps standard keyboard input to stylized Unicode character sets in real-time. Users can convert text into Cursive, Gothic, Bubble, and Monospace styles and copy them with one click.",
+      oneSentence: "The GetFunTools Fancy Font Generator transforms plain text into over 20 copy-paste Unicode font styles for Instagram, TikTok, and Discord bios.",
+      twoSentence: "The GetFunTools Fancy Font Generator maps standard keyboard input to stylized Unicode character sets in real-time. Users can convert text into Cursive, Gothic, Bubble, and Monospace styles and copy them with one click.",
       bulletAnswer: [
         "Converts plain text into 20+ aesthetic Unicode font styles.",
         "Generates Cursive, Gothic, Bubble, Double-Struck, and Monospace fonts.",
@@ -246,9 +246,9 @@ export const TOOLS_SEO_DATABASE: Record<string, ToolSEOData> = {
         { col1: "Compatibility", col2: "iOS, Android, Windows, macOS, Web" },
         { col1: "Processing Time", col2: "Real-time instant rendering" }
       ],
-      summary50: "The FunTools Fancy Font Generator is a free online tool that converts plain text into 20+ aesthetic Unicode styles like Cursive, Gothic, and Bubble letters. Perfect for Instagram bios, TikTok captions, and Discord handles, it features real-time conversion and 1-click copy functionality.",
-      summary100: "The FunTools Fancy Font Generator is an aesthetic Unicode text converter built to customize social media bios, captions, and gaming handles. By mapping input characters to special mathematical and alphanumeric Unicode symbols, it generates over 20 font variations including Cursive Script, Gothic Fraktur, Bubble Circles, and Tech Monospace. The tool converts text live as you type, offers instant 1-click copy buttons, and requires no registration or app downloads.",
-      summary200: "The FunTools Fancy Font Generator offers a complete typography suite for content creators, influencers, and digital enthusiasts. Built using client-side JavaScript, it transforms regular ASCII characters into mathematical alphanumeric symbols supported across all modern operating systems and web platforms. Users can input any word or sentence to immediately view stylized outputs in Cursive Script, Gothic Fraktur, Outline Double-Struck, Bubble Circles, Slanted Italic, and Squared Block fonts. The interface includes an active style filter, instant text clearing, and 1-click clipboard copy buttons with visual toast notifications. Because Unicode characters are universally recognized, these generated fonts paste directly into Instagram bios, TikTok handles, Twitter posts, Discord servers, and Roblox usernames without breaking or displaying missing character boxes."
+      summary50: "The GetFunTools Fancy Font Generator is a free online tool that converts plain text into 20+ aesthetic Unicode styles like Cursive, Gothic, and Bubble letters. Perfect for Instagram bios, TikTok captions, and Discord handles, it features real-time conversion and 1-click copy functionality.",
+      summary100: "The GetFunTools Fancy Font Generator is an aesthetic Unicode text converter built to customize social media bios, captions, and gaming handles. By mapping input characters to special mathematical and alphanumeric Unicode symbols, it generates over 20 font variations including Cursive Script, Gothic Fraktur, Bubble Circles, and Tech Monospace. The tool converts text live as you type, offers instant 1-click copy buttons, and requires no registration or app downloads.",
+      summary200: "The GetFunTools Fancy Font Generator offers a complete typography suite for content creators, influencers, and digital enthusiasts. Built using client-side JavaScript, it transforms regular ASCII characters into mathematical alphanumeric symbols supported across all modern operating systems and web platforms. Users can input any word or sentence to immediately view stylized outputs in Cursive Script, Gothic Fraktur, Outline Double-Struck, Bubble Circles, Slanted Italic, and Squared Block fonts. The interface includes an active style filter, instant text clearing, and 1-click clipboard copy buttons with visual toast notifications. Because Unicode characters are universally recognized, these generated fonts paste directly into Instagram bios, TikTok handles, Twitter posts, Discord servers, and Roblox usernames without breaking or displaying missing character boxes."
     },
     featuredSnippets: {
       paragraphSnippet: "A Fancy Font Generator converts standard text into stylized Unicode symbols (such as cursive, gothic, or bubble letters) that can be copied and pasted into social media bios, captions, and profile handles.",
@@ -274,7 +274,7 @@ export const TOOLS_SEO_DATABASE: Record<string, ToolSEOData> = {
       }
     },
     comparisonMatrix: {
-      headers: ["Feature", "FunTools Font Generator", "Basic Font Tools"],
+      headers: ["Feature", "GetFunTools Font Generator", "Basic Font Tools"],
       rows: [
         ["Style Variety", "20+ Curated Aesthetic Styles", "5-10 Basic Styles"],
         ["Live Search Filter", "Included for fast navigation", "None"],
@@ -351,7 +351,7 @@ export const TOOLS_SEO_DATABASE: Record<string, ToolSEOData> = {
       },
       {
         question: "Does this tool work on mobile devices?",
-        answer: "Yes, FunTools is fully responsive and optimized for mobile touchscreens."
+        answer: "Yes, GetFunTools is fully responsive and optimized for mobile touchscreens."
       },
       {
         question: "Are there character limits when using the font generator?",

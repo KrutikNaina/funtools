@@ -18,12 +18,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!col) return {};
 
   return {
-    title: `${col.title} - Curated Tools | FunTools`,
+    title: `${col.title} - Curated Tools | GetFunTools`,
     description: col.seoDescription,
     openGraph: {
-      title: `${col.title} | FunTools`,
+      title: `${col.title} | GetFunTools`,
       description: col.seoDescription,
-      url: `https://funtools.com/collections/${col.slug}`,
+      url: `https://getfuntools.app/collections/${col.slug}`,
     },
   };
 }

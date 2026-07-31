@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { QrCode, Download, Copy, Check, Sparkles } from "lucide-react";
 
 export default function QRCodeGenerator() {
-  const [text, setText] = useState("https://funtools.com");
+  const [text, setText] = useState("https://getfuntools.app");
   const [fgColor, setFgColor] = useState("#4f46e5");
   const [bgColor, setBgColor] = useState("#ffffff");
   const [copied, setCopied] = useState(false);

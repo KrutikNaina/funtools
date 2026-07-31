@@ -22,12 +22,12 @@ export const nicknameGeneratorContent: DomainToolModule = {
     metaTitle: "Cool Nickname Generator - 40+ Epic Gamer Tags & Aliases",
     metaDescription: "Generate epic aliases and cool nicknames for Discord, Roblox, Valorant, and social profiles. Features vibes like Cyberpunk, Mythic, Cute, and VIP.",
     slug: "nickname-generator",
-    canonicalUrl: "https://funtools.com/tools/nickname-generator",
+    canonicalUrl: "https://getfuntools.app/tools/nickname-generator",
     robots: "index, follow",
     openGraph: {
       title: "Cool Nickname Generator | 40+ Gamer Tags & Aliases",
       description: "Generate epic nicknames for Discord, Roblox, Valorant, and social media.",
-      url: "https://funtools.com/tools/nickname-generator",
+      url: "https://getfuntools.app/tools/nickname-generator",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const nicknameGeneratorContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Nickname Generator creates epic gamer tags, Discord aliases, and cool nicknames for online profiles.",
-    twoSentence: "The FunTools Nickname Generator pairs user names with curated thematic title banks across 4 vibe categories: Cyberpunk, Mythic, Cute, and VIP. It outputs stylized nickname cards with instant 1-click clipboard copying.",
-    summary50: "The FunTools Nickname Generator is a free online tool that creates over 40 epic nicknames and gamer tags for Discord, Roblox, Valorant, and social profiles across Cyberpunk, Mythic, Cute, and VIP vibe themes.",
-    summary100: "The FunTools Nickname Generator provides creative alias creation for gamers, streamers, and social media users. Users input their real name or seed keyword and select a vibe theme to instantly generate dozens of stylized nicknames, complete with 1-click clipboard copying.",
-    summary200: "The FunTools Nickname Generator is a complete digital identity tool designed for gaming communities, Discord servers, and social media platforms. Powered by lightweight browser string manipulation, it blends user name inputs with curated title word banks across four distinct vibe styles: Cyberpunk Ninja, Mythic Dragon, Cute Boba, and VIP Executive. The generator renders responsive nickname cards that can be copied to the clipboard with a single tap. Ideal for Valorant handles, Roblox names, Discord server nicknames, and social media alter-egos.",
+    oneSentence: "The GetFunTools Nickname Generator creates epic gamer tags, Discord aliases, and cool nicknames for online profiles.",
+    twoSentence: "The GetFunTools Nickname Generator pairs user names with curated thematic title banks across 4 vibe categories: Cyberpunk, Mythic, Cute, and VIP. It outputs stylized nickname cards with instant 1-click clipboard copying.",
+    summary50: "The GetFunTools Nickname Generator is a free online tool that creates over 40 epic nicknames and gamer tags for Discord, Roblox, Valorant, and social profiles across Cyberpunk, Mythic, Cute, and VIP vibe themes.",
+    summary100: "The GetFunTools Nickname Generator provides creative alias creation for gamers, streamers, and social media users. Users input their real name or seed keyword and select a vibe theme to instantly generate dozens of stylized nicknames, complete with 1-click clipboard copying.",
+    summary200: "The GetFunTools Nickname Generator is a complete digital identity tool designed for gaming communities, Discord servers, and social media platforms. Powered by lightweight browser string manipulation, it blends user name inputs with curated title word banks across four distinct vibe styles: Cyberpunk Ninja, Mythic Dragon, Cute Boba, and VIP Executive. The generator renders responsive nickname cards that can be copied to the clipboard with a single tap. Ideal for Valorant handles, Roblox names, Discord server nicknames, and social media alter-egos.",
     bulletSummary: [
       "Generates 40+ epic nicknames and gamer tags.",
       "Offers 4 vibe themes: Cyberpunk, Mythic, Cute, and VIP.",
@@ -56,7 +56,7 @@ export const nicknameGeneratorContent: DomainToolModule = {
       { label: "Cost", value: "100% Free" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools Nickname Generator", "Generic Name Tools"],
+      header: ["Feature", "GetFunTools Nickname Generator", "Generic Name Tools"],
       rows: [
         ["Vibe Themes", "4 Curated Vibe Categories", "Generic Random List"],
         ["Clipboard Copy", "1-Tap Copy with Toast", "Manual Highlight Required"],
@@ -120,7 +120,7 @@ export const nicknameGeneratorContent: DomainToolModule = {
       { title: "1-Tap Copy", description: "Fast copying without manual highlighting." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Nickname Gen", "Generic Generators"],
+      headers: ["Feature", "GetFunTools Nickname Gen", "Generic Generators"],
       rows: [
         ["Themes", "4 Curated Vibe Themes", "None"],
         ["Copying", "1-Tap Copy Buttons", "Manual Selection"]
@@ -142,7 +142,7 @@ export const nicknameGeneratorContent: DomainToolModule = {
     { question: "Can I generate nicknames for my friends?", answer: "Yes! Type any name into the input field to generate nicknames for anyone." },
     { question: "How many nicknames can I generate?", answer: "You can generate unlimited nickname variations." },
     { question: "What makes a gamer tag cool?", answer: "Cool gamer tags often use strong action words, mysterious elements, or clean cyber prefixes." },
-    { question: "Does this generator work on mobile phones?", answer: "Yes, FunTools is fully responsive for mobile devices." },
+    { question: "Does this generator work on mobile phones?", answer: "Yes, GetFunTools is fully responsive for mobile devices." },
     { question: "Can I add numbers to my nickname?", answer: "Yes, you can include numbers directly in your input seed word." },
     { question: "What should I do if my nickname is taken in a game?", answer: "Try adding a subtle suffix like _pro, .x, or _vortex." },
     { question: "Can I use special symbols in nicknames?", answer: "Most gaming platforms support underscores and periods." },

@@ -11,7 +11,7 @@ export default function PrivacyPage() {
 
       <div className="prose dark:prose-invert max-w-none text-sm text-slate-600 dark:text-slate-400 space-y-4 leading-relaxed">
         <p>
-          At FunTools (funtools.com), the privacy of our visitors is extremely important to us. This Privacy Policy outlines the types of personal information collected and how it is used.
+          At GetFunTools (getfuntools.app), the privacy of our visitors is extremely important to us. This Privacy Policy outlines the types of personal information collected and how it is used.
         </p>
 
         <h3 className="text-base font-bold text-slate-900 dark:text-white">Client-Side Computation</h3>
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
 
         <h3 className="text-base font-bold text-slate-900 dark:text-white">Cookies and Web Beacons</h3>
         <p>
-          FunTools uses cookies to store user preferences, such as light/dark mode selection and saved tool bookmarks stored locally.
+          GetFunTools uses cookies to store user preferences, such as light/dark mode selection and saved tool bookmarks stored locally.
         </p>
 
         <h3 className="text-base font-bold text-slate-900 dark:text-white">Google AdSense & Third Party Ads</h3>

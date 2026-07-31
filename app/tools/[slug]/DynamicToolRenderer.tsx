@@ -84,7 +84,7 @@ export default function DynamicToolRenderer({ tool }: { tool: Tool }) {
     }
   };
 
-  const currentUrl = typeof window !== "undefined" ? window.location.href : `https://funtools.com/tools/${tool.slug}`;
+  const currentUrl = typeof window !== "undefined" ? window.location.href : `https://getfuntools.app/tools/${tool.slug}`;
 
   return (
     <div className="space-y-4">

@@ -29,7 +29,7 @@ export default function Footer() {
                 <Sparkles className="w-5 h-5" />
               </div>
               <span className="font-black text-xl tracking-tight text-slate-900 dark:text-white">
-                FunTools<span className="text-pink-500">.</span>
+                GetFunTools<span className="text-pink-500">.</span>
               </span>
             </Link>
             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-sm">
@@ -97,7 +97,7 @@ export default function Footer() {
               Legal & Info
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400 font-medium">
-              <li><Link href="/about" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">About FunTools</Link></li>
+              <li><Link href="/about" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">About GetFunTools</Link></li>
               <li><Link href="/blog" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Blog & Articles</Link></li>
               <li><Link href="/privacy" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Terms of Service</Link></li>
@@ -108,7 +108,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
-          <p>© {new Date().getFullYear()} FunTools. Built with Next.js 15, React & Tailwind CSS.</p>
+          <p>© {new Date().getFullYear()} GetFunTools. Built with Next.js 15, React & Tailwind CSS.</p>
           <div className="flex items-center gap-1">
             <span>Crafted with</span>
             <Heart className="w-3.5 h-3.5 text-rose-500 fill-current" />

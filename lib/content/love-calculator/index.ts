@@ -22,26 +22,26 @@ export const loveCalculatorContent: DomainToolModule = {
     metaTitle: "Love Calculator - Test True Love & Relationship Compatibility Online",
     metaDescription: "Calculate your instant love compatibility percentage with our free Love Calculator. Analyze name numerology, zodiac vibes, and relationship chemistry with 1-click shareable result cards.",
     slug: "love-calculator",
-    canonicalUrl: "https://funtools.com/tools/love-calculator",
+    canonicalUrl: "https://getfuntools.app/tools/love-calculator",
     robots: "index, follow",
     openGraph: {
       title: "Love Calculator - Test Your Love Synergy Online",
       description: "Discover your cosmic love percentage & relationship vibe report instantly.",
-      url: "https://funtools.com/tools/love-calculator",
+      url: "https://getfuntools.app/tools/love-calculator",
       type: "website"
     },
     twitterCard: {
       card: "summary_large_image",
-      title: "Love Calculator Online | FunTools",
+      title: "Love Calculator Online | GetFunTools",
       description: "Test love synergy between two names with animated progress gauge and shareable badges."
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Love Calculator evaluates name numerology and cosmic vibes to generate an instant relationship compatibility percentage.",
-    twoSentence: "The FunTools Love Calculator analyzes the letter synergy and energetic frequency between two names. It generates a 65% to 100% animated compatibility score alongside custom relationship insights and shareable result cards.",
-    summary50: "The FunTools Love Calculator is a free digital entertainment tool that calculates relationship compatibility between two names. Featuring dynamic vibe selectors (Cosmic, Spicy, Bestie, Chaos), animated progress gauges, and confetti particle celebrations, it delivers instant shareable love match scores.",
-    summary100: "The FunTools Love Calculator is an interactive consumer application built to measure romantic, friendship, and social synergy. By calculating character frequency values and incorporating user-selected relationship modes (such as Cosmic Soulmates or Spicy Banter), the calculator renders an animated percentage score from 65% to 100%. Operating 100% client-side inside the browser, it ensures total data privacy, requires no registration, and allows instant 1-click copying for WhatsApp, Instagram, and TikTok sharing.",
-    summary200: "The FunTools Love Calculator brings a modern, aesthetic approach to relationship testing. Designed with soft gradients, glassmorphism, and Framer Motion micro-interactions, the tool invites users to enter two names and pick from four relationship modes: Cosmic Soulmates, Spicy & Playful, Bestie Chemistry, or Pure Chaotic Fun. After processing letter ASCII frequencies and numerological weights, the engine computes a match score between 65% and 100%, rendering a glowing circular progress gauge. High-scoring matches (>75%) trigger festive particle confetti. In addition to numerical scores, the calculator provides customized relationship advice. All calculations occur locally in the user's browser without storing personal names, making it lightweight, zero-latency, and 100% private.",
+    oneSentence: "The GetFunTools Love Calculator evaluates name numerology and cosmic vibes to generate an instant relationship compatibility percentage.",
+    twoSentence: "The GetFunTools Love Calculator analyzes the letter synergy and energetic frequency between two names. It generates a 65% to 100% animated compatibility score alongside custom relationship insights and shareable result cards.",
+    summary50: "The GetFunTools Love Calculator is a free digital entertainment tool that calculates relationship compatibility between two names. Featuring dynamic vibe selectors (Cosmic, Spicy, Bestie, Chaos), animated progress gauges, and confetti particle celebrations, it delivers instant shareable love match scores.",
+    summary100: "The GetFunTools Love Calculator is an interactive consumer application built to measure romantic, friendship, and social synergy. By calculating character frequency values and incorporating user-selected relationship modes (such as Cosmic Soulmates or Spicy Banter), the calculator renders an animated percentage score from 65% to 100%. Operating 100% client-side inside the browser, it ensures total data privacy, requires no registration, and allows instant 1-click copying for WhatsApp, Instagram, and TikTok sharing.",
+    summary200: "The GetFunTools Love Calculator brings a modern, aesthetic approach to relationship testing. Designed with soft gradients, glassmorphism, and Framer Motion micro-interactions, the tool invites users to enter two names and pick from four relationship modes: Cosmic Soulmates, Spicy & Playful, Bestie Chemistry, or Pure Chaotic Fun. After processing letter ASCII frequencies and numerological weights, the engine computes a match score between 65% and 100%, rendering a glowing circular progress gauge. High-scoring matches (>75%) trigger festive particle confetti. In addition to numerical scores, the calculator provides customized relationship advice. All calculations occur locally in the user's browser without storing personal names, making it lightweight, zero-latency, and 100% private.",
     bulletSummary: [
       "Calculates relationship compatibility using name numerology algorithms.",
       "Supports 4 relationship modes: Cosmic Soulmates, Spicy, Bestie, Chaos.",
@@ -56,7 +56,7 @@ export const loveCalculatorContent: DomainToolModule = {
       { label: "Compatibility", value: "Mobile, Tablet & Desktop browsers" }
     ],
     comparisonSummary: {
-      header: ["Metric", "FunTools Love Calculator", "Generic Static Love Meters"],
+      header: ["Metric", "GetFunTools Love Calculator", "Generic Static Love Meters"],
       rows: [
         ["Visual Gauge", "Interactive Animated SVG Gauge", "Plain static text"],
         ["Vibe Control", "4 Selectable Relationship Modes", "Single fixed formula"],
@@ -129,7 +129,7 @@ export const loveCalculatorContent: DomainToolModule = {
       { title: "Mobile Responsive", description: "Optimized touch targets and fluid layouts for all devices." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Love Calculator", "Basic Static Meters"],
+      headers: ["Feature", "GetFunTools Love Calculator", "Basic Static Meters"],
       rows: [
         ["Visual Animation", "Framer Motion SVG Gauge", "Static text string"],
         ["Mode Selection", "4 Distinct Vibe Settings", "Single algorithm"],
@@ -158,12 +158,12 @@ export const loveCalculatorContent: DomainToolModule = {
     }
   },
   faqs: [
-    { question: "What is the Love Calculator?", answer: "The FunTools Love Calculator is a free digital tool designed to compute a love compatibility percentage between two names using character numerology math and vibe algorithms." },
+    { question: "What is the Love Calculator?", answer: "The GetFunTools Love Calculator is a free digital tool designed to compute a love compatibility percentage between two names using character numerology math and vibe algorithms." },
     { question: "How does the Love Calculator calculate compatibility?", answer: "The algorithm converts name letters into numerical ASCII values, combines them with the selected vibe mode, and renders a score between 65% and 100%." },
     { question: "Is the Love Calculator free?", answer: "Yes, 100% free with unlimited calculations and zero registration required." },
     { question: "Is the Love Calculator accurate?", answer: "The tool produces consistent, repeatable results based on name math. However, it is intended strictly for entertainment purposes." },
     { question: "Is my personal data stored?", answer: "No. All calculations occur locally in your web browser. Names are never saved or sent to external servers." },
-    { question: "Can I use the Love Calculator on mobile phones?", answer: "Yes! FunTools is fully responsive and works smoothly on iOS, Android, and desktop browsers." },
+    { question: "Can I use the Love Calculator on mobile phones?", answer: "Yes! GetFunTools is fully responsive and works smoothly on iOS, Android, and desktop browsers." },
     { question: "Can I share my score with friends?", answer: "Yes, tap the 'Copy Result Card' button to copy a formatted result card directly to your clipboard." },
     { question: "Can I test friendship compatibility?", answer: "Yes! Choose the 'Bestie Chemistry' or 'Pure Chaotic Fun' mode to test friendship compatibility." },
     { question: "Does it work with non-English names?", answer: "Yes, the Unicode text algorithm supports international names written in French, Spanish, German, Hindi, and more." },

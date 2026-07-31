@@ -22,26 +22,26 @@ export const bmiCalculatorContent: DomainToolModule = {
     metaTitle: "BMI Calculator - Calculate Body Mass Index & WHO Health Categories",
     metaDescription: "Calculate your adult Body Mass Index (BMI) accurately with our free online calculator. Supports Metric (cm/kg) and Imperial (ft/lbs) units with World Health Organization health categories.",
     slug: "bmi-calculator",
-    canonicalUrl: "https://funtools.com/tools/bmi-calculator",
+    canonicalUrl: "https://getfuntools.app/tools/bmi-calculator",
     robots: "index, follow",
     openGraph: {
-      title: "Body Mass Index (BMI) Calculator | FunTools Health",
+      title: "Body Mass Index (BMI) Calculator | GetFunTools Health",
       description: "Calculate adult BMI, category ranges & healthy weight guidelines.",
-      url: "https://funtools.com/tools/bmi-calculator",
+      url: "https://getfuntools.app/tools/bmi-calculator",
       type: "website"
     },
     twitterCard: {
       card: "summary_large_image",
-      title: "BMI Calculator Online | FunTools",
+      title: "BMI Calculator Online | GetFunTools",
       description: "Calculate your BMI score & weight category instantly."
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools BMI Calculator calculates adult Body Mass Index (BMI) in metric or imperial units according to World Health Organization (WHO) categories.",
-    twoSentence: "The FunTools BMI Calculator measures body mass index by dividing body weight by height squared ($kg/m^2$). It classifies results into four WHO adult categories: Underweight (<18.5), Normal Weight (18.5-24.9), Overweight (25.0-29.9), and Obese (≥30.0).",
-    summary50: "The FunTools BMI Calculator is a free health tool that computes adult Body Mass Index (BMI) using metric (cm/kg) or imperial (ft/lbs) measurements. Based on World Health Organization guidelines, it provides instant category classifications and healthy weight range analysis.",
-    summary100: "The FunTools BMI Calculator calculates adult Body Mass Index (BMI) to assess weight relative to height. Supporting both Metric (centimeters and kilograms) and Imperial (feet, inches, and pounds) inputs, the engine computes $BMI = \text{weight} / \text{height}^2$. Results map to World Health Organization (WHO) classifications—Underweight, Normal Weight, Overweight, and Obese—giving users a clear health baseline alongside medical disclaimers.",
-    summary200: "The FunTools BMI Calculator provides an intuitive, accessible tool for adult health assessment. Built with clean interactive unit toggles, users can switch between Metric (cm and kg) and Imperial (feet, inches, and pounds) systems. The underlying formula calculates Body Mass Index ($kg/m^2$ or $lbs/in^2 \times 703$). The calculated score is rendered on a color-coded gauge representing the four primary World Health Organization (WHO) adult categories: Underweight (BMI < 18.5), Normal Weight (BMI 18.5 - 24.9), Overweight (BMI 25 - 29.9), and Obese (BMI ≥ 30). While BMI serves as a valuable screening tool for general adult populations, the page highlights limitations regarding muscular athletes, pregnant individuals, and elderly adults, emphasizing that BMI should complement comprehensive medical consultation.",
+    oneSentence: "The GetFunTools BMI Calculator calculates adult Body Mass Index (BMI) in metric or imperial units according to World Health Organization (WHO) categories.",
+    twoSentence: "The GetFunTools BMI Calculator measures body mass index by dividing body weight by height squared ($kg/m^2$). It classifies results into four WHO adult categories: Underweight (<18.5), Normal Weight (18.5-24.9), Overweight (25.0-29.9), and Obese (≥30.0).",
+    summary50: "The GetFunTools BMI Calculator is a free health tool that computes adult Body Mass Index (BMI) using metric (cm/kg) or imperial (ft/lbs) measurements. Based on World Health Organization guidelines, it provides instant category classifications and healthy weight range analysis.",
+    summary100: "The GetFunTools BMI Calculator calculates adult Body Mass Index (BMI) to assess weight relative to height. Supporting both Metric (centimeters and kilograms) and Imperial (feet, inches, and pounds) inputs, the engine computes $BMI = \text{weight} / \text{height}^2$. Results map to World Health Organization (WHO) classifications—Underweight, Normal Weight, Overweight, and Obese—giving users a clear health baseline alongside medical disclaimers.",
+    summary200: "The GetFunTools BMI Calculator provides an intuitive, accessible tool for adult health assessment. Built with clean interactive unit toggles, users can switch between Metric (cm and kg) and Imperial (feet, inches, and pounds) systems. The underlying formula calculates Body Mass Index ($kg/m^2$ or $lbs/in^2 \times 703$). The calculated score is rendered on a color-coded gauge representing the four primary World Health Organization (WHO) adult categories: Underweight (BMI < 18.5), Normal Weight (BMI 18.5 - 24.9), Overweight (BMI 25 - 29.9), and Obese (BMI ≥ 30). While BMI serves as a valuable screening tool for general adult populations, the page highlights limitations regarding muscular athletes, pregnant individuals, and elderly adults, emphasizing that BMI should complement comprehensive medical consultation.",
     bulletSummary: [
       "Calculates adult Body Mass Index (BMI) using standard mathematical formulas.",
       "Supports Metric (cm & kg) and Imperial (feet/inches & lbs) units.",
@@ -171,7 +171,7 @@ export const bmiCalculatorContent: DomainToolModule = {
     { question: "What is the difference between metric and imperial BMI math?", answer: "Metric uses kilograms and meters, while Imperial uses pounds and inches scaled by 703. Both yield equivalent final scores." },
     { question: "Is my personal height or weight saved?", answer: "No. All calculations run locally in your web browser. No medical or personal data is ever saved or transmitted." },
     { question: "What are the WHO BMI categories?", answer: "Underweight (<18.5), Normal Weight (18.5-24.9), Overweight (25.0-29.9), and Obese (≥30.0)." },
-    { question: "Can I use the BMI Calculator on mobile devices?", answer: "Yes! FunTools is fully responsive with fluid unit sliders for iOS and Android devices." },
+    { question: "Can I use the BMI Calculator on mobile devices?", answer: "Yes! GetFunTools is fully responsive with fluid unit sliders for iOS and Android devices." },
     { question: "Do I need to sign up for an account?", answer: "No registration or sign-up is required." },
     { question: "What should I do if my BMI is outside normal range?", answer: "Discuss your overall health, activity levels, and nutrition with a licensed medical practitioner." },
     { question: "Why does BMI matter in general health screening?", answer: "Population health studies correlate extreme BMI values with increased statistical risk for metabolic and cardiovascular conditions." },

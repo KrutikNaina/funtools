@@ -22,12 +22,12 @@ export const qrCodeGeneratorContent: DomainToolModule = {
     metaTitle: "Free QR Code Generator - HD PNG Download for Links, WiFi & Text",
     metaDescription: "Generate custom styled QR codes for links, text, and WiFi networks with high resolution PNG download. 100% free with no sign-up or expiration.",
     slug: "qr-code-generator",
-    canonicalUrl: "https://funtools.com/tools/qr-code-generator",
+    canonicalUrl: "https://getfuntools.app/tools/qr-code-generator",
     robots: "index, follow",
     openGraph: {
       title: "Free QR Code Generator | Custom HD Barcodes",
       description: "Create downloadable HD QR codes for URLs, WiFi, and text with custom colors.",
-      url: "https://funtools.com/tools/qr-code-generator",
+      url: "https://getfuntools.app/tools/qr-code-generator",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const qrCodeGeneratorContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools QR Code Generator creates custom high-definition downloadable QR codes for URLs, text, and WiFi networks.",
-    twoSentence: "The FunTools QR Code Generator turns website links, plain text, and contact details into scannable matrix barcodes. Users can customize foreground and background colors and download high-resolution PNG image files with zero expiration limits.",
-    summary50: "The FunTools QR Code Generator is a free online tool that converts URLs, text, and WiFi details into custom QR codes. Features include color customization, high-res PNG downloads, and zero registration or expiration constraints.",
-    summary100: "The FunTools QR Code Generator provides high-performance vector QR code creation for business cards, flyers, restaurant menus, and website promotion. Users input text or link URLs, select custom palette colors, and instantly preview and download high-resolution PNG barcode images compatible with all smartphone cameras.",
-    summary200: "The FunTools QR Code Generator is an essential digital utility designed to bridge physical and digital marketing effortless. Built for speed and compatibility, it converts any input data—including website URLs, social media profiles, plain text messages, email addresses, and WiFi credentials—into ISO-compliant 2D matrix barcodes. Users can personalize their QR codes by customizing foreground and background hex colors to match brand aesthetics. The generator creates permanent static QR codes that never expire, accompanied by instant high-res PNG image download buttons and clipboard copy features.",
+    oneSentence: "The GetFunTools QR Code Generator creates custom high-definition downloadable QR codes for URLs, text, and WiFi networks.",
+    twoSentence: "The GetFunTools QR Code Generator turns website links, plain text, and contact details into scannable matrix barcodes. Users can customize foreground and background colors and download high-resolution PNG image files with zero expiration limits.",
+    summary50: "The GetFunTools QR Code Generator is a free online tool that converts URLs, text, and WiFi details into custom QR codes. Features include color customization, high-res PNG downloads, and zero registration or expiration constraints.",
+    summary100: "The GetFunTools QR Code Generator provides high-performance vector QR code creation for business cards, flyers, restaurant menus, and website promotion. Users input text or link URLs, select custom palette colors, and instantly preview and download high-resolution PNG barcode images compatible with all smartphone cameras.",
+    summary200: "The GetFunTools QR Code Generator is an essential digital utility designed to bridge physical and digital marketing effortless. Built for speed and compatibility, it converts any input data—including website URLs, social media profiles, plain text messages, email addresses, and WiFi credentials—into ISO-compliant 2D matrix barcodes. Users can personalize their QR codes by customizing foreground and background hex colors to match brand aesthetics. The generator creates permanent static QR codes that never expire, accompanied by instant high-res PNG image download buttons and clipboard copy features.",
     bulletSummary: [
       "Generates scannable 2D QR codes for URLs, text, and WiFi.",
       "Allows custom foreground and background color selection.",
@@ -56,7 +56,7 @@ export const qrCodeGeneratorContent: DomainToolModule = {
       { label: "Cost", value: "100% Free" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools QR Generator", "Paid QR Services"],
+      header: ["Feature", "GetFunTools QR Generator", "Paid QR Services"],
       rows: [
         ["Expiration", "Never Expire (Permanent)", "Expires after Trial Period"],
         ["Scan Limits", "Unlimited Free Scans", "Capped Monthly Scan Limits"],
@@ -120,7 +120,7 @@ export const qrCodeGeneratorContent: DomainToolModule = {
       { title: "Universal Scanner Support", description: "Compatible with all iOS and Android camera apps." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools QR Gen", "Commercial QR Tools"],
+      headers: ["Feature", "GetFunTools QR Gen", "Commercial QR Tools"],
       rows: [
         ["Scan Fees", "0% Free Unlimited", "Subscription Required"],
         ["Expiration", "Permanent Lifetime", "Monthly Timeout"]
@@ -133,7 +133,7 @@ export const qrCodeGeneratorContent: DomainToolModule = {
     disclaimer: { type: "general", text: "Static QR codes encode fixed text data directly into the barcode module." }
   },
   faqs: [
-    { question: "Do generated QR codes expire?", answer: "No! Static QR codes generated on FunTools store data directly in the barcode and will work forever without expiring." },
+    { question: "Do generated QR codes expire?", answer: "No! Static QR codes generated on GetFunTools store data directly in the barcode and will work forever without expiring." },
     { question: "Is this QR Code Generator free?", answer: "Yes, 100% free with no hidden fees, scan limits, or registration requirements." },
     { question: "What image format is generated?", answer: "Our tool outputs high-resolution PNG image files suitable for both digital screens and physical printing." },
     { question: "Can I customize the QR code colors?", answer: "Yes! Use the foreground and background color pickers to customize your QR code palette." },
@@ -142,7 +142,7 @@ export const qrCodeGeneratorContent: DomainToolModule = {
     { question: "Why is high color contrast important for QR codes?", answer: "Smartphone cameras need high contrast (e.g. dark blue on white) to read the square module grid accurately." },
     { question: "Can I use these QR codes for commercial print ads?", answer: "Yes, all generated QR codes are free for commercial and personal use." },
     { question: "How much text can I put into a QR code?", answer: "QR codes can store up to 3,000+ characters, though shorter links produce cleaner barcodes." },
-    { question: "Does FunTools track scans on my QR code?", answer: "No, static QR codes connect directly to your destination link with zero intermediary tracking servers." },
+    { question: "Does GetFunTools track scans on my QR code?", answer: "No, static QR codes connect directly to your destination link with zero intermediary tracking servers." },
     { question: "Can I edit the destination link after downloading?", answer: "Static QR codes encode fixed text directly. To change the link, simply generate a new QR code." },
     { question: "Does this tool work on mobile devices?", answer: "Yes, you can generate and download QR codes on smartphones and tablets." },
     { question: "What size should a printed QR code be?", answer: "For flyers and business cards, we recommend a minimum printed size of 1x1 inch (2.5x2.5 cm)." },

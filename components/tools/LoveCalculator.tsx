@@ -75,7 +75,7 @@ export default function LoveCalculator() {
 
   const handleCopy = () => {
     if (!result) return;
-    const shareText = `💖 Love Compatibility for ${name1} + ${name2}: ${result.score}% - ${result.title}! Tested on FunTools ✨`;
+    const shareText = `💖 Love Compatibility for ${name1} + ${name2}: ${result.score}% - ${result.title}! Tested on GetFunTools ✨`;
     navigator.clipboard.writeText(shareText);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);

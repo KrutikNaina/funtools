@@ -367,7 +367,7 @@ export default function HomePage() {
               Read & Learn
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">
-              FunTools Insights & Guides
+              GetFunTools Insights & Guides
             </h2>
           </div>
           <Link
@@ -465,7 +465,7 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-6">
         <div className="p-8 md:p-12 rounded-3xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white text-center space-y-4 shadow-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-xs font-bold uppercase">
-            <Send className="w-3.5 h-3.5" /> FunTools Weekly Newsletter
+            <Send className="w-3.5 h-3.5" /> GetFunTools Weekly Newsletter
           </div>
           <h2 className="text-3xl sm:text-4xl font-black">Stay Updated on New Viral Tools</h2>
           <p className="text-sm opacity-90 max-w-lg mx-auto">

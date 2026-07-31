@@ -22,12 +22,12 @@ export const percentageCalculatorContent: DomainToolModule = {
     metaTitle: "Percentage Calculator - Solve Percent Increase, Decrease & Ratios",
     metaDescription: "Multi-mode percentage calculator to solve % of a number, percentage change (increase/decrease), and ratio percentages instantly.",
     slug: "percentage-calculator",
-    canonicalUrl: "https://funtools.com/tools/percentage-calculator",
+    canonicalUrl: "https://getfuntools.app/tools/percentage-calculator",
     robots: "index, follow",
     openGraph: {
       title: "Ultimate Percentage Calculator | Multi-Mode Math Tool",
       description: "Solve percentage increase, decrease, discounts, and ratio math instantly.",
-      url: "https://funtools.com/tools/percentage-calculator",
+      url: "https://getfuntools.app/tools/percentage-calculator",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const percentageCalculatorContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Percentage Calculator solves percentage of a number, percentage change, and ratio percentage math.",
-    twoSentence: "The FunTools Percentage Calculator offers three specialized math modes: What is X% of Y, Percentage Change (increase/decrease), and X is what % of Y. It provides instant real-time mathematical calculations with formula explanations.",
-    summary50: "The FunTools Percentage Calculator is a free online math utility that solves percentage calculations across 3 modes: percent of a total, percentage increase/decrease, and value ratio percentages with instant real-time results.",
-    summary100: "The FunTools Percentage Calculator provides mathematical assistance for finance, shopping, and academic calculations. Users can toggle between three calculation modes to solve percentage of a number, percentage change between two values, or what percentage one value represents of another, complete with step-by-step mathematical explanations.",
-    summary200: "The FunTools Percentage Calculator is a versatile financial and educational tool designed to solve everyday percent calculations without manual formulas. Built for instant browser processing, it features three dedicated modes: Mode 1 computes standard percentage of a total (e.g. 15% of $200 = $30); Mode 2 calculates percentage change, detecting whether a value increased or decreased (e.g. moving from 100 to 150 is a +50% increase); Mode 3 calculates ratio percentages (e.g. 45 is 30% of 150). The tool updates outputs automatically as inputs change, providing step-by-step mathematical summaries ideal for sales tax, tip calculations, discounts, and financial analysis.",
+    oneSentence: "The GetFunTools Percentage Calculator solves percentage of a number, percentage change, and ratio percentage math.",
+    twoSentence: "The GetFunTools Percentage Calculator offers three specialized math modes: What is X% of Y, Percentage Change (increase/decrease), and X is what % of Y. It provides instant real-time mathematical calculations with formula explanations.",
+    summary50: "The GetFunTools Percentage Calculator is a free online math utility that solves percentage calculations across 3 modes: percent of a total, percentage increase/decrease, and value ratio percentages with instant real-time results.",
+    summary100: "The GetFunTools Percentage Calculator provides mathematical assistance for finance, shopping, and academic calculations. Users can toggle between three calculation modes to solve percentage of a number, percentage change between two values, or what percentage one value represents of another, complete with step-by-step mathematical explanations.",
+    summary200: "The GetFunTools Percentage Calculator is a versatile financial and educational tool designed to solve everyday percent calculations without manual formulas. Built for instant browser processing, it features three dedicated modes: Mode 1 computes standard percentage of a total (e.g. 15% of $200 = $30); Mode 2 calculates percentage change, detecting whether a value increased or decreased (e.g. moving from 100 to 150 is a +50% increase); Mode 3 calculates ratio percentages (e.g. 45 is 30% of 150). The tool updates outputs automatically as inputs change, providing step-by-step mathematical summaries ideal for sales tax, tip calculations, discounts, and financial analysis.",
     bulletSummary: [
       "3 calculation modes: % of total, % change, and ratio %.",
       "Automatically detects percentage increase vs percentage decrease.",
@@ -56,7 +56,7 @@ export const percentageCalculatorContent: DomainToolModule = {
       { label: "Cost", value: "100% Free" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools Percentage Calc", "Basic Calculator"],
+      header: ["Feature", "GetFunTools Percentage Calc", "Basic Calculator"],
       rows: [
         ["Mode Selection", "3 Dedicated Modes", "Single Math Entry"],
         ["Change Detection", "Auto-Identifies Increase/Decrease", "Requires Manual Formula"],
@@ -120,7 +120,7 @@ export const percentageCalculatorContent: DomainToolModule = {
       { title: "Auto Increase/Decrease", description: "Identifies positive and negative growth." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Percentage Calc", "Standard Calculator"],
+      headers: ["Feature", "GetFunTools Percentage Calc", "Standard Calculator"],
       rows: [
         ["Modes", "3 Dedicated Modes", "Manual Percent Button"],
         ["Explanation", "Full Step-by-Step Summary", "None"]
@@ -143,7 +143,7 @@ export const percentageCalculatorContent: DomainToolModule = {
     { question: "Does the tool round the calculated result?", answer: "Results are rounded to 2 decimal places for clean readable financial outputs." },
     { question: "Can I use this for test score percentages?", answer: "Yes! Use Mode 3 by entering your score as X and total points as Y." },
     { question: "Does this tool store my calculations?", answer: "No, all math calculations happen locally in your web browser." },
-    { question: "Does it work on smartphones?", answer: "Yes, FunTools is fully optimized for iOS and Android devices." },
+    { question: "Does it work on smartphones?", answer: "Yes, GetFunTools is fully optimized for iOS and Android devices." },
     { question: "What is 20% off $50?", answer: "20% of $50 is $10, making the discounted final price $40." },
     { question: "What is the difference between percentage points and percentage change?", answer: "Percentage points is the simple difference between two percentages, while percentage change is the relative percentage growth." },
     { question: "How to add a percentage to a number?", answer: "Calculate X% of the number using Mode 1, then add that result to your starting number." },

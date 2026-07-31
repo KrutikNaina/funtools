@@ -22,12 +22,12 @@ export const deathCalculatorContent: DomainToolModule = {
     metaTitle: "Cosmic Death & Lifespan Calculator (Entertainment Only)",
     metaDescription: "Enter your daily coffee, sleep, and humor habits to calculate your estimated remaining days on Earth with funny longevity badges. (Entertainment Only)",
     slug: "death-calculator",
-    canonicalUrl: "https://funtools.com/tools/death-calculator",
+    canonicalUrl: "https://getfuntools.app/tools/death-calculator",
     robots: "index, follow",
     openGraph: {
       title: "Cosmic Death & Lifespan Calculator | Fun Life Clock",
       description: "Calculate your estimated remaining days on Earth with humorous habit sliders and badges. (Entertainment Only)",
-      url: "https://funtools.com/tools/death-calculator",
+      url: "https://getfuntools.app/tools/death-calculator",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const deathCalculatorContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Cosmic Death Calculator is an entertainment-only life clock that calculates a humorous estimated remaining lifespan based on daily habit sliders.",
-    twoSentence: "The FunTools Cosmic Death Calculator evaluates user inputs for coffee intake, sleep, laughter, and chaos levels. It outputs a playful estimate of remaining days on Earth along with funny longevity badges like Immortal Cactus or Vibrant Phoenix.",
-    summary50: "The FunTools Cosmic Death Calculator is a free entertainment utility that estimates remaining lifespan days using humorous habit sliders (coffee, sleep, laughter). It includes funny archetype badges and clear entertainment disclaimers.",
-    summary100: "The FunTools Cosmic Death Calculator offers a lighthearted humor quiz exploring lifestyle habits. Users adjust interactive sliders for daily coffee cups, sleep hours, laughter levels, and chaos to view a playful calculation of estimated remaining days on Earth, complete with shareable longevity badges.",
-    summary200: "The FunTools Cosmic Death Calculator is a humorous entertainment micro-app created for social sharing and lighthearted fun. Built with interactive sliders for age, coffee intake, sleep hours, laughter frequency, and daily chaos, it computes a playful lifespan estimation without medical claims. Output results feature a live calculated remaining days counter, total estimated years, and funny longevity badges such as 'Immortal Cyber Cactus' or 'Vibrant Phoenix'. The tool features prominent disclaimers emphasizing its 100% entertainment purpose, making it a popular viral quiz for friends and social media.",
+    oneSentence: "The GetFunTools Cosmic Death Calculator is an entertainment-only life clock that calculates a humorous estimated remaining lifespan based on daily habit sliders.",
+    twoSentence: "The GetFunTools Cosmic Death Calculator evaluates user inputs for coffee intake, sleep, laughter, and chaos levels. It outputs a playful estimate of remaining days on Earth along with funny longevity badges like Immortal Cactus or Vibrant Phoenix.",
+    summary50: "The GetFunTools Cosmic Death Calculator is a free entertainment utility that estimates remaining lifespan days using humorous habit sliders (coffee, sleep, laughter). It includes funny archetype badges and clear entertainment disclaimers.",
+    summary100: "The GetFunTools Cosmic Death Calculator offers a lighthearted humor quiz exploring lifestyle habits. Users adjust interactive sliders for daily coffee cups, sleep hours, laughter levels, and chaos to view a playful calculation of estimated remaining days on Earth, complete with shareable longevity badges.",
+    summary200: "The GetFunTools Cosmic Death Calculator is a humorous entertainment micro-app created for social sharing and lighthearted fun. Built with interactive sliders for age, coffee intake, sleep hours, laughter frequency, and daily chaos, it computes a playful lifespan estimation without medical claims. Output results feature a live calculated remaining days counter, total estimated years, and funny longevity badges such as 'Immortal Cyber Cactus' or 'Vibrant Phoenix'. The tool features prominent disclaimers emphasizing its 100% entertainment purpose, making it a popular viral quiz for friends and social media.",
     bulletSummary: [
       "Humorous lifespan estimation based on coffee, sleep, and laughter sliders.",
       "Calculates estimated remaining days and total lifespan years.",
@@ -56,7 +56,7 @@ export const deathCalculatorContent: DomainToolModule = {
       { label: "Cost", value: "100% Free" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools Death Calculator", "Medical Actuarial Tables"],
+      header: ["Feature", "GetFunTools Death Calculator", "Medical Actuarial Tables"],
       rows: [
         ["Purpose", "100% Humorous Entertainment", "Insurance Actuarial Science"],
         ["Input Style", "Coffee & Laughter Sliders", "Medical & Genetic Data"],
@@ -120,7 +120,7 @@ export const deathCalculatorContent: DomainToolModule = {
       { title: "Longevity Badges", description: "Funny archetype ranks." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Death Calc", "Medical Actuarial Tools"],
+      headers: ["Feature", "GetFunTools Death Calc", "Medical Actuarial Tools"],
       rows: [
         ["Tone", "Humorous & Fun", "Serious & Medical"],
         ["Disclaimer", "Prominent Entertainment Notice", "Medical Terms"]
@@ -140,7 +140,7 @@ export const deathCalculatorContent: DomainToolModule = {
     { question: "What are longevity archetypes?", answer: "Longevity archetypes are funny rank badges (like Immortal Cactus or Chill Sloth) assigned based on your score." },
     { question: "Can I share my results with friends?", answer: "Yes! Use the Share button to copy your funny result card link." },
     { question: "Why does coffee increase estimated lifespan in the tool?", answer: "Because coffee fuels developers and makes for a fun coffee-lover humor slider!" },
-    { question: "Does this tool work on mobile phones?", answer: "Yes, FunTools is fully optimized for iOS, Android, and mobile screens." },
+    { question: "Does this tool work on mobile phones?", answer: "Yes, GetFunTools is fully optimized for iOS, Android, and mobile screens." },
     { question: "Should I make lifestyle changes based on this calculator?", answer: "No! Consult a qualified healthcare professional for any real medical or lifestyle advice." },
     { question: "Can I generate results for my friends?", answer: "Yes, simply adjust the sliders to match your friends' habits." },
     { question: "How many days are in 50 years?", answer: "50 years contains approximately 18,262 calendar days." },

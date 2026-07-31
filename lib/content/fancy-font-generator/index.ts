@@ -22,12 +22,12 @@ export const fancyFontGeneratorContent: DomainToolModule = {
     metaTitle: "Fancy Font Generator - 20+ Aesthetic Copy & Paste Fonts for Instagram, TikTok & Discord",
     metaDescription: "Transform plain text into 20+ aesthetic Unicode font styles with our free Fancy Font Generator. Generate Cursive, Gothic, Bubble, and Monospace text for Instagram bios, TikTok captions, and Discord handles.",
     slug: "fancy-font-generator",
-    canonicalUrl: "https://funtools.com/tools/fancy-font-generator",
+    canonicalUrl: "https://getfuntools.app/tools/fancy-font-generator",
     robots: "index, follow",
     openGraph: {
       title: "Viral Fancy Font Generator | Copy & Paste Aesthetic Fonts",
       description: "Convert text to Cursive, Gothic & Bubble fonts with 1-click copy for social media.",
-      url: "https://funtools.com/tools/fancy-font-generator",
+      url: "https://getfuntools.app/tools/fancy-font-generator",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const fancyFontGeneratorContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Fancy Font Generator converts standard text into 20+ aesthetic Unicode character styles for social media bios and captions.",
-    twoSentence: "The FunTools Fancy Font Generator maps normal keyboard input to special mathematical and alphanumeric Unicode symbols. Users can convert text into Cursive Script, Gothic Fraktur, Bubble Circles, and Monospace fonts with 1-click clipboard copying.",
-    summary50: "The FunTools Fancy Font Generator is a free web-based Unicode typography tool that turns plain text into 20+ aesthetic font styles like Cursive, Gothic, and Bubble letters. Perfect for Instagram bios, TikTok captions, and Discord handles, it features real-time conversion and 1-click copy functionality.",
-    summary100: "The FunTools Fancy Font Generator is a Unicode text transformation engine designed for content creators, influencers, and gamers. By mapping regular ASCII letters to stylized Unicode character sets, it generates over 20 font variations including Cursive Script, Gothic Fraktur, Double-Struck Outline, and Tech Monospace. The tool updates live as you type, includes style search filters, and offers 1-click copy buttons compatible with iOS, Android, and all major web apps.",
-    summary200: "The FunTools Fancy Font Generator provides a complete aesthetic typography suite for social media personalization. Powered by browser JavaScript, it converts standard keyboard characters into mathematical alphanumeric symbols recognized universally across modern operating systems. Users can input any word or handle to instantly preview stylized variations in Cursive Script, Gothic Fraktur, Bubble Circles, Slanted Italic, and Squared Block fonts. The tool includes live search filtering, instant text clearing, and 1-click copy buttons with toast notifications. Because Unicode characters are native system glyphs, these generated fonts paste seamlessly into Instagram bios, TikTok captions, Twitter posts, Discord handles, and Roblox usernames without breaking or showing missing character boxes.",
+    oneSentence: "The GetFunTools Fancy Font Generator converts standard text into 20+ aesthetic Unicode character styles for social media bios and captions.",
+    twoSentence: "The GetFunTools Fancy Font Generator maps normal keyboard input to special mathematical and alphanumeric Unicode symbols. Users can convert text into Cursive Script, Gothic Fraktur, Bubble Circles, and Monospace fonts with 1-click clipboard copying.",
+    summary50: "The GetFunTools Fancy Font Generator is a free web-based Unicode typography tool that turns plain text into 20+ aesthetic font styles like Cursive, Gothic, and Bubble letters. Perfect for Instagram bios, TikTok captions, and Discord handles, it features real-time conversion and 1-click copy functionality.",
+    summary100: "The GetFunTools Fancy Font Generator is a Unicode text transformation engine designed for content creators, influencers, and gamers. By mapping regular ASCII letters to stylized Unicode character sets, it generates over 20 font variations including Cursive Script, Gothic Fraktur, Double-Struck Outline, and Tech Monospace. The tool updates live as you type, includes style search filters, and offers 1-click copy buttons compatible with iOS, Android, and all major web apps.",
+    summary200: "The GetFunTools Fancy Font Generator provides a complete aesthetic typography suite for social media personalization. Powered by browser JavaScript, it converts standard keyboard characters into mathematical alphanumeric symbols recognized universally across modern operating systems. Users can input any word or handle to instantly preview stylized variations in Cursive Script, Gothic Fraktur, Bubble Circles, Slanted Italic, and Squared Block fonts. The tool includes live search filtering, instant text clearing, and 1-click copy buttons with toast notifications. Because Unicode characters are native system glyphs, these generated fonts paste seamlessly into Instagram bios, TikTok captions, Twitter posts, Discord handles, and Roblox usernames without breaking or showing missing character boxes.",
     bulletSummary: [
       "Converts regular text into 20+ aesthetic Unicode font styles.",
       "Supports Cursive Script, Gothic Fraktur, Bubble Circles, and Monospace.",
@@ -56,7 +56,7 @@ export const fancyFontGeneratorContent: DomainToolModule = {
       { label: "Cost & Limits", value: "100% Free with unlimited text conversions" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools Fancy Fonts", "Basic Font Converters"],
+      header: ["Feature", "GetFunTools Fancy Fonts", "Basic Font Converters"],
       rows: [
         ["Live Style Search", "Included for fast navigation", "None"],
         ["Clipboard Feedback", "1-Click Toast Notification", "Manual highlight required"],
@@ -127,7 +127,7 @@ export const fancyFontGeneratorContent: DomainToolModule = {
       { title: "Instant Clear Button", description: "1-tap clear button for effortless text editing." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Font Generator", "Generic Text Tools"],
+      headers: ["Feature", "GetFunTools Font Generator", "Generic Text Tools"],
       rows: [
         ["Live Style Search", "Included for quick navigation", "None"],
         ["Style Variety", "20+ Curated Unicode Styles", "5-10 Styles"],
@@ -167,7 +167,7 @@ export const fancyFontGeneratorContent: DomainToolModule = {
     { question: "What is the difference between custom fonts and Unicode fonts?", answer: "Custom fonts (TTF/WOFF) require file downloads, whereas Unicode fonts use standard universal character codes built into all modern devices." },
     { question: "How many font styles are available in this tool?", answer: "Over 20 unique aesthetic styles including Bold, Cursive, Gothic, Double-Struck, Bubble, Monospace, and Italic." },
     { question: "Can I filter or search for specific font styles?", answer: "Yes! Use the search bar above the font grid to quickly filter by keyword like 'Cursive' or 'Gothic'." },
-    { question: "Does this tool work on mobile devices?", answer: "Yes, FunTools is fully responsive and optimized for mobile touchscreens." },
+    { question: "Does this tool work on mobile devices?", answer: "Yes, GetFunTools is fully responsive and optimized for mobile touchscreens." },
     { question: "Are there character limits when using the font generator?", answer: "There are no strict limits, though shorter phrases and bios produce the most aesthetically pleasing typography." },
     { question: "What are common mistakes when formatting social media bios?", answer: "Overusing complex fonts throughout long paragraphs can reduce legibility. We recommend pairing fancy headers with clean body text." },
     { question: "How can I troubleshoot if text doesn't copy to my clipboard?", answer: "Check that browser clipboard permissions are enabled, or manually highlight the text box and press Ctrl+C (Cmd+C on Mac)." },

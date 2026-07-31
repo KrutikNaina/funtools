@@ -22,12 +22,12 @@ export const usernameGeneratorContent: DomainToolModule = {
     metaTitle: "Username Generator - 50+ Aesthetic Ideas for Instagram, TikTok & Discord",
     metaDescription: "Generate 50+ unique, aesthetic usernames for Instagram, TikTok, Discord, and Gaming handles. Features style themes like Aesthetic, Cyber, Cute, Tech, and Anime.",
     slug: "username-generator",
-    canonicalUrl: "https://funtools.com/tools/username-generator",
+    canonicalUrl: "https://getfuntools.app/tools/username-generator",
     robots: "index, follow",
     openGraph: {
       title: "Viral Username Generator | 50+ Aesthetic Handle Ideas",
       description: "Generate creative aesthetic usernames for Instagram, TikTok, and Discord with 1-click copy.",
-      url: "https://funtools.com/tools/username-generator",
+      url: "https://getfuntools.app/tools/username-generator",
       type: "website"
     },
     twitterCard: {
@@ -37,11 +37,11 @@ export const usernameGeneratorContent: DomainToolModule = {
     }
   },
   aiOverview: {
-    oneSentence: "The FunTools Username Generator creates unique aesthetic usernames for Instagram, TikTok, Discord, and gaming handles.",
-    twoSentence: "The FunTools Username Generator combines user keywords with curated aesthetic prefixes and suffixes. Users can instantly generate and copy stylized handles across Aesthetic, Cyber, Cute, Tech, and Anime themes.",
-    summary50: "The FunTools Username Generator is a free online tool that creates over 50 aesthetic username ideas for Instagram, TikTok, Discord, and gaming profiles. It features style presets such as Aesthetic, Cyber, Cute, and Tech with instant 1-click clipboard copy.",
-    summary100: "The FunTools Username Generator is a social handle creation tool designed for content creators, gamers, and influencers. Users input a core keyword and select a style vibe to generate dozens of unique username combinations. Incorporating popular naming trends like soft aesthetics, gaming tags, and anime suffixes, it helps users craft memorable online handles with 1-click copy functionality.",
-    summary200: "The FunTools Username Generator offers a comprehensive handle design system for digital identity customization. Built for fast web performance, it processes keyword inputs and pairs them with curated thematic suffixes and prefixes across five distinct style categories: Aesthetic, Cyber Gaming, Cute Boba, Tech Minimal, and Anime Vibe. The tool updates results live as keywords or style filters change. Users can tap any generated username to copy it directly to their clipboard for instant registration on Instagram, TikTok, Discord, Twitter, or gaming platforms like Roblox and Valorant.",
+    oneSentence: "The GetFunTools Username Generator creates unique aesthetic usernames for Instagram, TikTok, Discord, and gaming handles.",
+    twoSentence: "The GetFunTools Username Generator combines user keywords with curated aesthetic prefixes and suffixes. Users can instantly generate and copy stylized handles across Aesthetic, Cyber, Cute, Tech, and Anime themes.",
+    summary50: "The GetFunTools Username Generator is a free online tool that creates over 50 aesthetic username ideas for Instagram, TikTok, Discord, and gaming profiles. It features style presets such as Aesthetic, Cyber, Cute, and Tech with instant 1-click clipboard copy.",
+    summary100: "The GetFunTools Username Generator is a social handle creation tool designed for content creators, gamers, and influencers. Users input a core keyword and select a style vibe to generate dozens of unique username combinations. Incorporating popular naming trends like soft aesthetics, gaming tags, and anime suffixes, it helps users craft memorable online handles with 1-click copy functionality.",
+    summary200: "The GetFunTools Username Generator offers a comprehensive handle design system for digital identity customization. Built for fast web performance, it processes keyword inputs and pairs them with curated thematic suffixes and prefixes across five distinct style categories: Aesthetic, Cyber Gaming, Cute Boba, Tech Minimal, and Anime Vibe. The tool updates results live as keywords or style filters change. Users can tap any generated username to copy it directly to their clipboard for instant registration on Instagram, TikTok, Discord, Twitter, or gaming platforms like Roblox and Valorant.",
     bulletSummary: [
       "Generates 50+ creative username ideas instantly.",
       "Offers 5 distinct style vibes: Aesthetic, Cyber, Cute, Tech, and Anime.",
@@ -56,7 +56,7 @@ export const usernameGeneratorContent: DomainToolModule = {
       { label: "Cost & Privacy", value: "100% Free, zero data logging" }
     ],
     comparisonSummary: {
-      header: ["Feature", "FunTools Username Generator", "Basic Generators"],
+      header: ["Feature", "GetFunTools Username Generator", "Basic Generators"],
       rows: [
         ["Style Filters", "5 Curated Vibe Themes", "None"],
         ["Clipboard Copy", "1-Tap Copy with Toast", "Manual Highlight"],
@@ -121,7 +121,7 @@ export const usernameGeneratorContent: DomainToolModule = {
       { title: "1-Tap Clipboard Copy", description: "Fast copying without manual selection." }
     ],
     comparisonTable: {
-      headers: ["Feature", "FunTools Username Gen", "Generic Generators"],
+      headers: ["Feature", "GetFunTools Username Gen", "Generic Generators"],
       rows: [
         ["Vibe Filters", "5 Curated Themes", "Generic Random"],
         ["Copy Speed", "1-Tap Copy", "Manual Selection"]
@@ -136,7 +136,7 @@ export const usernameGeneratorContent: DomainToolModule = {
   faqs: [
     { question: "What is a Username Generator?", answer: "A Username Generator is an online tool that creates creative handle ideas by combining keywords with aesthetic prefixes and suffixes." },
     { question: "Are these usernames free to use?", answer: "Yes, 100% free with unlimited handle generation." },
-    { question: "How do I check if a username is available on Instagram?", answer: "Copy your chosen username from FunTools and test it directly in the Instagram profile edit screen." },
+    { question: "How do I check if a username is available on Instagram?", answer: "Copy your chosen username from GetFunTools and test it directly in the Instagram profile edit screen." },
     { question: "What makes a good aesthetic username?", answer: "Aesthetic usernames typically feature short words, soft punctuation like dots or underscores, and mood words like vibe, aura, or haze." },
     { question: "Can I generate gaming tags for Discord and Roblox?", answer: "Yes! Select the Cyber/Gaming style filter for epic gaming handle ideas." },
     { question: "Does this generator store my input keywords?", answer: "No, all keyword processing occurs locally in your browser." },
@@ -147,7 +147,7 @@ export const usernameGeneratorContent: DomainToolModule = {
     { question: "Can I use special symbols in my username?", answer: "Most social platforms allow underscores and dots." },
     { question: "What should I do if my favorite username is taken?", answer: "Try adding a subtle suffix like .io, _vibe, or x_." },
     { question: "Is there a limit on username length?", answer: "Most platforms cap usernames at 30 characters." },
-    { question: "Does this tool work on mobile phones?", answer: "Yes, FunTools is fully mobile optimized." },
+    { question: "Does this tool work on mobile phones?", answer: "Yes, GetFunTools is fully mobile optimized." },
     { question: "How often should I change my online username?", answer: "Keeping a consistent handle helps followers find you easily across multiple platforms." }
   ],
   peopleAlsoAsk: [
