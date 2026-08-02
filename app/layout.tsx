@@ -43,6 +43,9 @@ export const metadata: Metadata = {
   publisher: "GetFunTools",
   creator: "GetFunTools Team",
   category: "Tools and Utilities",
+  icons: {
+    icon: "/icon.svg",
+  },
   alternates: {
     canonical: "https://getfuntools.app",
     languages: {

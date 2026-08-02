@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, Bookmark, ArrowUpRight, Star, Heart, Zap, Type, Dices, Coins, Bot, Orbit, BrainCircuit } from "lucide-react";
+import { Sparkles, Bookmark, ArrowUpRight, Heart, Zap, Type, Dices, Coins, Bot, Orbit, BrainCircuit } from "lucide-react";
 import { Tool } from "@/types/tool";
 
 // Icon mapping dictionary
@@ -90,11 +90,7 @@ export default function ToolCard({ tool }: { tool: Tool }) {
             <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
               {tool.title}
             </h3>
-            <div className="flex items-center gap-1 text-xs text-amber-500 font-bold mt-0.5">
-              <Star className="w-3.5 h-3.5 fill-current" />
-              <span>{tool.rating}</span>
-              <span className="text-slate-400 font-normal">({tool.useCount} uses)</span>
-            </div>
+
           </div>
         </div>
 

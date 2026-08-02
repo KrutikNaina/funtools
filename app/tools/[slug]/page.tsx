@@ -11,7 +11,7 @@ import DynamicToolRenderer from "./DynamicToolRenderer";
 import AEOOverviewBox from "@/components/seo/AEOOverviewBox";
 import FeaturedSnippetBox from "@/components/seo/FeaturedSnippetBox";
 import ToolFAQSection from "@/components/seo/ToolFAQSection";
-import TrustAuthorBox from "@/components/seo/TrustAuthorBox";
+
 import BookmarkButton from "@/components/BookmarkButton";
 import ToolComments from "@/components/ToolComments";
 import {
@@ -133,11 +133,6 @@ export default async function ToolDetailPage({ params }: PageProps) {
       price: "0",
       priceCurrency: "USD",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: tool.rating.toString(),
-      ratingCount: "1850",
-    },
   };
 
   const howToSchema = {
@@ -188,16 +183,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
             {module.content.heroSubheading}
           </p>
 
-          {/* E-E-A-T Quick Metadata Bar */}
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-slate-500 font-medium pt-2">
-            <span>By <strong className="text-slate-900 dark:text-white">{module.eeat.authorName}</strong> ({module.eeat.authorRole})</span>
-            <span>•</span>
-            <span>Reviewed by <strong className="text-slate-900 dark:text-white">{module.eeat.reviewerName}</strong></span>
-            <span>•</span>
-            <span>Updated: {module.eeat.lastUpdated}</span>
-            <span>•</span>
-            <span>{module.eeat.readTime}</span>
-          </div>
+
         </header>
 
         {/* SECTION 3: Interactive Tool Component */}
@@ -376,21 +362,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* SECTION 11: Trust Author & Verification Box */}
-        <section className="max-w-4xl mx-auto">
-          <TrustAuthorBox eeat={{
-            authorName: module.eeat.authorName,
-            authorRole: module.eeat.authorRole,
-            authorAvatar: module.eeat.authorAvatar,
-            reviewerName: module.eeat.reviewerName,
-            reviewerRole: module.eeat.reviewerRole,
-            lastUpdated: module.eeat.lastUpdated,
-            contentVersion: module.eeat.contentVersion,
-            readTime: module.eeat.readTime,
-            disclaimerType: module.content.disclaimer?.type || "general",
-            disclaimerText: module.content.disclaimer?.text
-          }} />
-        </section>
+
 
         {/* SECTION 12: Tool FAQ Accordion */}
         <section className="max-w-4xl mx-auto">

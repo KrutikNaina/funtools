@@ -14,7 +14,7 @@ function DirectoryContent() {
 
   const [query, setQuery] = useState(initialQuery);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const [sortBy, setSortBy] = useState<"popular" | "rating" | "latest">("popular");
+  const [sortBy, setSortBy] = useState<"popular" | "latest">("popular");
   const [onlyBookmarks, setOnlyBookmarks] = useState(false);
 
   const filteredTools = useMemo(() => {
@@ -33,7 +33,6 @@ function DirectoryContent() {
 
       return matchesQuery && matchesCat && matchesBookmark;
     }).sort((a, b) => {
-      if (sortBy === "rating") return b.rating - a.rating;
       if (sortBy === "popular") return b.isPopular ? 1 : -1;
       return 0;
     });
@@ -79,7 +78,6 @@ function DirectoryContent() {
                 className="w-full px-4 py-2.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 focus:outline-none cursor-pointer"
               >
                 <option value="popular">Most Popular</option>
-                <option value="rating">Highest Rated</option>
                 <option value="latest">Recently Added</option>
               </select>
             </div>

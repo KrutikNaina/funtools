@@ -102,8 +102,6 @@ export interface Tool {
   isTrending?: boolean;
   isNew?: boolean;
   isFeatured?: boolean;
-  rating: number;
-  useCount: string;
   gradient: string;
   tags: string[];
   features: string[];

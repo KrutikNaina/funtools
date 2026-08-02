@@ -75,7 +75,6 @@ export function getPeopleAlsoUsed(toolSlug: string, limit = 4): Tool[] {
 
 export function getPopularInCategory(category: string, currentSlug?: string, limit = 4): Tool[] {
   return TOOLS.filter((t) => t.category === category && t.slug !== currentSlug)
-    .sort((a, b) => b.rating - a.rating)
     .slice(0, limit);
 }
 

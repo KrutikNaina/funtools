@@ -146,11 +146,6 @@ export default function HomePage() {
             </div>
             <h2 className="text-2xl sm:text-3xl font-black">{toolOfTheDay.title}</h2>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{toolOfTheDay.description}</p>
-            <div className="flex items-center gap-4 text-xs font-semibold text-amber-400 justify-center md:justify-start">
-              <span>★ {toolOfTheDay.rating} Score</span>
-              <span>•</span>
-              <span>{toolOfTheDay.useCount} Active Daily Users</span>
-            </div>
           </div>
 
           <Link
