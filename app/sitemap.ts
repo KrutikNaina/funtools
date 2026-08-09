@@ -1,8 +1,9 @@
 import { MetadataRoute } from "next";
 import { TOOLS, CATEGORIES, BLOG_POSTS } from "@/lib/tools-data";
+import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://getfuntools.app";
+  const baseUrl = SITE_URL;
 
   const toolUrls = TOOLS.map((t) => ({
     url: `${baseUrl}/tools/${t.slug}`,

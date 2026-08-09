@@ -22,12 +22,12 @@ export const deathCalculatorContent: DomainToolModule = {
     metaTitle: "Cosmic Death & Lifespan Calculator (Entertainment Only)",
     metaDescription: "Enter your daily coffee, sleep, and humor habits to calculate your estimated remaining days on Earth with funny longevity badges. (Entertainment Only)",
     slug: "death-calculator",
-    canonicalUrl: "https://getfuntools.app/tools/death-calculator",
+    canonicalUrl: "https://www.getfuntools.app/tools/death-calculator",
     robots: "index, follow",
     openGraph: {
       title: "Cosmic Death & Lifespan Calculator | Fun Life Clock",
       description: "Calculate your estimated remaining days on Earth with humorous habit sliders and badges. (Entertainment Only)",
-      url: "https://getfuntools.app/tools/death-calculator",
+      url: "https://www.getfuntools.app/tools/death-calculator",
       type: "website"
     },
     twitterCard: {

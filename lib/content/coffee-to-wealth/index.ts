@@ -22,12 +22,12 @@ export const coffeeToWealthContent: DomainToolModule = {
     metaTitle: "Coffee to Wealth Calculator - See How Daily $5 Splurges Grow into Wealth",
     metaDescription: "Calculate how skipping a daily $5 coffee or boba habit transforms into thousands of dollars through compound interest. Visualize wealth milestones like iPhones, trips & EVs.",
     slug: "coffee-to-wealth",
-    canonicalUrl: "https://getfuntools.app/tools/coffee-to-wealth",
+    canonicalUrl: "https://www.getfuntools.app/tools/coffee-to-wealth",
     robots: "index, follow",
     openGraph: {
       title: "Coffee to Wealth Calculator - The Latte Factor Math",
       description: "Visualize what daily habit savings turn into over 5, 10, or 20 years with compound interest.",
-      url: "https://getfuntools.app/tools/coffee-to-wealth",
+      url: "https://www.getfuntools.app/tools/coffee-to-wealth",
       type: "website"
     },
     twitterCard: {

@@ -38,7 +38,7 @@ export default function DynamicToolRenderer({ tool }: { tool: Tool }) {
         return <LoveCalculator />;
       case "fancy-font-generator":
         return <FancyFontGenerator />;
-      case "emoji-reaction-test":
+      case "reaction-time-test":
         return <ReactionSpeedTest />;
       case "decision-wheel":
         return <DecisionWheel />;
@@ -84,7 +84,7 @@ export default function DynamicToolRenderer({ tool }: { tool: Tool }) {
     }
   };
 
-  const currentUrl = typeof window !== "undefined" ? window.location.href : `https://getfuntools.app/tools/${tool.slug}`;
+  const currentUrl = typeof window !== "undefined" ? window.location.href : `https://www.getfuntools.app/tools/${tool.slug}`;
 
   return (
     <div className="space-y-4">

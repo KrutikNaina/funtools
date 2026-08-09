@@ -96,7 +96,7 @@ export default function LoveCalculator() {
           Calculate Your Compatibility
         </h2>
         <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
-          Enter two names to unveil your cosmic chemistry percentage & vibe breakdown.
+          Enter two names to get your compatibility score and vibe breakdown.
         </p>
       </div>
 

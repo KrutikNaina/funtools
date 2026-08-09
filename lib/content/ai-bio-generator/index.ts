@@ -22,12 +22,12 @@ export const aiBioGeneratorContent: DomainToolModule = {
     metaTitle: "AI Bio & Roast Generator - Create Viral Social Media Bios Instantly",
     metaDescription: "Generate punchy, hilarious, or professional social media bios for Instagram, X, TikTok, and LinkedIn. Pick your vibe (Gen-Z Roast, Tech Founder, Aesthetic Chic, Executive) and get instant clout ratings.",
     slug: "ai-bio-generator",
-    canonicalUrl: "https://getfuntools.app/tools/ai-bio-generator",
+    canonicalUrl: "https://www.getfuntools.app/tools/ai-bio-generator",
     robots: "index, follow",
     openGraph: {
       title: "AI Bio & Roast Generator | Viral Profile Copy Tool",
       description: "Create viral, hilariously accurate social bios with clout ratings & 1-click copy.",
-      url: "https://getfuntools.app/tools/ai-bio-generator",
+      url: "https://www.getfuntools.app/tools/ai-bio-generator",
       type: "website"
     },
     twitterCard: {

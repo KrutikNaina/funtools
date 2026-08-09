@@ -22,12 +22,12 @@ export const emojiReactionTestContent: DomainToolModule = {
     metaTitle: "Emoji Reaction Speed Test - Measure Your Reflexes in Milliseconds",
     metaDescription: "Test your visual reaction speed and reflexes in milliseconds with our free Reaction Speed Test. Compare your score to global human benchmarks and discover your gamer rank.",
     slug: "emoji-reaction-test",
-    canonicalUrl: "https://getfuntools.app/tools/emoji-reaction-test",
+    canonicalUrl: "https://www.getfuntools.app/tools/emoji-reaction-test",
     robots: "index, follow",
     openGraph: {
       title: "Emoji Reaction Speed Test - How Fast Are Your Reflexes?",
       description: "Measure reaction speed in milliseconds with gamer ranks & high scores.",
-      url: "https://getfuntools.app/tools/emoji-reaction-test",
+      url: "https://www.getfuntools.app/tools/emoji-reaction-test",
       type: "website"
     },
     twitterCard: {

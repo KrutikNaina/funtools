@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/site";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     "personality quiz",
   ],
   authors: [{ name: "GetFunTools Team" }],
-  metadataBase: new URL("https://getfuntools.app"),
+  metadataBase: new URL(SITE_URL),
   applicationName: "GetFunTools",
   generator: "Next.js",
   publisher: "GetFunTools",
@@ -47,21 +48,21 @@ export const metadata: Metadata = {
     icon: "/icon.svg",
   },
   alternates: {
-    canonical: "https://getfuntools.app",
+    canonical: "/",
     languages: {
-      "en-US": "https://getfuntools.app",
+      "en-US": "/",
     },
   },
   openGraph: {
     title: "GetFunTools – Free Online Tools, AI Tools, Calculators & Generators",
     description: "GetFunTools offers free online calculators, generators, converters, AI tools, image tools, developer utilities, productivity tools, and fun interactive tools. Fast, secure, mobile-friendly, and free to use.",
-    url: "https://getfuntools.app",
+    url: SITE_URL,
     siteName: "GetFunTools",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://getfuntools.app/og-image.jpg",
+        url: `${SITE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "GetFunTools",
@@ -72,7 +73,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "GetFunTools – Free Online Tools, AI Tools, Calculators & Generators",
     description: "GetFunTools offers free online calculators, generators, converters, AI tools, image tools, developer utilities, productivity tools, and fun interactive tools.",
-    images: ["https://getfuntools.app/og-image.jpg"],
+    images: [`${SITE_URL}/og-image.jpg`],
   },
   verification: {
     google: "cafc85c2be785fc6",
@@ -97,23 +98,23 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://getfuntools.app/#organization",
+        "@id": `${SITE_URL}/#organization`,
         name: "GetFunTools",
-        url: "https://getfuntools.app",
-        logo: "https://getfuntools.app/logo.png",
+        url: SITE_URL,
+        logo: `${SITE_URL}/logo.png`,
       },
       {
         "@type": "WebSite",
-        "@id": "https://getfuntools.app/#website",
+        "@id": `${SITE_URL}/#website`,
         name: "GetFunTools",
-        url: "https://getfuntools.app",
+        url: SITE_URL,
         description: "GetFunTools offers free online calculators, generators, converters, AI tools, image tools, developer utilities, productivity tools, and fun interactive tools. Fast, secure, mobile-friendly, and free to use.",
         publisher: {
-          "@id": "https://getfuntools.app/#organization",
+          "@id": `${SITE_URL}/#organization`,
         },
         potentialAction: {
           "@type": "SearchAction",
-          target: "https://getfuntools.app/search?q={search_term_string}",
+          target: `${SITE_URL}/search?q={search_term_string}`,
           "query-input": "required name=search_term_string",
         },
       }

@@ -22,12 +22,12 @@ export const dateCalculatorContent: DomainToolModule = {
     metaTitle: "Date Calculator - Add & Subtract Days, Weeks, Months to Any Date",
     metaDescription: "Calculate future or past target dates instantly by adding or subtracting specific days, weeks, months, or years. Includes leap year accuracy.",
     slug: "date-calculator",
-    canonicalUrl: "https://getfuntools.app/tools/date-calculator",
+    canonicalUrl: "https://www.getfuntools.app/tools/date-calculator",
     robots: "index, follow",
     openGraph: {
       title: "Date Add & Subtract Calculator | Instant Calendar Math",
       description: "Find future or past dates by adding or subtracting days, weeks, and months.",
-      url: "https://getfuntools.app/tools/date-calculator",
+      url: "https://www.getfuntools.app/tools/date-calculator",
       type: "website"
     },
     twitterCard: {

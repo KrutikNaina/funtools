@@ -22,12 +22,12 @@ export const nicknameGeneratorContent: DomainToolModule = {
     metaTitle: "Cool Nickname Generator - 40+ Epic Gamer Tags & Aliases",
     metaDescription: "Generate epic aliases and cool nicknames for Discord, Roblox, Valorant, and social profiles. Features vibes like Cyberpunk, Mythic, Cute, and VIP.",
     slug: "nickname-generator",
-    canonicalUrl: "https://getfuntools.app/tools/nickname-generator",
+    canonicalUrl: "https://www.getfuntools.app/tools/nickname-generator",
     robots: "index, follow",
     openGraph: {
       title: "Cool Nickname Generator | 40+ Gamer Tags & Aliases",
       description: "Generate epic nicknames for Discord, Roblox, Valorant, and social media.",
-      url: "https://getfuntools.app/tools/nickname-generator",
+      url: "https://www.getfuntools.app/tools/nickname-generator",
       type: "website"
     },
     twitterCard: {

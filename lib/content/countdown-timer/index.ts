@@ -22,12 +22,12 @@ export const countdownTimerContent: DomainToolModule = {
     metaTitle: "Countdown Timer - Live Ticking Event & Launch Clock",
     metaDescription: "Create custom live ticking countdown timers for product launches, birthdays, holidays, and personal goals. Displays days, hours, minutes, and seconds.",
     slug: "countdown-timer",
-    canonicalUrl: "https://getfuntools.app/tools/countdown-timer",
+    canonicalUrl: "https://www.getfuntools.app/tools/countdown-timer",
     robots: "index, follow",
     openGraph: {
       title: "Event & Goal Countdown Timer | Live Ticking Clock",
       description: "Track time remaining until your next birthday, launch, or holiday.",
-      url: "https://getfuntools.app/tools/countdown-timer",
+      url: "https://www.getfuntools.app/tools/countdown-timer",
       type: "website"
     },
     twitterCard: {

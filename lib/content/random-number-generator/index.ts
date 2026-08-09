@@ -5,168 +5,345 @@ export const randomNumberGeneratorContent: DomainToolModule = {
   schemaType: "SoftwareApplication",
   keywords: {
     primary: "Random Number Generator",
-    secondary: ["RNG Generator", "Random Number Picker", "Lottery Number Picker", "Random Integer Generator", "Raffle Number Generator"],
+    secondary: [
+      "Random Number Picker",
+      "RNG Tool",
+      "Lottery Number Picker",
+      "Random Integer Generator",
+      "Raffle Number Generator",
+    ],
     longTail: [
       "free random number generator between min and max range",
-      "non repeating random number picker for raffles and lotteries",
-      "cryptographically secure random integer generator online",
-      "generate multiple random numbers with ascending sort option",
-      "3D die roll animation random number picker free"
+      "non repeating random number picker for raffles",
+      "generate multiple random numbers online",
+      "random number generator 1 to 100",
+      "random number picker no duplicates",
     ],
-    lsi: ["pseudo random number", "cryptographic randomness", "unbiased generator", "integer bounds", "raffle draw"],
-    semantic: ["number randomizer", "RNG picker", "lottery number tool", "integer generator"],
-    questionKeywords: ["how to generate truly random numbers", "is an online random number generator fair", "how to pick raffle winners randomly"],
-    intentKeywords: ["generate random number", "pick random number", "RNG generator"]
+    lsi: [
+      "pseudorandom number",
+      "integer range",
+      "raffle draw",
+      "number picker",
+      "duplicate filter",
+    ],
+    semantic: [
+      "number randomizer",
+      "RNG picker",
+      "lottery number tool",
+      "integer generator",
+      "random picker",
+    ],
+    questionKeywords: [
+      "how to generate random numbers",
+      "how to pick raffle winners randomly",
+      "how to generate numbers without repeats",
+    ],
+    intentKeywords: [
+      "generate random number",
+      "pick random number",
+      "random number generator online",
+    ],
   },
   metadata: {
-    metaTitle: "Random Number Generator - Custom Range & Non-Repeating RNG",
-    metaDescription: "Generate single or multiple random numbers within any min and max limit. Features non-repeating filters, sorting options, and 3D die roll animation.",
+    metaTitle: "Random Number Generator – Free Random Number Picker | GetFunTools",
+    metaDescription:
+      "Generate random numbers instantly with custom minimum and maximum ranges. Choose multiple numbers, allow or prevent repeats, copy results, and use random numbers for games, raffles, giveaways, and everyday decisions.",
     slug: "random-number-generator",
-    canonicalUrl: "https://getfuntools.app/tools/random-number-generator",
+    canonicalUrl: "https://www.getfuntools.app/tools/random-number-generator",
     robots: "index, follow",
     openGraph: {
-      title: "Random Number Generator | Unbiased RNG Picker",
-      description: "Generate random numbers, lottery picks, and raffle winners with custom limits.",
-      url: "https://getfuntools.app/tools/random-number-generator",
-      type: "website"
+      title: "Random Number Generator – Free Random Number Picker",
+      description:
+        "Generate random numbers with custom ranges, multiple results, and optional duplicate numbers. Free and easy to use.",
+      url: "https://www.getfuntools.app/tools/random-number-generator",
+      type: "website",
     },
     twitterCard: {
       card: "summary_large_image",
-      title: "Random Number Generator - Custom RNG Tool",
-      description: "Generate non-repeating random numbers for raffles and games."
-    }
+      title: "Random Number Generator – Free Random Number Picker",
+      description:
+        "Generate random numbers with custom ranges, multiple results, and optional duplicate numbers. Free and easy to use.",
+    },
   },
   aiOverview: {
-    oneSentence: "The GetFunTools Random Number Generator creates unbiased random integers within user-defined minimum and maximum ranges.",
-    twoSentence: "The GetFunTools Random Number Generator produces single or multiple random numbers between custom numerical limits. Featuring toggles for duplicate suppression and sorting, it ensures 100% fair RNG outputs for raffles, games, and lotteries.",
-    summary50: "The GetFunTools Random Number Generator is a free online RNG utility that generates random integers between any min and max limit. It supports duplicate number filtering, list sorting, and 1-click output copying.",
-    summary100: "The GetFunTools Random Number Generator provides cryptographically safe random number generation for games, raffles, statistical sampling, and giveaways. Users can specify minimum and maximum integer bounds, set quantity counts up to 100 numbers, filter out duplicate values, and copy results instantly.",
-    summary200: "The GetFunTools Random Number Generator is an essential decision-making and raffle utility designed for total fairness and zero bias. Utilizing browser cryptographic pseudo-random generation, it evaluates user-defined Minimum and Maximum numerical bounds. Users can generate up to 100 numbers simultaneously, toggle 'Allow duplicate numbers' off for non-repeating lottery draws, and sort results in ascending or descending order. The tool features an animated die roll simulation and 1-click clipboard copying, making it ideal for classroom picks, contest drawings, gaming dice rolls, and scientific sampling.",
+    oneSentence:
+      "The GetFunTools Random Number Generator picks numbers from a user-defined range using a browser-based pseudorandom algorithm.",
+    twoSentence:
+      "The GetFunTools Random Number Generator produces one or more random numbers between custom minimum and maximum limits. It supports duplicate filtering, sort order, and one-click copying — useful for games, raffles, classroom draws, and everyday decisions.",
+    summary50:
+      "A free random number generator that picks numbers from any custom range. Supports multiple results, no-duplicate mode, sorting, and clipboard copy.",
+    summary100:
+      "The GetFunTools Random Number Generator lets you set a minimum and maximum, choose how many numbers to generate, and optionally prevent duplicates. Results display as individual chips that are easy to read and copy. No signup required.",
+    summary200:
+      "The GetFunTools Random Number Generator is a free browser tool for generating one or more random integers within any custom range. Users can set minimum and maximum values, choose a quantity, toggle duplicate prevention, and sort results in ascending or descending order. Quick range presets (1–10, 1–100, dice, cards, and more) let you get started instantly. Results appear as individual number chips and can be copied to the clipboard with one tap. The generator uses JavaScript's Math.random() — a pseudorandom algorithm — and is suitable for games, raffles, classroom activities, giveaways, and everyday decisions.",
     bulletSummary: [
-      "Generates random integers within custom min and max bounds.",
-      "Supports unique non-repeating number generation for raffles.",
-      "Generates up to 100 numbers in a single click.",
-      "Features sorting options (ascending/descending) and 1-click copy.",
-      "100% free with zero registration."
+      "Generates random integers within any custom min–max range.",
+      "Supports unique (no-repeat) number generation.",
+      "Displays results as individual number chips, not a single string.",
+      "Quick range presets: 1–10, 1–100, dice, cards, and more.",
+      "Copy to clipboard, clear, and generate again — all in one click.",
+      "100% free with no signup or usage limits.",
     ],
     tableSummary: [
-      { label: "Quantity Capacity", value: "1 to 100 Numbers per Generation" },
-      { label: "Duplicates Filter", value: "Toggleable (Allow / Disallow)" },
-      { label: "RNG Engine", value: "Browser Cryptographic Pseudo-Random" },
-      { label: "Cost", value: "100% Free" }
+      { label: "Maximum Quantity", value: "Up to 10,000 numbers" },
+      { label: "Duplicate Filter", value: "Toggleable on / off" },
+      { label: "Random Source", value: "Browser Math.random() (pseudorandom)" },
+      { label: "Cost", value: "Free" },
     ],
     comparisonSummary: {
-      header: ["Feature", "GetFunTools RNG Generator", "Physical Dice / Slips"],
+      header: ["Feature", "GetFunTools RNG", "Physical Dice / Slips"],
       rows: [
-        ["Speed", "Instant Generation (100 Numbers)", "Time-Consuming Manual Draw"],
-        ["Fairness", "Cryptographically Unbiased", "Physical Wear & Bias Risk"],
-        ["Non-Repeating Filter", "Supported 1-Click Toggle", "Requires Manual Removal"]
-      ]
-    }
+        ["Speed", "Instant (multiple numbers at once)", "Slow manual draw"],
+        ["No-repeat mode", "One-click toggle", "Requires manual removal"],
+        ["Quantity", "1 to 10,000 in one click", "Limited by physical items"],
+      ],
+    },
   },
   snippets: {
-    paragraph: "A Random Number Generator (RNG) is a hardware or software algorithm designed to output numbers that lack any predictable pattern or deterministic bias.",
+    paragraph:
+      "A random number generator is a tool that picks numbers from a defined range using an algorithm that produces results without any obvious pattern. This browser-based tool uses JavaScript's Math.random() function, a pseudorandom source suitable for games, raffles, and everyday decisions.",
     list: [
-      "Step 1: Set your Minimum (Min) and Maximum (Max) number bounds.",
-      "Step 2: Enter how many numbers you wish to generate.",
-      "Step 3: Toggle 'Allow duplicate numbers' on or off.",
-      "Step 4: Click 'Generate Random Numbers' and copy the output list."
+      "Step 1: Enter your minimum (lowest) number.",
+      "Step 2: Enter your maximum (highest) number.",
+      "Step 3: Choose how many numbers to generate.",
+      "Step 4: Click Generate Random Numbers and copy the results.",
     ],
     numbered: [
-      "Set Min & Max Range",
-      "Select Quantity",
-      "Configure Duplicate Filter",
-      "Click Generate & Copy"
+      "Set Min & Max range",
+      "Choose quantity",
+      "Toggle duplicates on or off",
+      "Click Generate & copy",
     ],
     table: {
-      headers: ["Use Case", "Suggested Min / Max", "Duplicate Filter"],
+      headers: ["Use Case", "Range", "Repeats"],
       rows: [
-        ["Single Die Roll", "1 to 6", "Allowed"],
-        ["Raffle Winner Draw", "1 to 500", "Disallowed (Unique)"],
-        ["Lottery Numbers", "1 to 69", "Disallowed (Unique)"]
-      ]
-    }
+        ["Single dice roll", "1 to 6", "Allowed"],
+        ["Raffle winner draw", "1 to 500", "Off"],
+        ["Pick a number 1–100", "1 to 100", "Allowed"],
+      ],
+    },
   },
   howTo: [
-    { name: "Set Limits", text: "Enter minimum and maximum integer values." },
-    { name: "Choose Count", text: "Specify how many numbers to generate." },
-    { name: "Set Filter", text: "Uncheck duplicates if picking unique winners." },
-    { name: "Generate", text: "Tap Generate to reveal your random numbers." }
+    { name: "Set minimum", text: "Enter the lowest number you want in the Minimum field." },
+    { name: "Set maximum", text: "Enter the highest number you want in the Maximum field." },
+    {
+      name: "Choose quantity",
+      text: "Enter how many numbers you want in the 'How many?' field. You can generate from 1 up to 10,000.",
+    },
+    {
+      name: "Generate",
+      text: "Click Generate Random Numbers. Results appear as individual chips and can be copied to your clipboard.",
+    },
   ],
   content: {
-    heroHeadline: "Generate Unbiased Random Numbers Instantly",
-    heroSubheading: "Create custom RNG sequences, lottery picks, and raffle draws with zero bias.",
-    introduction: "Fair randomness is essential for giveaways, raffles, gaming, and research sampling. The Random Number Generator delivers instant, cryptographically safe random numbers.",
-    definition: "A Random Number Generator is a computational algorithm that produces numerical sequences characterized by uniform distribution and non-predictability.",
+    heroHeadline: "Random Number Generator",
+    heroSubheading:
+      "Generate random numbers instantly with a custom range, multiple results, and optional duplicate numbers. Free to use with no signup.",
+    introduction:
+      "Whether you need a single number for a quick decision or hundreds for a raffle draw, this free generator handles any range and quantity instantly in your browser.",
+    definition:
+      "A random number generator is a tool that picks values from a defined numeric range using an algorithm designed to produce results without any predictable sequence. This tool uses your browser's built-in pseudorandom function.",
     howItWorks: [
-      "Bound Validation: Ensures minimum value is strictly less than maximum value.",
-      "Random Sampling: Computes Math.floor(random * range) + min.",
-      "Set Filtering: Suppresses duplicate entries if unique toggle is active.",
-      "Grid Rendering: Formats output cards with 1-click clipboard copy."
+      "You set a minimum and maximum integer value.",
+      "The generator uses Math.floor(Math.random() × (max − min + 1)) + min to produce each number.",
+      "If duplicates are off, a partial Fisher-Yates shuffle ensures each number is unique.",
+      "Results are displayed as individual chips — easy to read and copy.",
     ],
     examples: [
-      { scenario: "Drawing 3 raffle winners out of 100 tickets", input: "Min: 1, Max: 100, Count: 3 (No Duplicates)", output: "[14, 67, 92]" }
+      {
+        scenario: "Drawing 3 raffle winners from 200 entrants",
+        input: "Min: 1, Max: 200, Quantity: 3, Duplicates: Off",
+        output: "e.g. 47, 132, 199",
+      },
+      {
+        scenario: "Rolling a dice 5 times",
+        input: "Min: 1, Max: 6, Quantity: 5, Duplicates: Allowed",
+        output: "e.g. 4, 2, 6, 1, 4",
+      },
     ],
     useCases: [
-      { audience: "Contest Hosts", description: "Drawing random giveaway and raffle ticket winners." },
-      { audience: "Gamers & Dungeon Masters", description: "Rolling custom dice ranges for RPG games." }
+      {
+        audience: "Raffle & Giveaway Hosts",
+        description: "Assign ticket numbers to entrants and draw unique winners with duplicates off.",
+      },
+      {
+        audience: "Gamers & Dungeon Masters",
+        description: "Roll custom dice ranges for RPG encounters, loot tables, and challenges.",
+      },
+      {
+        audience: "Teachers & Educators",
+        description: "Randomly call on students, assign topics, or divide groups fairly.",
+      },
     ],
     benefits: [
-      { title: "100% Unbiased", description: "Eliminates human selection bias." },
-      { title: "Non-Repeating Option", description: "Ensures unique ticket numbers for contests." }
+      {
+        title: "No-repeat mode",
+        description: "Ensures every generated number is unique within the selected range.",
+      },
+      {
+        title: "Batch generation",
+        description: "Generate up to 10,000 numbers in a single click.",
+      },
+      {
+        title: "Clear results display",
+        description: "Each number appears as its own chip — not a single hard-to-read string.",
+      },
     ],
     features: [
-      { title: "Custom Range Controls", description: "Set any positive or negative integer bounds." },
-      { title: "Batch Generation", description: "Generate up to 100 numbers per click." }
+      {
+        title: "Custom range",
+        description: "Set any integer min and max, including negative numbers.",
+      },
+      {
+        title: "Quick range presets",
+        description: "One-click presets for 1–10, 1–100, dice, cards, and more.",
+      },
+      {
+        title: "Sort options",
+        description: "View results in original, ascending, or descending order.",
+      },
     ],
     comparisonTable: {
       headers: ["Feature", "GetFunTools RNG", "Basic Wheel Spinner"],
       rows: [
-        ["Batch Quantity", "Up to 100 Numbers", "1 Result at a Time"],
-        ["Non-Repeating Mode", "Supported", "Not Supported"]
-      ]
+        ["Quantity", "1 to 10,000", "1 result at a time"],
+        ["No-repeat mode", "Supported", "Not supported"],
+        ["Negative numbers", "Supported", "Not typically supported"],
+      ],
     },
-    accuracyStatement: "RNG outputs utilize browser-standard uniform random distribution algorithms.",
-    limitations: ["Quantity cannot exceed range when duplicate suppression is active."],
-    bestPractices: ["Use unique non-repeating mode when picking multiple raffle winners!"],
-    expertTips: ["Bookmark this tool for quick random order selection in team activities!"],
-    disclaimer: { type: "general", text: "Generators provide pseudo-random mathematical integer outputs." }
+    accuracyStatement:
+      "Results use JavaScript's Math.random() pseudorandom function. Outputs are well-distributed across the selected range and unpredictable in practice, though not cryptographically secure.",
+    limitations: [
+      "Quantity cannot exceed the range size when duplicate prevention is enabled.",
+      "Uses pseudorandom generation (Math.random()), not a hardware entropy source.",
+    ],
+    bestPractices: [
+      "Use no-repeat mode when picking raffle winners to ensure fairness.",
+      "Use the quick range presets for common scenarios like dice rolls or 1-to-100 picks.",
+    ],
+    expertTips: [
+      "For large groups, generate numbers in batches and copy results to a spreadsheet.",
+    ],
+    disclaimer: {
+      type: "general",
+      text: "This tool uses browser-based pseudorandom generation (Math.random()). Results are not cryptographically secure and should not be used for security-sensitive applications.",
+    },
   },
   faqs: [
-    { question: "How does the Random Number Generator work?", answer: "Enter your minimum and maximum numbers, choose how many numbers you want, and click Generate. The tool outputs unbiased random integers instantly." },
-    { question: "Is this random number generator truly random?", answer: "Yes, it uses standard browser cryptographic pseudo-random algorithms for uniform, fair distribution." },
-    { question: "Can I generate non-repeating numbers for raffles?", answer: "Yes! Uncheck 'Allow duplicate numbers' to ensure every generated number is unique." },
-    { question: "How many numbers can I generate at once?", answer: "You can generate up to 100 numbers in a single click." },
-    { question: "Is the Random Number Generator free?", answer: "Yes, 100% free with unlimited generation." },
-    { question: "Can I generate negative numbers?", answer: "Yes, you can set negative minimum and maximum bounds." },
-    { question: "How do I copy the generated numbers?", answer: "Click the 'Copy Numbers' button to copy the comma-separated output directly to your clipboard." },
-    { question: "Can I use this as a lottery number generator?", answer: "Yes, set Min to 1, Max to 69 (or your lottery limit), set Count to 6, and uncheck duplicates." },
-    { question: "What happens if Count is larger than the Min-Max range?", answer: "If duplicate numbers are disallowed, the generator will cap results to the maximum available unique integers." },
-    { question: "Does this tool store generated results?", answer: "No, all calculations execute locally in your web browser with zero server data storage." },
-    { question: "Does it work on mobile phones?", answer: "Yes, GetFunTools is fully responsive for iPhone, Android, and mobile browsers." },
-    { question: "Can I sort the generated numbers in order?", answer: "Yes, results can be formatted in ascending or descending numeric order." },
-    { question: "What is RNG in gaming?", answer: "RNG stands for Random Number Generation, which determines random loot drops, critical hits, and game outcomes." },
-    { question: "Can I use this for secret Santa or name drawing?", answer: "Yes! Assign each participant a ticket number and use the RNG to draw numbers." },
-    { question: "Is there any limit on how many times I can roll?", answer: "No, you can roll as many times as you like." }
+    {
+      question: "What is a random number generator?",
+      answer:
+        "A random number generator (RNG) is a tool or algorithm that produces numbers from a defined range without any predictable pattern. Software RNGs like this one use a pseudorandom algorithm — numbers are chosen in a way that appears random, though they are produced by a mathematical formula inside the browser.",
+    },
+    {
+      question: "How do I generate a random number?",
+      answer:
+        "Enter a minimum and maximum value, choose how many numbers you want, then click Generate Random Numbers. Results appear as individual chips below the generator.",
+    },
+    {
+      question: "Can I generate a random number between 1 and 100?",
+      answer:
+        "Yes. Set Minimum to 1, Maximum to 100, and Quantity to 1 (or more), then click Generate. You can also click the '1 – 100' quick range button to fill those values instantly.",
+    },
+    {
+      question: "Can I generate multiple random numbers at once?",
+      answer:
+        "Yes. Set the 'How many?' field to any number between 1 and 10,000. All results are shown as individual chips.",
+    },
+    {
+      question: "Can I generate numbers without duplicates?",
+      answer:
+        "Yes. Uncheck 'Allow duplicate numbers' and the generator produces only unique values. If you request more than the range allows, a validation message explains the maximum available.",
+    },
+    {
+      question: "Can I generate negative random numbers?",
+      answer:
+        "Yes. Set Minimum to a negative integer such as -50 and Maximum to a positive integer such as 50. The generator handles negative ranges correctly.",
+    },
+    {
+      question: "Can I generate zero?",
+      answer:
+        "Yes. Zero can appear in any range that includes it — for example, 0 to 99.",
+    },
+    {
+      question: "What happens if I request more unique numbers than the range allows?",
+      answer:
+        "The generator shows a clear validation message. For example, if Min is 1, Max is 3, Quantity is 5, and duplicates are off, it will say 'You can generate a maximum of 3 unique numbers from this range.'",
+    },
+    {
+      question: "Can I use this for raffles and giveaways?",
+      answer:
+        "Yes. Assign each entrant a number, set the range to match your entrant count, and turn off duplicates. For example: 200 entrants, 3 prizes → Min 1, Max 200, Quantity 3, Duplicates off.",
+    },
+    {
+      question: "Is the random number generator free?",
+      answer:
+        "Yes. Completely free with no signup, no account, and no usage limits. Generate as many times as you like.",
+    },
+    {
+      question: "Does the random number generator work on mobile?",
+      answer:
+        "Yes. The generator is fully responsive. Inputs stack on small screens, buttons are tap-friendly, and results wrap neatly with no horizontal scrolling.",
+    },
+    {
+      question: "Are computer-generated random numbers truly random?",
+      answer:
+        "Not in the strict sense. This tool uses JavaScript's Math.random(), a pseudorandom number generator. Results appear unpredictable and are well-distributed, but they are produced by a deterministic algorithm. For games, raffles, and everyday decisions, this is more than sufficient.",
+    },
   ],
   peopleAlsoAsk: [
-    { question: "What does RNG stand for?", answer: "RNG stands for Random Number Generator." },
-    { question: "How to pick a random number between 1 and 10?", answer: "Set Min to 1 and Max to 10 in our Random Number Generator." }
+    {
+      question: "What does RNG stand for?",
+      answer: "RNG stands for Random Number Generator.",
+    },
+    {
+      question: "How do I pick a random number between 1 and 10?",
+      answer:
+        "Click the '1 – 10' quick range preset on the generator, set Quantity to 1, and click Generate.",
+    },
   ],
   eeat: {
-    authorName: "Alex Rivers",
-    authorRole: "RNG & Systems Developer",
-    authorBio: "Alex specializes in statistical sampling systems and gaming algorithms.",
-    authorAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
-    reviewerName: "Sophia Patel",
-    reviewerRole: "Gaming Editor",
-    lastUpdated: "July 19, 2026",
-    contentVersion: "v3.1.0",
-    readTime: "4 min read"
+    authorName: "GetFunTools Team",
+    authorRole: "Tool Developer",
+    authorBio:
+      "The GetFunTools team builds free, browser-based utility tools for games, decisions, and everyday use.",
+    authorAvatar: "",
+    reviewerName: "Editorial Team",
+    reviewerRole: "Content Editor",
+    lastUpdated: "August 2026",
+    contentVersion: "v4.0.0",
+    readTime: "4 min read",
   },
   relatedTools: [
-    { title: "Ultimate Decision Wheel", slug: "decision-wheel", category: "random", relationReason: "Spin an animated wheel for visual random choices." },
-    { title: "Cosmic Lucky Number Generator", slug: "lucky-number-generator", category: "random", relationReason: "Generate lucky lottery and horoscope numbers." },
-    { title: "Password Generator", slug: "password-generator", category: "productivity", relationReason: "Generate random cryptographic security keys." }
-  ]
+    {
+      title: "Decision Wheel",
+      slug: "decision-wheel",
+      category: "random",
+      relationReason: "Spin a visual wheel to pick from a named list of options.",
+    },
+    {
+      title: "Lucky Number Generator",
+      slug: "lucky-number-generator",
+      category: "random",
+      relationReason: "Generate lucky numbers based on your name or horoscope.",
+    },
+    {
+      title: "Password Generator",
+      slug: "password-generator",
+      category: "productivity",
+      relationReason: "Generate strong random passwords and security keys.",
+    },
+    {
+      title: "Percentage Calculator",
+      slug: "percentage-calculator",
+      category: "math",
+      relationReason: "Calculate percentages, ratios, and proportions quickly.",
+    },
+    {
+      title: "Date Calculator",
+      slug: "date-calculator",
+      category: "productivity",
+      relationReason: "Add or subtract days from a date for deadline planning.",
+    },
+  ],
 };

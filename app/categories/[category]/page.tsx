@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${category.name} Tools | GetFunTools`,
       description: category.description,
-      url: `https://getfuntools.app/categories/${category.id}`,
+      url: `https://www.getfuntools.app/categories/${category.id}`,
     },
   };
 }

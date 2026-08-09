@@ -22,12 +22,12 @@ export const textRepeaterContent: DomainToolModule = {
     metaTitle: "Text Repeater - Repeat Text Up to 10,000 Times Instantly",
     metaDescription: "Free online text repeater tool. Multiply any word, sentence, or string up to 10,000 times instantly with custom separators. 1-click copy for WhatsApp, Discord, and more.",
     slug: "text-repeater",
-    canonicalUrl: "https://getfuntools.app/tools/text-repeater",
+    canonicalUrl: "https://www.getfuntools.app/tools/text-repeater",
     robots: "index, follow",
     openGraph: {
       title: "Text Repeater Generator | Multiply Text Instantly",
       description: "Repeat words or sentences up to 10,000 times with custom separators. 100% free with instant copy.",
-      url: "https://getfuntools.app/tools/text-repeater",
+      url: "https://www.getfuntools.app/tools/text-repeater",
       type: "website"
     },
     twitterCard: {

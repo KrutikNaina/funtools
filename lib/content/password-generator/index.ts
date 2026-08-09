@@ -22,12 +22,12 @@ export const passwordGeneratorContent: DomainToolModule = {
     metaTitle: "Strong Password Generator - Cryptographically Secure & 100% Private",
     metaDescription: "Generate unhackable, cryptographically secure random passwords with entropy strength scoring. 100% local browser processing for total privacy.",
     slug: "password-generator",
-    canonicalUrl: "https://getfuntools.app/tools/password-generator",
+    canonicalUrl: "https://www.getfuntools.app/tools/password-generator",
     robots: "index, follow",
     openGraph: {
       title: "Strong Password Generator | Cryptographically Secure Tool",
       description: "Create unhackable random passwords locally in your browser with zero server transmission.",
-      url: "https://getfuntools.app/tools/password-generator",
+      url: "https://www.getfuntools.app/tools/password-generator",
       type: "website"
     },
     twitterCard: {

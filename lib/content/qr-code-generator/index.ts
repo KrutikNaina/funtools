@@ -22,12 +22,12 @@ export const qrCodeGeneratorContent: DomainToolModule = {
     metaTitle: "Free QR Code Generator - HD PNG Download for Links, WiFi & Text",
     metaDescription: "Generate custom styled QR codes for links, text, and WiFi networks with high resolution PNG download. 100% free with no sign-up or expiration.",
     slug: "qr-code-generator",
-    canonicalUrl: "https://getfuntools.app/tools/qr-code-generator",
+    canonicalUrl: "https://www.getfuntools.app/tools/qr-code-generator",
     robots: "index, follow",
     openGraph: {
       title: "Free QR Code Generator | Custom HD Barcodes",
       description: "Create downloadable HD QR codes for URLs, WiFi, and text with custom colors.",
-      url: "https://getfuntools.app/tools/qr-code-generator",
+      url: "https://www.getfuntools.app/tools/qr-code-generator",
       type: "website"
     },
     twitterCard: {

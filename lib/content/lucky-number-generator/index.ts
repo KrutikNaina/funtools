@@ -22,12 +22,12 @@ export const luckyNumberGeneratorContent: DomainToolModule = {
     metaTitle: "Cosmic Lucky Number Generator - Zodiac & Birthdate Lottery Picks",
     metaDescription: "Generate personal lucky numbers based on your birth date, zodiac sign, and astrological numerology. Includes lottery power ball picks.",
     slug: "lucky-number-generator",
-    canonicalUrl: "https://getfuntools.app/tools/lucky-number-generator",
+    canonicalUrl: "https://www.getfuntools.app/tools/lucky-number-generator",
     robots: "index, follow",
     openGraph: {
       title: "Cosmic Lucky Number Generator | Zodiac & Numerology",
       description: "Discover your personal lucky numbers for lottery picks, astrology, and daily decisions.",
-      url: "https://getfuntools.app/tools/lucky-number-generator",
+      url: "https://www.getfuntools.app/tools/lucky-number-generator",
       type: "website"
     },
     twitterCard: {

@@ -22,12 +22,12 @@ export const techArchetypeQuizContent: DomainToolModule = {
     metaTitle: "Which Tech Archetype Are You? - Fun 60-Second Personality Quiz",
     metaDescription: "Uncover your digital alter-ego in 4 quick questions! Are you a Keyboard Ninja, AI Prompt Whisperer, Pixel Perfectionist, or Midnight Debugger? Includes custom badges & shareable reports.",
     slug: "tech-archetype-quiz",
-    canonicalUrl: "https://getfuntools.app/tools/tech-archetype-quiz",
+    canonicalUrl: "https://www.getfuntools.app/tools/tech-archetype-quiz",
     robots: "index, follow",
     openGraph: {
       title: "Which Tech Archetype Are You? | Interactive Quiz",
       description: "Discover your digital alter-ego with custom result badges and superpower reports.",
-      url: "https://getfuntools.app/tools/tech-archetype-quiz",
+      url: "https://www.getfuntools.app/tools/tech-archetype-quiz",
       type: "website"
     },
     twitterCard: {

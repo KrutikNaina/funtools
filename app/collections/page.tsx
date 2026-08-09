@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Curated Tool Collections | GetFunTools",
     description: "Hand-picked collections of top micro-tools, calculators, generators, and fun games.",
-    url: "https://getfuntools.app/collections",
+    url: "https://www.getfuntools.app/collections",
   },
 };
 

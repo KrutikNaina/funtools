@@ -161,27 +161,27 @@ export const TOOLS: Tool[] = [
   },
   {
     id: "reaction-test",
-    slug: "emoji-reaction-test",
-    title: "Emoji Reaction Speed Test",
+    slug: "reaction-time-test",
+    title: "Reaction Time Test",
     subtitle: "Test your gaming reflexes in milliseconds!",
-    description: "Click as fast as you can when the screen turns green! Measures your reaction time in milliseconds, compares it to average human benchmarks, and assigns you a fun gamer rank.",
+    description: "Build a professional browser-based reaction time tester. Features a 5-round mode with average, best, and median scores. Find out if you have world-class esports reaction time!",
     category: "gaming",
     iconName: "Zap",
     isPopular: true,
     isTrending: false,
     isFeatured: true,
     gradient: "from-emerald-500 to-teal-600",
-    tags: ["reflex test", "gaming speed", "reaction time", "mini game"],
+    tags: ["reaction time test", "reaction speed test", "reflex test", "gaming reaction test"],
     features: [
-      "Millisecond precision timing mechanism",
-      "High score tracking saved locally in your browser",
-      "Gamer rank badges (Godlike Cyber Ninja, Pro Gamer, Chill Sloth)",
-      "Visual chart comparing your speed against global averages"
+      "Millisecond precision timing mechanism using performance.now()",
+      "5-round mode with consistency, best, worst, and average tracking",
+      "Gamer rank badges (World Class, Professional Esports, Elite)",
+      "Visual chart comparing your speed against F1 drivers and pro gamers"
     ],
     faq: [
       {
-        question: "What is a good reaction speed?",
-        answer: "The average human visual reaction time is around 250 milliseconds (ms). Top esports gamers often achieve 150-190ms!"
+        question: "What is a good average reaction time?",
+        answer: "The average human visual reaction time is around 250 milliseconds (ms). Top esports gamers and F1 drivers often achieve 150-180ms!"
       }
     ]
   },
@@ -190,24 +190,24 @@ export const TOOLS: Tool[] = [
     slug: "decision-wheel",
     title: "Ultimate Decision Wheel",
     subtitle: "Can't decide? Let the spinning wheel of destiny choose!",
-    description: "Spin the colorful animated wheel or flip a 3D coin for food choices, movie picks, game choices, or truth or dare. Includes confetti celebrations and custom options!",
+    description: "Spin the colorful animated wheel to randomly pick from your own list of choices — food, movies, names, tasks, and more. Includes presets, a Yes/No mode, and confetti celebrations.",
     category: "random",
     iconName: "CircleDot",
     isPopular: true,
     isTrending: true,
     isFeatured: true,
     gradient: "from-blue-500 to-indigo-600",
-    tags: ["decision maker", "random spinner", "coin flip", "wheel of fortune"],
+    tags: ["decision maker", "random spinner", "wheel of fortune", "random picker"],
     features: [
-      "Physics-based smooth spinning wheel animation",
-      "Custom preset templates (What to Eat, Weekend Plan, Game Mode, Yes/No)",
-      "Sound toggles and victory confetti explosion",
-      "Full custom entry editor with instant save"
+      "Smooth spinning wheel animation that always lands on the actual result",
+      "Preset choice lists (What to Eat, What to Watch, Classroom, and more) plus a Yes/No mode",
+      "Optional elimination mode, sound toggle, and confetti celebration",
+      "Entries saved automatically in your browser"
     ],
     faq: [
       {
-        question: "Is the spinning wheel truly random?",
-        answer: "Yes! The wheel uses cryptographic browser pseudo-random selection to ensure 100% fair and unbiased results."
+        question: "How does the spinning wheel pick a winner?",
+        answer: "It uses the browser's standard random number generator to select one of your entries, then animates the wheel so it visually lands on that same result."
       }
     ]
   },

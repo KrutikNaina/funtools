@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${col.title} | GetFunTools`,
       description: col.seoDescription,
-      url: `https://getfuntools.app/collections/${col.slug}`,
+      url: `https://www.getfuntools.app/collections/${col.slug}`,
     },
   };
 }

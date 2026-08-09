@@ -17,6 +17,7 @@ import { dateDifferenceCalculatorContent } from "./date-difference-calculator";
 import { percentageCalculatorContent } from "./percentage-calculator";
 import { randomNumberGeneratorContent } from "./random-number-generator";
 import { qrCodeGeneratorContent } from "./qr-code-generator";
+import { reactionTimeTestContent } from "./reaction-time-test";
 import { countdownTimerContent } from "./countdown-timer";
 import { luckyNumberGeneratorContent } from "./lucky-number-generator";
 import { nicknameGeneratorContent } from "./nickname-generator";
@@ -41,6 +42,7 @@ export const DOMAIN_TOOLS_REPOSITORY: Record<string, DomainToolModule> = {
   "percentage-calculator": percentageCalculatorContent,
   "random-number-generator": randomNumberGeneratorContent,
   "qr-code-generator": qrCodeGeneratorContent,
+  "reaction-time-test": reactionTimeTestContent,
   "countdown-timer": countdownTimerContent,
   "lucky-number-generator": luckyNumberGeneratorContent,
   "nickname-generator": nicknameGeneratorContent,

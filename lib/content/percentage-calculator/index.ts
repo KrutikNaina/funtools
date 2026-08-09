@@ -22,12 +22,12 @@ export const percentageCalculatorContent: DomainToolModule = {
     metaTitle: "Percentage Calculator - Solve Percent Increase, Decrease & Ratios",
     metaDescription: "Multi-mode percentage calculator to solve % of a number, percentage change (increase/decrease), and ratio percentages instantly.",
     slug: "percentage-calculator",
-    canonicalUrl: "https://getfuntools.app/tools/percentage-calculator",
+    canonicalUrl: "https://www.getfuntools.app/tools/percentage-calculator",
     robots: "index, follow",
     openGraph: {
       title: "Ultimate Percentage Calculator | Multi-Mode Math Tool",
       description: "Solve percentage increase, decrease, discounts, and ratio math instantly.",
-      url: "https://getfuntools.app/tools/percentage-calculator",
+      url: "https://www.getfuntools.app/tools/percentage-calculator",
       type: "website"
     },
     twitterCard: {

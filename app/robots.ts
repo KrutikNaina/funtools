@@ -5,9 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/admin", "/api/private", "/_next", "/tmp"],
+      disallow: ["/admin", "/api/private", "/tmp"],
     },
-    sitemap: "https://getfuntools.app/sitemap.xml",
-    host: "https://getfuntools.app",
+    sitemap: "https://www.getfuntools.app/sitemap.xml",
   };
 }

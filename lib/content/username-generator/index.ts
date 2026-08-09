@@ -22,12 +22,12 @@ export const usernameGeneratorContent: DomainToolModule = {
     metaTitle: "Username Generator - 50+ Aesthetic Ideas for Instagram, TikTok & Discord",
     metaDescription: "Generate 50+ unique, aesthetic usernames for Instagram, TikTok, Discord, and Gaming handles. Features style themes like Aesthetic, Cyber, Cute, Tech, and Anime.",
     slug: "username-generator",
-    canonicalUrl: "https://getfuntools.app/tools/username-generator",
+    canonicalUrl: "https://www.getfuntools.app/tools/username-generator",
     robots: "index, follow",
     openGraph: {
       title: "Viral Username Generator | 50+ Aesthetic Handle Ideas",
       description: "Generate creative aesthetic usernames for Instagram, TikTok, and Discord with 1-click copy.",
-      url: "https://getfuntools.app/tools/username-generator",
+      url: "https://www.getfuntools.app/tools/username-generator",
       type: "website"
     },
     twitterCard: {

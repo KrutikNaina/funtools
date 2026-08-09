@@ -22,12 +22,12 @@ export const bmiCalculatorContent: DomainToolModule = {
     metaTitle: "BMI Calculator - Calculate Body Mass Index & WHO Health Categories",
     metaDescription: "Calculate your adult Body Mass Index (BMI) accurately with our free online calculator. Supports Metric (cm/kg) and Imperial (ft/lbs) units with World Health Organization health categories.",
     slug: "bmi-calculator",
-    canonicalUrl: "https://getfuntools.app/tools/bmi-calculator",
+    canonicalUrl: "https://www.getfuntools.app/tools/bmi-calculator",
     robots: "index, follow",
     openGraph: {
       title: "Body Mass Index (BMI) Calculator | GetFunTools Health",
       description: "Calculate adult BMI, category ranges & healthy weight guidelines.",
-      url: "https://getfuntools.app/tools/bmi-calculator",
+      url: "https://www.getfuntools.app/tools/bmi-calculator",
       type: "website"
     },
     twitterCard: {

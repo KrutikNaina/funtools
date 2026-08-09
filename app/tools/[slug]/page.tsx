@@ -5,6 +5,7 @@ import { TOOLS, CATEGORIES, BLOG_POSTS } from "@/lib/tools-data";
 import { getToolContent } from "@/lib/content";
 import { getRelatedTools, getPeopleAlsoUsed, getPopularInCategory } from "@/lib/recommendations";
 import Breadcrumb from "@/components/Breadcrumb";
+import { SITE_URL } from "@/lib/site";
 import ToolCard from "@/components/ToolCard";
 import AdBanner from "@/components/AdBanner";
 import DynamicToolRenderer from "./DynamicToolRenderer";
@@ -31,7 +32,11 @@ import {
   Lightbulb,
   BookOpen,
   Star,
-  Check
+  Check,
+  Clock,
+  Calendar,
+  User,
+  TrendingUp
 } from "lucide-react";
 
 interface PageProps {
@@ -93,23 +98,22 @@ export default async function ToolDetailPage({ params }: PageProps) {
   // Relevant blog posts
   const relevantPosts = BLOG_POSTS.slice(0, 2);
 
-  // Schemas
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "GetFunTools",
-    url: "https://getfuntools.app",
-    logo: "https://getfuntools.app/favicon.ico",
+    url: SITE_URL,
+    logo: `${SITE_URL}/favicon.ico`,
   };
 
   const siteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "GetFunTools",
-    url: "https://getfuntools.app",
+    url: SITE_URL,
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://getfuntools.app/tools?q={search_term_string}",
+      target: `${SITE_URL}/tools?q={search_term_string}`,
       "query-input": "required name=search_term_string",
     },
   };
@@ -182,6 +186,14 @@ export default async function ToolDetailPage({ params }: PageProps) {
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
             {module.content.heroSubheading}
           </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-500 dark:text-slate-400 mt-4">
+            <span className="flex items-center gap-1"><ShieldCheck className="w-4 h-4 text-emerald-500" /> Free & Secure</span>
+            <span className="flex items-center gap-1"><Zap className="w-4 h-4 text-amber-500" /> Instant Results</span>
+            <span className="flex items-center gap-1"><Clock className="w-4 h-4 text-indigo-500" /> {module.eeat?.readTime || "5 min read"}</span>
+            <span className="flex items-center gap-1"><User className="w-4 h-4 text-purple-500" /> By {module.eeat?.authorName || "GetFunTools"}</span>
+            <span className="flex items-center gap-1"><Calendar className="w-4 h-4 text-pink-500" /> Updated {module.eeat?.lastUpdated || "2026"}</span>
+          </div>
 
 
         </header>
@@ -314,14 +326,25 @@ export default async function ToolDetailPage({ params }: PageProps) {
               <Lightbulb className="w-5 h-5" /> Expert Best Practices
             </h3>
             <ul className="space-y-2 text-xs text-slate-700 dark:text-slate-300">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                <span>Bookmark this tool on your home screen for instant browser access.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                <span>Use 1-click results copying to quickly paste formatting into notes or chats.</span>
-              </li>
+              {module.content.bestPractices?.length > 0 ? (
+                module.content.bestPractices.map((practice, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                    <span>{practice}</span>
+                  </li>
+                ))
+              ) : (
+                <>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                    <span>Bookmark this tool on your home screen for instant browser access.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                    <span>Use 1-click results copying to quickly paste formatting into notes or chats.</span>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
 
@@ -330,17 +353,82 @@ export default async function ToolDetailPage({ params }: PageProps) {
               <AlertTriangle className="w-5 h-5" /> Common Mistakes to Avoid
             </h3>
             <ul className="space-y-2 text-xs text-slate-700 dark:text-slate-300">
-              <li className="flex items-start gap-2">
-                <span className="text-rose-500 font-bold">•</span>
-                <span>Entering mismatched unit inputs when performing calculations.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-rose-500 font-bold">•</span>
-                <span>Forgetting to copy generated output before reloading the page.</span>
-              </li>
+              {module.content.limitations?.length > 0 ? (
+                module.content.limitations.map((mistake, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-rose-500 font-bold">•</span>
+                    <span>{mistake}</span>
+                  </li>
+                ))
+              ) : (
+                <>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-500 font-bold">•</span>
+                    <span>Entering mismatched unit inputs when performing calculations.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-500 font-bold">•</span>
+                    <span>Forgetting to copy generated output before reloading the page.</span>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </section>
+
+        {/* SECTION 9.5: Practical Examples */}
+        {module.content.examples && module.content.examples.length > 0 && (
+          <section className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+             <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <Grid className="w-5 h-5 text-pink-500" />
+              Practical Real-World Examples
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {module.content.examples.map((ex, idx) => (
+                <div key={idx} className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-700/50">
+                  <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Example {idx + 1}</div>
+                  <div className="font-semibold text-sm text-slate-900 dark:text-white mb-1">{ex.scenario}</div>
+                  <div className="text-xs text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900 p-2 rounded mb-2">
+                    <span className="font-bold text-indigo-500">Input:</span> {ex.input}
+                  </div>
+                  <div className="text-xs text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900 p-2 rounded">
+                    <span className="font-bold text-emerald-500">Output:</span> {ex.output}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* SECTION 9.6: Comparison Table */}
+        {module.content.comparisonTable && module.content.comparisonTable.rows.length > 0 && (
+          <section className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 overflow-hidden">
+             <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-indigo-500" />
+              Reference Data & Comparisons
+            </h2>
+            <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+              <table className="w-full text-left text-sm text-slate-600 dark:text-slate-400">
+                <thead className="bg-slate-50 dark:bg-slate-800/80 text-slate-900 dark:text-white font-bold">
+                  <tr>
+                    {module.content.comparisonTable.headers.map((h, i) => (
+                      <th key={i} className="p-4 whitespace-nowrap">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+                  {module.content.comparisonTable.rows.map((row, i) => (
+                    <tr key={i} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition">
+                      {row.map((cell, j) => (
+                        <td key={j} className="p-4">{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
 
         {/* SECTION 10: Use Cases & Target Audience */}
         <section className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
@@ -368,6 +456,58 @@ export default async function ToolDetailPage({ params }: PageProps) {
         <section className="max-w-4xl mx-auto">
           <ToolFAQSection faqs={module.faqs} />
         </section>
+
+        {/* SECTION 12.5: People Also Ask (PAA) */}
+        {module.peopleAlsoAsk && module.peopleAlsoAsk.length > 0 && (
+          <section className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/30 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+             <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <HelpCircle className="w-5 h-5 text-indigo-500" />
+              People Also Ask (Conversational Search)
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {module.peopleAlsoAsk.map((paa, idx) => (
+                <div key={idx} className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-700/50 space-y-2">
+                  <h4 className="font-bold text-slate-900 dark:text-white text-sm">{paa.question}</h4>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">{paa.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* SECTION 12.6: Author EEAT Box */}
+        {module.eeat && (
+          <section className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-indigo-50 dark:bg-indigo-900/10 border border-indigo-100 dark:border-indigo-800/30 flex flex-col md:flex-row gap-6 items-center shadow-sm">
+            <div className="w-24 h-24 rounded-full overflow-hidden bg-white shrink-0 border-4 border-white dark:border-slate-800 shadow-md">
+              <img src={module.eeat.authorAvatar || "/avatars/default.png"} alt={module.eeat.authorName} className="w-full h-full object-cover" />
+            </div>
+            <div className="space-y-2 text-center md:text-left">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Written by {module.eeat.authorName}</h3>
+              <p className="text-xs font-semibold text-indigo-600 dark:text-indigo-400">{module.eeat.authorRole}</p>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{module.eeat.authorBio}</p>
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-[11px] text-slate-500 pt-2">
+                <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Fact Checked by {module.eeat.reviewerName || "Editorial Team"}</span>
+                <span className="flex items-center gap-1"><Calendar className="w-3.5 h-3.5 text-slate-400" /> Updated: {module.eeat.lastUpdated}</span>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* SECTION 12.7: Semantic Keywords */}
+        {module.keywords && module.keywords.semantic && module.keywords.semantic.length > 0 && (
+           <section className="max-w-4xl mx-auto p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+             <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+               <ListOrdered className="w-4 h-4 text-slate-500" /> Related Concepts
+             </h3>
+             <div className="flex flex-wrap gap-2">
+               {module.keywords.semantic.slice(0, 15).map((kw, i) => (
+                 <span key={i} className="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] font-medium border border-slate-200 dark:border-slate-700">
+                   {kw}
+                 </span>
+               ))}
+             </div>
+           </section>
+        )}
 
         {/* SECTION 13: SMART DISCOVERY SECTION - Contextual Related Tools */}
         <section className="max-w-7xl mx-auto space-y-6">

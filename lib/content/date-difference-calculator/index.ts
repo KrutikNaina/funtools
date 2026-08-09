@@ -22,12 +22,12 @@ export const dateDifferenceCalculatorContent: DomainToolModule = {
     metaTitle: "Date Difference Calculator - Days, Weeks & Months Between Two Dates",
     metaDescription: "Calculate the exact duration and total days between any two calendar dates. Displays breakdown in days, weeks, months, years, and total hours.",
     slug: "date-difference-calculator",
-    canonicalUrl: "https://getfuntools.app/tools/date-difference-calculator",
+    canonicalUrl: "https://www.getfuntools.app/tools/date-difference-calculator",
     robots: "index, follow",
     openGraph: {
       title: "Date Difference Calculator | Days Between Two Dates",
       description: "Find the exact duration in days, weeks, and months between two dates.",
-      url: "https://getfuntools.app/tools/date-difference-calculator",
+      url: "https://www.getfuntools.app/tools/date-difference-calculator",
       type: "website"
     },
     twitterCard: {
