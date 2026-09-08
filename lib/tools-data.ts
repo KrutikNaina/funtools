@@ -106,26 +106,26 @@ export const TOOLS: Tool[] = [
   {
     id: "love-calc",
     slug: "love-calculator",
-    title: "Love & Vibe Compatibility",
-    subtitle: "Discover your cosmic love score & relationship vibe analysis",
-    description: "Calculate your instant romantic compatibility using name energy, Zodiac harmony, and fun personality vibe math. Share your custom love badge with friends!",
+    title: "Love Calculator by Name",
+    subtitle: "Free love compatibility test with instant percentage & vibes",
+    description: "Calculate your love compatibility by name instantly. Enter two names to get a fun love percentage, relationship vibe, and shareable result card. Free, private, and no signup required.",
     category: "love",
     iconName: "HeartHandshake",
     isPopular: true,
     isTrending: true,
     isFeatured: true,
     gradient: "from-rose-500 to-pink-500",
-    tags: ["love", "romance", "compatibility", "couples", "zodiac"],
+    tags: ["love calculator", "love calculator by name", "love compatibility", "name compatibility", "couples", "crush test"],
     features: [
       "Instant percentage calculation with animated gauge",
-      "Custom relationship vibe breakdown (Cosmic Soulmates, Spicy Chaos, Bestie Energy)",
-      "Zodiac element synergy matrix",
-      "One-click shareable aesthetic card download & copy link"
+      "4 custom relationship vibe modes (Cosmic Soulmates, Spicy & Playful, Bestie Chemistry, Pure Chaotic Fun)",
+      "100% private browser computation (zero name storage)",
+      "One-click shareable aesthetic card & friend challenge"
     ],
     faq: [
       {
-        question: "How does the Love Compatibility Calculator work?",
-        answer: "Our algorithm combines traditional name numerology, astrological element harmony, and playful character matrix algorithms to generate a unique compatibility score and vibe report."
+        question: "How does the Love Calculator by Name work?",
+        answer: "The calculator runs locally in your browser, converting the character codes of both names and your selected vibe into an upbeat compatibility percentage between 65% and 99%."
       },
       {
         question: "Is this Love Calculator free to use?",
@@ -188,26 +188,26 @@ export const TOOLS: Tool[] = [
   {
     id: "decision-wheel",
     slug: "decision-wheel",
-    title: "Ultimate Decision Wheel",
-    subtitle: "Can't decide? Let the spinning wheel of destiny choose!",
-    description: "Spin the colorful animated wheel to randomly pick from your own list of choices — food, movies, names, tasks, and more. Includes presets, a Yes/No mode, and confetti celebrations.",
+    title: "Decision Wheel – Free Random Picker",
+    subtitle: "Spin the wheel & pick random choices, names, or Yes/No instantly",
+    description: "Add your choices, spin the wheel, and get a random result instantly. Use it as a decision maker, random name picker, or wheel spinner for everyday choices, games, classrooms, giveaways, and more.",
     category: "random",
     iconName: "CircleDot",
     isPopular: true,
     isTrending: true,
     isFeatured: true,
     gradient: "from-blue-500 to-indigo-600",
-    tags: ["decision maker", "random spinner", "wheel of fortune", "random picker"],
+    tags: ["decision wheel", "free decision wheel", "random picker", "spin the wheel", "wheel spinner", "random name picker", "wheel of names", "yes or no wheel"],
     features: [
-      "Smooth spinning wheel animation that always lands on the actual result",
-      "Preset choice lists (What to Eat, What to Watch, Classroom, and more) plus a Yes/No mode",
-      "Optional elimination mode, sound toggle, and confetti celebration",
-      "Entries saved automatically in your browser"
+      "Smooth spinning wheel animation synchronized with true random selection",
+      "10 built-in presets (Food, Movies, Games, Classroom, Work, and more) plus Yes/No mode",
+      "Optional elimination mode to remove winners after each spin",
+      "100% private browser storage and instant URL sharing"
     ],
     faq: [
       {
-        question: "How does the spinning wheel pick a winner?",
-        answer: "It uses the browser's standard random number generator to select one of your entries, then animates the wheel so it visually lands on that same result."
+        question: "How does the Decision Wheel pick a winner?",
+        answer: "It uses the browser's standard pseudo-random number generator to select one of your entries, then animates the wheel so it visually lands on that same result."
       }
     ]
   },
@@ -424,19 +424,19 @@ export const TOOLS: Tool[] = [
     slug: "date-difference-calculator",
     title: "Date Difference Calculator",
     subtitle: "Calculate exact time span & days between any two dates",
-    description: "Find the precise difference between two calendar dates in years, months, weeks, days, hours, and total minutes.",
+    description: "Calculate the exact number of days between two dates, including weeks, months and hours. Free online date difference calculator with an optional end-date setting.",
     category: "age",
     iconName: "Clock",
     isPopular: true,
     isTrending: false,
     isFeatured: true,
     gradient: "from-yellow-500 to-amber-600",
-    tags: ["date difference", "days between dates", "time span calculator", "duration"],
+    tags: ["days between dates", "date difference calculator", "number of days between dates", "calculate days between two dates", "time between two dates", "weeks between dates", "hours between dates", "date duration calculator"],
     features: [
-      "Breakdown in total days, weeks, months, and years",
-      "Include or exclude end date toggle",
-      "Leap year adjustment accuracy",
-      "Real-time live comparison cards"
+      "Breakdown in total days, weeks, calendar duration, and hours",
+      "Include or exclude end date toggle (+1 day)",
+      "Automatic leap year accuracy (366-day handling)",
+      "Real-time instant results with quick interval presets"
     ],
     faq: [
       {
@@ -526,21 +526,21 @@ export const TOOLS: Tool[] = [
   {
     id: "countdown-timer-tool",
     slug: "countdown-timer",
-    title: "Event & Goal Countdown Timer",
+    title: "Countdown Timer",
     subtitle: "Create live ticking countdown timers for any event",
-    description: "Set custom countdown timers for birthdays, product launches, holidays, or personal goals with live visual progress wheels.",
+    description: "Create a free countdown timer for birthdays, vacations, events, launches, holidays and important dates. Set a date and time and watch the countdown update live.",
     category: "productivity",
     iconName: "Clock",
     isPopular: false,
     isTrending: true,
     isFeatured: true,
     gradient: "from-purple-500 to-rose-500",
-    tags: ["countdown timer", "event countdown", "timer online", "launch clock"],
+    tags: ["countdown timer", "countdown timer online", "free countdown timer", "online countdown clock", "event countdown", "countdown clock", "live countdown timer", "days until calculator", "countdown to a date", "birthday countdown", "vacation countdown"],
     features: [
       "Days, Hours, Minutes, and Seconds live ticking clock",
-      "Custom event title & background card themes",
-      "Shareable countdown card link generation",
-      "Confetti explosion on countdown completion"
+      "Custom event title & local timezone accuracy",
+      "Shareable countdown links via Web Share API or copy link",
+      "Celebratory zero state when countdown arrives"
     ],
     faq: [
       {

@@ -22,6 +22,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import confetti from "canvas-confetti";
+import { recordToolComplete } from "@/lib/recommendations";
 
 type Mode = "custom" | "yesno" | "yesnomaybe";
 
@@ -248,6 +249,7 @@ export default function DecisionWheel() {
       const wonOption = entries[selectedIndex];
       setWinner(wonOption);
       setHistory((prev) => [wonOption, ...prev].slice(0, 20));
+      recordToolComplete("decision-wheel", "random", wonOption);
       setSpinning(false);
       playWin();
       if (confettiEnabled && !prefersReducedMotion) {
@@ -410,10 +412,12 @@ export default function DecisionWheel() {
 
   // Share
   const shareUrl = useMemo(() => {
-    if (typeof window === "undefined" || mode !== "custom") return "";
-    const encoded = customEntries.map((e) => encodeURIComponent(e)).join(",");
+    if (typeof window === "undefined") return "";
+    const list = mode === "custom" ? customEntries : entries;
+    if (list.length === 0) return "";
+    const encoded = list.map((e) => encodeURIComponent(e)).join(",");
     return `${window.location.origin}${window.location.pathname}?items=${encoded}`;
-  }, [customEntries, mode]);
+  }, [customEntries, entries, mode]);
 
   const shareWheel = async () => {
     if (!shareUrl) return;
@@ -683,16 +687,14 @@ export default function DecisionWheel() {
               Remove winner after each spin
             </label>
 
-            {mode === "custom" && (
-              <button
-                type="button"
-                onClick={shareWheel}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-indigo-600 text-xs font-bold transition"
-              >
-                <Share2 className="w-3.5 h-3.5" aria-hidden="true" />
-                {linkCopied ? "Link Copied!" : "Share Wheel"}
-              </button>
-            )}
+            <button
+              type="button"
+              onClick={shareWheel}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-xs font-bold transition cursor-pointer"
+            >
+              {linkCopied ? <Check className="w-3.5 h-3.5 text-emerald-500" aria-hidden="true" /> : <Share2 className="w-3.5 h-3.5" aria-hidden="true" />}
+              <span>{linkCopied ? "Link Copied!" : "Share Wheel"}</span>
+            </button>
           </div>
           </div>
         </div>

@@ -4,6 +4,9 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Zap, Trophy, RefreshCw, AlertCircle, Share2, Copy, Check, BarChart2, CheckCircle2 } from "lucide-react";
 import confetti from "canvas-confetti";
+import { recordToolComplete } from "@/lib/recommendations";
+import ShareableResultCard from "@/components/recommendations/ShareableResultCard";
+import FriendChallenge from "@/components/recommendations/FriendChallenge";
 
 type State = "WAITING_START" | "WAITING_GREEN" | "READY_CLICK" | "TOO_EARLY" | "ROUND_RESULT" | "FINAL_RESULT";
 
@@ -60,6 +63,7 @@ export default function ReactionSpeedTest() {
       if (newScores.length >= ROUNDS_TO_WIN) {
         setState("FINAL_RESULT");
         const avg = newScores.reduce((a, b) => a + b, 0) / newScores.length;
+        recordToolComplete("reaction-time-test", "gaming", avg.toFixed(1));
         if (!bestTime || avg < bestTime) {
           setBestTime(parseFloat(avg.toFixed(1)));
           localStorage.setItem("funtools_reaction_best_time", avg.toFixed(1));
@@ -216,19 +220,36 @@ Test your reflexes at: https://www.getfuntools.app/tools/reaction-time-test`;
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+            <ShareableResultCard
+              toolTitle="Reaction Speed Test"
+              toolSlug="reaction-time-test"
+              metricLabel="Reaction Latency"
+              metricValue={`${stats.avg} ms`}
+              highlightBadge={perf.level}
+              callToAction="Can you beat my reaction time?"
+            />
+            <FriendChallenge
+              toolSlug="reaction-time-test"
+              toolTitle="Reaction Speed Test"
+              myScore={stats.avg}
+              scoreUnit="ms"
+            />
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
             <button
               onClick={resetTest}
-              className="px-8 py-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
+              className="px-8 py-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer"
             >
               <RefreshCw className="w-5 h-5" /> Play Again
             </button>
             <button
               onClick={handleShare}
-              className="px-8 py-3 rounded-full bg-emerald-500 text-white font-bold hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
+              className="px-8 py-3 rounded-full bg-emerald-500 text-white font-bold hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer"
             >
               {copied ? <Check className="w-5 h-5" /> : <Share2 className="w-5 h-5" />}
-              {copied ? "Copied!" : "Share Result"}
+              {copied ? "Copied!" : "Share Link"}
             </button>
           </div>
         </motion.div>

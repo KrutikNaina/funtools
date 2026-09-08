@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 import { Sparkles, Bookmark, ArrowUpRight, Heart, Zap, Type, Dices, Coins, Bot, Orbit, BrainCircuit } from "lucide-react";
 import { Tool } from "@/types/tool";
 
+import { isFavoriteTool, toggleFavoriteTool } from "@/lib/user-store";
+import { trackEvent } from "@/lib/recommendations";
+
 // Icon mapping dictionary
 const ICON_MAP: Record<string, any> = {
   HeartHandshake: Heart, Type, Zap, CircleDot: Dices, TrendingUp: Coins, Bot, BrainCircuit, Orbit
@@ -14,23 +17,21 @@ const ICON_MAP: Record<string, any> = {
 export default function ToolCard({ tool }: { tool: Tool }) {
   const [bookmarked, setBookmarked] = useState(false);
 
-  // 1. Read bookmark state from LocalStorage on mount
+  // 1. Read bookmark state on mount
   useEffect(() => {
-    const saved = localStorage.getItem(`funtools_bookmark_${tool.id}`);
-    if (saved) setBookmarked(true);
-  }, [tool.id]);
+    setBookmarked(isFavoriteTool(tool.slug));
+  }, [tool.slug]);
 
   // 2. Toggle bookmark and persist state
   const toggleBookmark = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    const next = !bookmarked;
+    const next = toggleFavoriteTool(tool.slug);
     setBookmarked(next);
-    if (next) {
-      localStorage.setItem(`funtools_bookmark_${tool.id}`, "true");
-    } else {
-      localStorage.removeItem(`funtools_bookmark_${tool.id}`);
-    }
+    trackEvent(next ? "tool_bookmarked" : "tool_favorited", {
+      toolSlug: tool.slug,
+      category: tool.category,
+    });
   };
 
   const IconComponent = ICON_MAP[tool.iconName] || Sparkles;
@@ -103,6 +104,12 @@ export default function ToolCard({ tool }: { tool: Tool }) {
       {/* SECTION 4: ACTION BUTTON (OPEN TOOL) */}
       <Link
         href={`/tools/${tool.slug}`}
+        onClick={() =>
+          trackEvent("related_tool_clicked", {
+            toolSlug: tool.slug,
+            category: tool.category,
+          })
+        }
         className="w-full py-3 px-4 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold text-xs flex items-center justify-center gap-2 group-hover:bg-gradient-to-r group-hover:from-indigo-600 group-hover:to-purple-600 group-hover:text-white transition-all duration-300 shadow-sm cursor-pointer"
       >
         <span>Open Tool</span>

@@ -99,6 +99,20 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400 font-medium">
               <li><Link href="/about" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">About GetFunTools</Link></li>
               <li><Link href="/blog" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Blog & Articles</Link></li>
+              <li><Link href="/challenge" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">🏆 Arena & Challenges</Link></li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (typeof window !== "undefined") {
+                      window.dispatchEvent(new CustomEvent("funtools_open_analytics"));
+                    }
+                  }}
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition cursor-pointer text-left"
+                >
+                  📊 Discovery Analytics
+                </button>
+              </li>
               <li><Link href="/privacy" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Terms of Service</Link></li>
               <li><Link href="/contact" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Contact & Support</Link></li>

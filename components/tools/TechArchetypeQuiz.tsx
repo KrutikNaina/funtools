@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BrainCircuit, Sparkles, RefreshCw, CheckCircle2, Trophy, Share2 } from "lucide-react";
 import confetti from "canvas-confetti";
+import { recordToolComplete } from "@/lib/recommendations";
 
 interface Question {
   id: number;
@@ -115,6 +116,7 @@ export default function TechArchetypeQuiz() {
         }
       });
       setFinalArchetype(topKey);
+      recordToolComplete("tech-archetype-quiz", "personality", topKey);
       confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
     }
   };

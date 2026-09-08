@@ -11,6 +11,8 @@ import ToolComments from "@/components/ToolComments";
 import { SITE_URL } from "@/lib/site";
 import { fancyFontGeneratorContent as module } from "@/lib/content/fancy-font-generator";
 import { ShieldCheck, Zap, HelpCircle } from "lucide-react";
+import WhatsNext from "@/components/recommendations/WhatsNext";
+import CategoryDiscovery from "@/components/recommendations/CategoryDiscovery";
 
 export const metadata: Metadata = {
   title: "Fancy Font Generator – Stylish Copy & Paste Fonts",
@@ -128,8 +130,10 @@ export default function FancyFontGeneratorPage() {
         </header>
 
         {/* Interactive Tool */}
-        <section id="interactive-tool" className="max-w-4xl mx-auto">
+        <section id="interactive-tool" className="max-w-4xl mx-auto space-y-8">
           <FancyFontGenerator />
+          <WhatsNext currentTool={tool} />
+          <CategoryDiscovery currentCategory="social" />
         </section>
 
         <AdBanner slot="7788990011" format="horizontal" label="In-Article Ad" />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Tool } from "@/types/tool";
 import LoveCalculator from "@/components/tools/LoveCalculator";
 import FancyFontGenerator from "@/components/tools/FancyFontGenerator";
@@ -28,9 +28,31 @@ import TextRepeater from "@/components/tools/TextRepeater";
 
 import ShareModal from "@/components/ShareModal";
 import { Share2 } from "lucide-react";
+import WhatsNext from "@/components/recommendations/WhatsNext";
+import KeepExploring from "@/components/recommendations/KeepExploring";
+import CategoryDiscovery from "@/components/recommendations/CategoryDiscovery";
+import { recordToolView } from "@/lib/recommendations";
 
 export default function DynamicToolRenderer({ tool }: { tool: Tool }) {
   const [shareOpen, setShareOpen] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false);
+
+  useEffect(() => {
+    recordToolView(tool.slug, tool.category);
+
+    const handleEvent = (e: Event) => {
+      const custom = e as CustomEvent<{ toolSlug?: string; name: string }>;
+      if (
+        (custom.detail?.name === "tool_complete" || custom.detail?.name === "result_generated") &&
+        custom.detail?.toolSlug === tool.slug
+      ) {
+        setIsCompleted(true);
+      }
+    };
+
+    window.addEventListener("funtools_event", handleEvent);
+    return () => window.removeEventListener("funtools_event", handleEvent);
+  }, [tool.slug, tool.category]);
 
   const renderTool = () => {
     switch (tool.slug) {
@@ -107,6 +129,15 @@ export default function DynamicToolRenderer({ tool }: { tool: Tool }) {
 
       {/* Interactive Tool Component */}
       {renderTool()}
+
+      {/* Completion Experience: Keep Exploring */}
+      {isCompleted && <KeepExploring currentTool={tool} />}
+
+      {/* Contextual What's Next Recommendations */}
+      <WhatsNext currentTool={tool} />
+
+      {/* Category Cross-Discovery */}
+      <CategoryDiscovery currentCategory={tool.category} />
 
       <ShareModal
         isOpen={shareOpen}

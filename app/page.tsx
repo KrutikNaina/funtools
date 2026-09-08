@@ -32,6 +32,9 @@ import ToolCard from "@/components/ToolCard";
 import CategoryCard from "@/components/CategoryCard";
 import AdBanner from "@/components/AdBanner";
 import FancyFontGenerator from "@/components/tools/FancyFontGenerator";
+import PersonalizedHomeBanner from "@/components/recommendations/PersonalizedHomeBanner";
+import DailyThree from "@/components/recommendations/DailyThree";
+import SurpriseMeButton from "@/components/recommendations/SurpriseMeButton";
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -126,6 +129,7 @@ export default function HomePage() {
               <Link href="/tools/decision-wheel" className="px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-semibold hover:bg-blue-500 hover:text-white transition">
                 🎡 Spin Wheel
               </Link>
+              <SurpriseMeButton variant="pill" className="py-1 px-3" />
             </div>
           </motion.div>
         </div>
@@ -136,26 +140,12 @@ export default function HomePage() {
         <AdBanner slot="9988776655" format="horizontal" label="Featured Sponsor" />
       </div>
 
-      {/* TOOL OF THE DAY / DAILY CHALLENGE */}
-      <section className="max-w-7xl mx-auto px-6">
-        <div className="p-6 md:p-8 rounded-3xl bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-indigo-500/30">
-          <div className="space-y-3 max-w-xl text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-500/30">
-              <Award className="w-3.5 h-3.5" />
-              Tool of the Day & Daily Challenge
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-black">{toolOfTheDay.title}</h2>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{toolOfTheDay.description}</p>
-          </div>
+      {/* PERSONALIZED RETURNING VISITOR HERO BANNER */}
+      <PersonalizedHomeBanner />
 
-          <Link
-            href={`/tools/${toolOfTheDay.slug}`}
-            className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black text-xs hover:scale-105 transition shadow-lg flex items-center gap-2 cursor-pointer flex-shrink-0"
-          >
-            <span>Play Daily Challenge</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+      {/* TODAY'S 3 CHALLENGES */}
+      <section className="max-w-7xl mx-auto px-6">
+        <DailyThree />
       </section>
 
       {/* CONTINUE WHERE YOU LEFT OFF / RECENTLY VIEWED (Client-side rehydrated) */}

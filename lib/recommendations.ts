@@ -1,28 +1,18 @@
 import { TOOLS } from "@/lib/tools-data";
 import { Tool } from "@/types/tool";
+import { TOOL_AFFINITY_MAP } from "./recommendations/tool-affinity";
 
-export const EXPLICIT_SMART_MAP: Record<string, string[]> = {
-  "cosmic-age-clock": ["countdown-timer", "date-difference-calculator", "date-calculator", "bmi-calculator"],
-  "date-calculator": ["date-difference-calculator", "countdown-timer", "cosmic-age-clock", "percentage-calculator"],
-  "date-difference-calculator": ["date-calculator", "countdown-timer", "cosmic-age-clock", "percentage-calculator"],
-  "countdown-timer": ["date-calculator", "date-difference-calculator", "cosmic-age-clock", "random-number-generator"],
-  "username-generator": ["nickname-generator", "fancy-font-generator", "ai-bio-generator", "password-generator"],
-  "nickname-generator": ["username-generator", "fancy-font-generator", "ai-bio-generator", "love-calculator"],
-  "fancy-font-generator": ["username-generator", "nickname-generator", "ai-bio-generator", "qr-code-generator"],
-  "ai-bio-generator": ["fancy-font-generator", "username-generator", "nickname-generator", "tech-archetype-quiz"],
-  "password-generator": ["username-generator", "qr-code-generator", "random-number-generator", "percentage-calculator"],
-  "qr-code-generator": ["password-generator", "random-number-generator", "fancy-font-generator", "percentage-calculator"],
-  "love-calculator": ["decision-wheel", "fancy-font-generator", "cosmic-age-clock", "nickname-generator"],
-  "bmi-calculator": ["cosmic-age-clock", "date-calculator", "coffee-to-wealth", "percentage-calculator"],
-  "percentage-calculator": ["coffee-to-wealth", "bmi-calculator", "random-number-generator", "date-calculator"],
-  "random-number-generator": ["decision-wheel", "lucky-number-generator", "percentage-calculator", "qr-code-generator"],
-  "decision-wheel": ["random-number-generator", "lucky-number-generator", "emoji-reaction-test", "love-calculator"],
-  "lucky-number-generator": ["decision-wheel", "random-number-generator", "love-calculator", "cosmic-age-clock"],
-  "coffee-to-wealth": ["percentage-calculator", "bmi-calculator", "tech-archetype-quiz", "date-calculator"],
-  "tech-archetype-quiz": ["emoji-reaction-test", "ai-bio-generator", "coffee-to-wealth", "decision-wheel"],
-  "emoji-reaction-test": ["tech-archetype-quiz", "decision-wheel", "lucky-number-generator", "fancy-font-generator"],
-  "death-calculator": ["cosmic-age-clock", "bmi-calculator", "date-calculator", "coffee-to-wealth"],
-};
+export * from "./recommendations/recommendation-types";
+export * from "./recommendations/event-bus";
+export * from "./recommendations/user-profile";
+export * from "./recommendations/discovery-score";
+export * from "./recommendations/tool-affinity";
+export * from "./recommendations/tool-chains";
+export * from "./recommendations/daily-challenge";
+export * from "./recommendations/achievements";
+export * from "./recommendations/recommendation-engine";
+
+export const EXPLICIT_SMART_MAP: Record<string, string[]> = TOOL_AFFINITY_MAP;
 
 export function getToolsBySlugs(slugs: string[]): Tool[] {
   return slugs
@@ -34,7 +24,7 @@ export function getRelatedTools(toolSlug: string, limit = 4): Tool[] {
   const currentTool = TOOLS.find((t) => t.slug === toolSlug);
   if (!currentTool) return TOOLS.slice(0, limit);
 
-  const mappedSlugs = EXPLICIT_SMART_MAP[toolSlug] || [];
+  const mappedSlugs = TOOL_AFFINITY_MAP[toolSlug] || [];
   let result = getToolsBySlugs(mappedSlugs);
 
   // Fill with same category if needed
@@ -58,8 +48,8 @@ export function getRelatedTools(toolSlug: string, limit = 4): Tool[] {
 
 export function getPeopleAlsoUsed(toolSlug: string, limit = 4): Tool[] {
   const currentTool = TOOLS.find((t) => t.slug === toolSlug);
-  const mappedSlugs = EXPLICIT_SMART_MAP[toolSlug] || [];
-  
+  const mappedSlugs = TOOL_AFFINITY_MAP[toolSlug] || [];
+
   // Pick complement tools outside primary category if possible
   const mappedTools = getToolsBySlugs(mappedSlugs);
   const crossCategoryTools = TOOLS.filter(

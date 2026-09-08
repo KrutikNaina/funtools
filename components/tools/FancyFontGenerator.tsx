@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Copy, Check, Type, Search } from "lucide-react";
+import { recordToolComplete } from "@/lib/recommendations";
 
 // Unicode style transformers – 20 genuinely distinct styles
 const transformFont = (text: string, style: string): string => {
@@ -199,6 +200,7 @@ export default function FancyFontGenerator() {
   const handleCopy = (styledText: string, styleId: string) => {
     navigator.clipboard.writeText(styledText);
     setCopiedId(styleId);
+    recordToolComplete("fancy-font-generator", "social", styleId);
     setTimeout(() => setCopiedId(null), 1800);
   };
 

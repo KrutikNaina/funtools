@@ -13,35 +13,6 @@ interface Comment {
   userLiked?: boolean;
 }
 
-const INITIAL_COMMENTS: Record<string, Comment[]> = {
-  default: [
-    {
-      id: "1",
-      name: "Sarah M.",
-      avatarBg: "bg-purple-500",
-      text: "Super clean interface and instant results! Loved using this on mobile.",
-      timeAgo: "2 hours ago",
-      likes: 12,
-    },
-    {
-      id: "2",
-      name: "Alex Dev",
-      avatarBg: "bg-indigo-500",
-      text: "Bookmark-worthy tool. Saved me so much time today!",
-      timeAgo: "5 hours ago",
-      likes: 8,
-    },
-    {
-      id: "3",
-      name: "Elena R.",
-      avatarBg: "bg-pink-500",
-      text: "Shared this with my group chat, everyone tried it right away haha.",
-      timeAgo: "1 day ago",
-      likes: 19,
-    },
-  ],
-};
-
 export default function ToolComments({ toolSlug }: { toolSlug: string }) {
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState("");
@@ -53,10 +24,10 @@ export default function ToolComments({ toolSlug }: { toolSlug: string }) {
       if (stored) {
         setComments(JSON.parse(stored));
       } else {
-        setComments(INITIAL_COMMENTS.default);
+        setComments([]);
       }
     } catch (e) {
-      setComments(INITIAL_COMMENTS.default);
+      setComments([]);
     }
   }, [toolSlug]);
 
@@ -149,31 +120,39 @@ export default function ToolComments({ toolSlug }: { toolSlug: string }) {
 
       {/* Comments List */}
       <div className="space-y-3 pt-2">
-        {comments.map((c) => (
-          <div key={c.id} className="p-4 rounded-2xl bg-slate-50/60 dark:bg-slate-800/40 border border-slate-150 dark:border-slate-800/60 flex items-start gap-3">
-            <div className={`w-8 h-8 rounded-full ${c.avatarBg} text-white font-bold text-xs flex items-center justify-center flex-shrink-0 shadow-sm`}>
-              {c.name.charAt(0)}
-            </div>
-            <div className="flex-1 space-y-1">
-              <div className="flex items-center justify-between">
-                <span className="font-bold text-xs text-slate-900 dark:text-white">{c.name}</span>
-                <span className="text-[10px] text-slate-400 font-medium">{c.timeAgo}</span>
-              </div>
-              <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">{c.text}</p>
-              <div className="pt-1 flex items-center gap-4 text-[11px] text-slate-400">
-                <button
-                  type="button"
-                  onClick={() => toggleLike(c.id)}
-                  className={`flex items-center gap-1 font-semibold transition ${
-                    c.userLiked ? "text-indigo-600 dark:text-indigo-400" : "hover:text-slate-600"
-                  }`}
-                >
-                  <ThumbsUp className="w-3 h-3" /> {c.likes}
-                </button>
-              </div>
-            </div>
+        {comments.length === 0 ? (
+          <div className="p-6 rounded-2xl bg-slate-50/50 dark:bg-slate-800/30 border border-dashed border-slate-200 dark:border-slate-800 text-center">
+            <p className="text-xs text-slate-500 dark:text-slate-400">
+              No comments yet. Be the first to share your compatibility results or fun tips!
+            </p>
           </div>
-        ))}
+        ) : (
+          comments.map((c) => (
+            <div key={c.id} className="p-4 rounded-2xl bg-slate-50/60 dark:bg-slate-800/40 border border-slate-150 dark:border-slate-800/60 flex items-start gap-3">
+              <div className={`w-8 h-8 rounded-full ${c.avatarBg} text-white font-bold text-xs flex items-center justify-center flex-shrink-0 shadow-sm`}>
+                {c.name.charAt(0)}
+              </div>
+              <div className="flex-1 space-y-1">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-xs text-slate-900 dark:text-white">{c.name}</span>
+                  <span className="text-[10px] text-slate-400 font-medium">{c.timeAgo}</span>
+                </div>
+                <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">{c.text}</p>
+                <div className="pt-1 flex items-center gap-4 text-[11px] text-slate-400">
+                  <button
+                    type="button"
+                    onClick={() => toggleLike(c.id)}
+                    className={`flex items-center gap-1 font-semibold transition ${
+                      c.userLiked ? "text-indigo-600 dark:text-indigo-400" : "hover:text-slate-600"
+                    }`}
+                  >
+                    <ThumbsUp className="w-3 h-3" /> {c.likes}
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))
+        )}
       </div>
     </section>
   );

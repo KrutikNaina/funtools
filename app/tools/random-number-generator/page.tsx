@@ -15,6 +15,8 @@ import {
   Zap,
   Users,
 } from "lucide-react";
+import WhatsNext from "@/components/recommendations/WhatsNext";
+import CategoryDiscovery from "@/components/recommendations/CategoryDiscovery";
 
 export const metadata: Metadata = {
   title: "Random Number Generator – Free Random Number Picker | GetFunTools",
@@ -187,8 +189,10 @@ export default function RandomNumberGeneratorPage() {
         </header>
 
         {/* Interactive Tool */}
-        <section id="interactive-tool" aria-label="Random number generator tool" className="max-w-3xl mx-auto">
+        <section id="interactive-tool" aria-label="Random number generator tool" className="max-w-3xl mx-auto space-y-8">
           <RandomNumberGenerator />
+          {tool && <WhatsNext currentTool={tool} />}
+          <CategoryDiscovery currentCategory="random" />
         </section>
 
         {/* Ad Slot — after tool, before content */}

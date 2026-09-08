@@ -5,6 +5,9 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE_URL } from "@/lib/site";
+import SurpriseMeModal from "@/components/recommendations/SurpriseMeModal";
+import AchievementToaster from "@/components/recommendations/AchievementToaster";
+import AnalyticsDashboardModal from "@/components/recommendations/AnalyticsDashboardModal";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -134,6 +137,9 @@ export default function RootLayout({
           <Header />
           <main className="flex-1 pt-24">{children}</main>
           <Footer />
+          <SurpriseMeModal />
+          <AchievementToaster />
+          <AnalyticsDashboardModal />
         </ThemeProvider>
       </body>
     </html>
