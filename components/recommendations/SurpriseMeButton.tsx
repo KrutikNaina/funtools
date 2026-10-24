@@ -22,11 +22,13 @@ export default function SurpriseMeButton({
     return (
       <button
         onClick={handleClick}
-        className={`px-3 py-1.5 rounded-full bg-gradient-to-r from-amber-500/15 to-purple-500/15 hover:from-amber-500/25 hover:to-purple-500/25 text-amber-600 dark:text-amber-400 border border-amber-500/30 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-sm hover:scale-105 ${className}`}
+        className={`px-2.5 py-1.5 xl:px-3 xl:py-1.5 rounded-full bg-gradient-to-r from-amber-500/15 to-purple-500/15 hover:from-amber-500/25 hover:to-purple-500/25 text-amber-600 dark:text-amber-400 border border-amber-500/30 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-xs hover:scale-105 shrink-0 whitespace-nowrap ${className}`}
         title="Surprise Me with a Random Tool"
       >
-        <Dices className="w-3.5 h-3.5 animate-bounce" />
-        <span className="hidden sm:inline">Surprise Me</span>
+        <Dices className="w-3.5 h-3.5 animate-bounce shrink-0" />
+        <span className="hidden xl:inline">Surprise Me</span>
+        <span className="hidden md:inline xl:hidden">Surprise</span>
+        <span className="inline md:hidden">Surprise Me</span>
       </button>
     );
   }

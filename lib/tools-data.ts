@@ -318,26 +318,42 @@ export const TOOLS: Tool[] = [
   {
     id: "bmi-calc",
     slug: "bmi-calculator",
-    title: "Body Mass Index (BMI) Calculator",
-    subtitle: "Calculate your exact Body Mass Index & WHO health range",
-    description: "Calculate your adult Body Mass Index (BMI) instantly using metric or imperial measurements. Includes World Health Organization categories and healthy weight range analysis.",
+    title: "BMI Calculator",
+    subtitle: "Calculate your adult Body Mass Index in kg/cm or ft/lbs instantly",
+    description: "Calculate your adult BMI using height and weight in metric or imperial units. Check your BMI category, view standard adult BMI ranges, and understand BMI's limitations.",
     category: "productivity",
-    iconName: "Zap",
+    iconName: "Activity",
     isPopular: true,
     isTrending: true,
     isFeatured: true,
     gradient: "from-teal-500 to-emerald-600",
-    tags: ["bmi calculator", "health meter", "body mass index", "fitness math"],
+    tags: [
+      "BMI Calculator",
+      "Body Mass Index Calculator",
+      "BMI Calculator for Adults",
+      "Calculate BMI from Height and Weight",
+      "BMI Calculator kg and cm",
+      "BMI Calculator Feet and Inches",
+      "BMI Chart for Adults",
+      "BMI Categories for Adults",
+      "BMI Formula"
+    ],
     features: [
-      "Metric (cm/kg) & Imperial (ft/lbs) toggle",
-      "Instant real-time BMI classification gauge",
-      "WHO weight category breakdown (Underweight, Normal, Overweight, Obese)",
-      "Medical disclaimer & educational guidelines"
+      "Metric (cm/kg) & Imperial (ft & in/lbs) dual synchronized controls",
+      "Instant real-time calculation with unrounded WHO threshold evaluation",
+      "Standard adult WHO categories (Underweight, Healthy Weight, Overweight, Obesity)",
+      "Mathematical formula and substitution step display",
+      "1-click result copy to clipboard and reset action",
+      "100% private, client-side calculation in your browser"
     ],
     faq: [
       {
         question: "How is Body Mass Index (BMI) calculated?",
-        answer: "BMI is calculated by dividing weight in kilograms by height in meters squared (kg/m²)."
+        answer: "In the metric system: BMI = weight in kilograms ÷ height in metres squared. In the imperial system: BMI = 703 × weight in pounds ÷ height in inches squared."
+      },
+      {
+        question: "What is a healthy BMI range for adults?",
+        answer: "According to the World Health Organization and CDC, a healthy adult BMI is between 18.5 and 24.9."
       }
     ]
   },
@@ -448,26 +464,42 @@ export const TOOLS: Tool[] = [
   {
     id: "percentage-calc",
     slug: "percentage-calculator",
-    title: "Ultimate Percentage Calculator",
-    subtitle: "Solve percentage increase, decrease & fraction math instantly",
-    description: "Multi-mode percentage calculator to solve % of a number, percentage change, markup/discount, and ratio percentages.",
+    title: "Percentage Calculator",
+    subtitle: "Calculate percentages, percentage increase & decrease, and compare values instantly",
+    description: "Use this free percentage calculator to find a percentage of a number, calculate percentage increase or decrease, and compare values instantly with formulas and examples.",
     category: "finance",
     iconName: "Coins",
     isPopular: true,
     isTrending: true,
     isFeatured: true,
     gradient: "from-green-500 to-teal-600",
-    tags: ["percentage calculator", "math calculator", "discount percent", "increase decrease"],
+    tags: [
+      "percentage calculator",
+      "percentage increase calculator",
+      "percentage decrease calculator",
+      "percentage change calculator",
+      "percentage of a number calculator",
+      "calculate percentage online",
+      "percentage difference calculator",
+      "percent off calculator",
+      "percentage calculator with steps"
+    ],
     features: [
-      "3 main calculation modes (What is X% of Y, Percentage change, X is what % of Y)",
-      "Instant real-time math results",
-      "Discount & sales tax fast preset mode",
-      "Step-by-step mathematical explanation"
+      "3 dedicated modes: % of a number, percentage change (increase/decrease), and ratio percentages",
+      "Instant real-time calculation with zero page reloads",
+      "Clear handling of undefined zero-baseline division",
+      "Quick percentage presets (5%, 10%, 15%, 20%, 25%, 50%) for tips and discounts",
+      "Step-by-step arithmetic notation and 1-click result copy",
+      "100% private, client-side calculation in your browser"
     ],
     faq: [
       {
-        question: "How do you calculate percentage increase?",
-        answer: "Subtract original from new value, divide by original value, and multiply by 100."
+        question: "How do you calculate percentage of a number?",
+        answer: "Multiply the percentage by the total number and divide by 100. For example, 15% of 200 = (15 ÷ 100) × 200 = 30."
+      },
+      {
+        question: "How do you calculate percentage increase or decrease?",
+        answer: "Subtract the original value from the new value, divide by the original value, and multiply by 100. A positive result indicates an increase; a negative result indicates a decrease. If the original value is zero, the calculation is mathematically undefined."
       }
     ]
   },
@@ -604,26 +636,33 @@ export const TOOLS: Tool[] = [
   {
     id: "death-calc",
     slug: "death-calculator",
-    title: "Cosmic Death & Lifespan Calculator",
-    subtitle: "Fun entertainment life clock & humor lifespan estimator",
-    description: "Enter your daily habits (coffee, sleep, stress, humor) to calculate your estimated remaining days on Earth with funny longevity badges! (Entertainment Only)",
+    title: "Death Calculator",
+    subtitle: "Explore your estimated remaining days with funny longevity badges",
+    description: "Try this free death calculator for a playful estimate of your remaining days. Explore your lifespan, discover fun longevity badges, and share your result. Entertainment only.",
     category: "personality",
     iconName: "Smile",
     isPopular: true,
     isTrending: true,
     isFeatured: true,
     gradient: "from-slate-700 via-purple-900 to-slate-900",
-    tags: ["death calculator", "life expectancy", "fun quiz", "lifespan test"],
+    tags: [
+      "death calculator",
+      "death clock",
+      "fun death clock",
+      "when will I die calculator",
+      "how many days do I have left to live",
+      "lifespan calculator"
+    ],
     features: [
-      "Interactive habit sliders (Coffee intake, Sleep, Chaos level)",
-      "Live ticking remaining lifespan clock visualization",
-      "Funny longevity badges (Immortal Cactus, Cyber Zombie, Chill Sloth)",
-      "Clear entertainment disclaimer & shareable result card"
+      "5 interactive habit sliders (Age, Coffee, Sleep, Laughter, Chaos)",
+      "Instant multi-unit conversion into remaining Days, Weeks, Months, and Years",
+      "5 funny longevity archetype badges (Immortal Cactus to Living Legend)",
+      "1-click result card sharing and 100% private client-side calculations"
     ],
     faq: [
       {
-        question: "Is the Death Calculator scientifically accurate?",
-        answer: "No! This tool is 100% created for fun, entertainment, and lighthearted humor."
+        question: "Is this death calculator accurate?",
+        answer: "No! This tool is 100% created for fun, entertainment, and lighthearted humor with zero medical validity."
       }
     ]
   },

@@ -126,17 +126,25 @@ export default async function ToolDetailPage({ params }: PageProps) {
     url: module.metadata.canonicalUrl,
   };
 
-  const softwareSchema = {
+  const webAppSchema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "WebApplication",
     name: tool.title,
-    applicationCategory: tool.category === "finance" ? "FinanceApplication" : "UtilityApplication",
-    operatingSystem: "Web Browser",
+    url: module.metadata.canonicalUrl,
+    applicationCategory:
+      tool.category === "finance"
+        ? "FinanceApplication"
+        : tool.category === "personality" || tool.category === "quiz"
+        ? "EntertainmentApplication"
+        : "UtilityApplication",
+    operatingSystem: "All",
+    browserRequirements: "Requires JavaScript. Requires HTML5.",
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
     },
+    description: module.metadata.metaDescription,
   };
 
   const howToSchema = {
@@ -152,12 +160,39 @@ export default async function ToolDetailPage({ params }: PageProps) {
     })),
   };
 
+  function renderParagraphWithLinks(text: string) {
+    const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const parts: (string | React.ReactNode)[] = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = regex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.substring(lastIndex, match.index));
+      }
+      parts.push(
+        <Link
+          key={match.index}
+          href={match[2]}
+          className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+        >
+          {match[1]}
+        </Link>
+      );
+      lastIndex = regex.lastIndex;
+    }
+    if (lastIndex < text.length) {
+      parts.push(text.substring(lastIndex));
+    }
+    return parts.length > 0 ? parts : text;
+  }
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       <div className="max-w-7xl mx-auto px-6 pb-24 space-y-12 pt-2">
@@ -231,6 +266,40 @@ export default async function ToolDetailPage({ params }: PageProps) {
             {module.content.introduction}
           </p>
         </section>
+
+        {/* SECTION 5.5: Deep Dive Editorial Guide Sections */}
+        {module.content.guideSections && module.content.guideSections.length > 0 && (
+          <div className="max-w-4xl mx-auto space-y-6">
+            {module.content.guideSections.map((sec, idx) => (
+              <section
+                key={idx}
+                className="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm"
+              >
+                <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                  {sec.icon && <span className="text-lg">{sec.icon}</span>}
+                  {sec.title}
+                </h2>
+                <div className="space-y-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  {sec.paragraphs.map((p, pIdx) => (
+                    <p key={pIdx}>{renderParagraphWithLinks(p)}</p>
+                  ))}
+                  {sec.bullets && sec.bullets.length > 0 && (
+                    <ul className="space-y-1.5 list-disc pl-5 pt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                      {sec.bullets.map((b, bIdx) => (
+                        <li key={bIdx}>{renderParagraphWithLinks(b)}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {sec.callout && (
+                    <div className="mt-3 p-4 rounded-2xl bg-indigo-50/80 dark:bg-indigo-950/40 border border-indigo-200/80 dark:border-indigo-800/60 text-xs sm:text-sm text-indigo-950 dark:text-indigo-200 font-medium">
+                      {renderParagraphWithLinks(sec.callout)}
+                    </div>
+                  )}
+                </div>
+              </section>
+            ))}
+          </div>
+        )}
 
         {/* SECTION 6: Step-by-Step How It Works Guide */}
         <section className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
@@ -486,7 +555,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
               <p className="text-xs font-semibold text-indigo-600 dark:text-indigo-400">{module.eeat.authorRole}</p>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{module.eeat.authorBio}</p>
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-[11px] text-slate-500 pt-2">
-                <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Fact Checked by {module.eeat.reviewerName || "Editorial Team"}</span>
+                <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Reviewed by {module.eeat.reviewerName || "Editorial Team"}</span>
                 <span className="flex items-center gap-1"><Calendar className="w-3.5 h-3.5 text-slate-400" /> Updated: {module.eeat.lastUpdated}</span>
               </div>
             </div>

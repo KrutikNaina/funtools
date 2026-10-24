@@ -17,19 +17,19 @@ export default function ExplorerProfileBadge() {
       {/* Header Pill Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-500/10 via-indigo-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 border border-purple-200 dark:border-purple-800/60 text-xs font-black text-slate-800 dark:text-slate-200 transition cursor-pointer shadow-sm group"
+        className="flex items-center gap-1.5 xl:gap-2 px-2.5 py-1.5 xl:px-3 xl:py-1.5 rounded-full bg-gradient-to-r from-purple-500/10 via-indigo-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 border border-purple-200 dark:border-purple-800/60 text-xs font-black text-slate-800 dark:text-slate-200 transition cursor-pointer shadow-xs group shrink-0 whitespace-nowrap"
         title="View Explorer Level & Achievements"
       >
-        <span className="w-5 h-5 rounded-full bg-gradient-to-tr from-indigo-600 to-pink-500 text-white flex items-center justify-center text-[10px] shadow-sm">
+        <span className="w-5 h-5 rounded-full bg-gradient-to-tr from-indigo-600 to-pink-500 text-white flex items-center justify-center text-[10px] font-black shadow-xs shrink-0">
           {profile.level}
         </span>
-        <span className="hidden lg:inline text-purple-600 dark:text-purple-400 font-extrabold">
+        <span className="hidden xl:inline text-purple-600 dark:text-purple-400 font-extrabold">
           Lvl {profile.level}
         </span>
-        <span className="text-[10px] text-slate-400 font-mono hidden sm:inline">
+        <span className="text-[10px] text-slate-400 font-mono hidden 2xl:inline">
           {profile.xp} XP
         </span>
-        <ChevronDown className="w-3 h-3 text-slate-400 group-hover:translate-y-0.5 transition" />
+        <ChevronDown className="w-3 h-3 text-slate-400 group-hover:translate-y-0.5 transition shrink-0" />
       </button>
 
       {/* Popover Dropdown Drawer */}
@@ -44,7 +44,7 @@ export default function ExplorerProfileBadge() {
               initial={{ opacity: 0, scale: 0.95, y: 10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 10 }}
-              className="absolute right-0 top-11 z-[130] w-80 sm:w-96 p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-4 text-left"
+              className="absolute right-0 top-11 z-[130] w-80 sm:w-96 max-w-[calc(100vw-2rem)] p-4 sm:p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-4 text-left"
             >
               {/* Header */}
               <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">

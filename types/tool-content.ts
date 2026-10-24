@@ -69,6 +69,7 @@ export interface ToolContentDetails {
   bestPractices: string[];
   expertTips: string[];
   disclaimer?: { type: "entertainment" | "medical" | "financial" | "general"; text: string };
+  guideSections?: { title: string; icon?: string; paragraphs: string[]; bullets?: string[]; callout?: string }[];
 }
 
 export interface ToolFAQ {
