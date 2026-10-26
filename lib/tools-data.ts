@@ -188,26 +188,38 @@ export const TOOLS: Tool[] = [
   {
     id: "decision-wheel",
     slug: "decision-wheel",
-    title: "Decision Wheel – Free Random Picker",
-    subtitle: "Spin the wheel & pick random choices, names, or Yes/No instantly",
-    description: "Add your choices, spin the wheel, and get a random result instantly. Use it as a decision maker, random name picker, or wheel spinner for everyday choices, games, classrooms, giveaways, and more.",
+    title: "Decision Wheel",
+    subtitle: "Free online wheel spinner, random name picker & decision maker",
+    description: "Spin the wheel online with this free decision maker and random picker. Create custom wheels, pick random names, choose Yes/No, and share your wheel instantly.",
     category: "random",
     iconName: "CircleDot",
     isPopular: true,
     isTrending: true,
     isFeatured: true,
     gradient: "from-blue-500 to-indigo-600",
-    tags: ["decision wheel", "free decision wheel", "random picker", "spin the wheel", "wheel spinner", "random name picker", "wheel of names", "yes or no wheel"],
+    tags: [
+      "decision wheel",
+      "free decision wheel",
+      "spin the wheel",
+      "spin wheel online",
+      "wheel spinner",
+      "random picker wheel",
+      "random name picker",
+      "wheel of names",
+      "random decision maker",
+      "online decision wheel",
+      "yes or no wheel"
+    ],
     features: [
-      "Smooth spinning wheel animation synchronized with true random selection",
+      "Smooth spinning wheel animation synchronized with 1-in-N random selection",
       "10 built-in presets (Food, Movies, Games, Classroom, Work, and more) plus Yes/No mode",
-      "Optional elimination mode to remove winners after each spin",
-      "100% private browser storage and instant URL sharing"
+      "Optional elimination mode to remove winners after each spin without duplicates",
+      "100% private browser storage, keyboard shortcuts (Ctrl+Enter), and instant URL sharing"
     ],
     faq: [
       {
         question: "How does the Decision Wheel pick a winner?",
-        answer: "It uses the browser's standard pseudo-random number generator to select one of your entries, then animates the wheel so it visually lands on that same result."
+        answer: "It uses the browser's standard pseudo-random number generator to select one of your entries with equal probability, then animates the wheel so it visually lands on that exact result."
       }
     ]
   },
@@ -292,26 +304,40 @@ export const TOOLS: Tool[] = [
   {
     id: "cosmic-age",
     slug: "cosmic-age-clock",
-    title: "Cosmic Age & Life Stats Clock",
-    subtitle: "Discover your age in seconds, heartbeats & planetary years",
-    description: "Enter your birthday to reveal your exact live ticking age down to seconds, total estimated heartbeats, days lived, and what age you'd be on Mars and Venus!",
+    title: "Cosmic Age Calculator",
+    subtitle: "Calculate your age in seconds, days and planetary years across the solar system",
+    description: "Calculate your age in seconds, days and planetary years with this free online age calculator. Explore your age on Mars and Venus and see your next birthday countdown.",
     category: "age",
     iconName: "Orbit",
     isPopular: true,
     isTrending: false,
     isFeatured: true,
     gradient: "from-amber-500 to-orange-600",
-    tags: ["age clock", "birthday countdown", "space age", "cosmic clock"],
+    tags: [
+      "Age in Seconds Calculator",
+      "Age on Mars Calculator",
+      "Planetary Age Calculator",
+      "Cosmic Age Calculator",
+      "Age in Days Calculator",
+      "How Many Seconds Have I Been Alive?",
+      "Birthday Countdown Calculator"
+    ],
     features: [
-      "Live ticking seconds clock with precision counter",
-      "Total estimated heartbeats & breathing stats",
-      "Planetary age calculator (Age on Mars, Venus, Jupiter)",
-      "Next birthday countdown with day of the week indicator"
+      "Live 1-second ticking clock tracking seconds, days, and Earth years lived",
+      "Planetary age calculator across all 8 planets (Mercury to Neptune)",
+      "1-Billion-Seconds Milestone tracker with exact date and live countdown",
+      "Next Martian Birthday counter celebrating 686.98-day orbital anniversaries",
+      "Estimated cumulative lifetime heartbeats (~70 bpm resting average)",
+      "1-Click Copy Summary & Web Share API with 100% browser privacy"
     ],
     faq: [
       {
-        question: "How are planetary ages calculated?",
-        answer: "Planetary ages are calculated using orbital periods around the Sun (e.g. 1 year on Mars = 687 Earth days)."
+        question: "How is my age in seconds calculated?",
+        answer: "Age in seconds is calculated by measuring the milliseconds between the current time and your birth date at midnight, divided by 1,000."
+      },
+      {
+        question: "How old would I be on Mars?",
+        answer: "Because Mars takes approximately 686.98 Earth days to orbit the Sun, your age on Mars is roughly 53% of your Earth age."
       }
     ]
   },

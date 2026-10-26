@@ -12,14 +12,14 @@ import {
   Dices,
   ShieldCheck,
   Zap,
-  HelpCircle,
   RotateCw,
-  Users,
   CheckCircle2,
-  Lock,
   ArrowRight,
+  HelpCircle,
+  Users,
+  Scale,
   Sparkles,
-  Award
+  Lock
 } from "lucide-react";
 import { decisionWheelContent as module } from "@/lib/content/decision-wheel";
 import WhatsNext from "@/components/recommendations/WhatsNext";
@@ -27,24 +27,26 @@ import CategoryDiscovery from "@/components/recommendations/CategoryDiscovery";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Decision Wheel – Free Random Picker & Spin the Wheel | GetFunTools",
+    absolute: "Decision Wheel – Free Online Spin the Wheel Tool | GetFunTools",
   },
   description:
-    "Spin the wheel and make decisions instantly with this free random picker. Create custom wheels, pick random names, choose Yes/No, and share your wheel online.",
+    "Spin the wheel online with this free decision maker and random picker. Create custom wheels, pick random names, choose Yes/No, and share your wheel instantly.",
   alternates: {
     canonical: `${SITE_URL}/tools/decision-wheel`,
   },
   openGraph: {
-    title: "Decision Wheel – Free Random Picker",
-    description: "Spin the wheel, pick a random choice, and make decisions instantly.",
+    title: "Decision Wheel – Free Online Spin the Wheel Tool | GetFunTools",
+    description:
+      "Spin the wheel online with this free decision maker and random picker. Create custom wheels, pick random names, choose Yes/No, and share your wheel instantly.",
     url: `${SITE_URL}/tools/decision-wheel`,
     siteName: "GetFunTools",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Decision Wheel – Free Random Picker",
-    description: "Spin the wheel, pick a random choice, and make decisions instantly.",
+    title: "Decision Wheel – Free Online Spin the Wheel Tool | GetFunTools",
+    description:
+      "Spin the wheel online with this free decision maker and random picker. Create custom wheels, pick random names, choose Yes/No, and share your wheel instantly.",
   },
 };
 
@@ -56,9 +58,9 @@ export default function DecisionWheelPage() {
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Decision Wheel – Free Random Picker & Spin the Wheel",
+    name: "Decision Wheel – Free Online Spin the Wheel Tool",
     description:
-      "Spin the wheel and make decisions instantly with this free random picker. Create custom wheels, pick random names, choose Yes/No, and share your wheel online.",
+      "Spin the wheel online with this free decision maker and random picker. Create custom wheels, pick random names, choose Yes/No, and share your wheel instantly.",
     url: `${SITE_URL}/tools/decision-wheel`,
     inLanguage: "en",
     isPartOf: {
@@ -71,7 +73,7 @@ export default function DecisionWheelPage() {
   const webAppSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "Decision Wheel – Free Random Picker",
+    name: "Decision Wheel – Free Online Spin the Wheel Tool",
     url: `${SITE_URL}/tools/decision-wheel`,
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "All modern web browsers (iOS, Android, macOS, Windows, Linux)",
@@ -146,23 +148,23 @@ export default function DecisionWheelPage() {
           <div className="flex items-center justify-center gap-2">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider">
               <Dices className="w-3.5 h-3.5" />
-              Random Picker
+              Free Online Random Picker
             </div>
             <BookmarkButton slug="decision-wheel" />
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight tracking-tight">
-            Decision Wheel – Free Random Picker
+            Decision Wheel – Free Online Spin the Wheel Tool
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto">
-            Add your choices, spin the wheel, and get a random result instantly. Use it as a decision maker, random name picker, or wheel spinner for everyday choices, games, classrooms, giveaways, and more.
+            Spin the wheel online with this free decision maker and random picker. Add your custom options, choose from 10 ready-made presets, pick random names, or switch to Yes/No mode for fast, unbiased decisions.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400 pt-1">
             <span className="flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-emerald-500" />
-              No Signup Required
+              100% Free &amp; No Signup
             </span>
             <span className="flex items-center gap-1.5">
               <Zap className="w-4 h-4 text-amber-500" />
@@ -171,6 +173,10 @@ export default function DecisionWheelPage() {
             <span className="flex items-center gap-1.5">
               <RotateCw className="w-4 h-4 text-indigo-500" />
               Up to 500 Choices
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Lock className="w-4 h-4 text-purple-500" />
+              Zero Server Storage
             </span>
           </div>
         </header>
@@ -189,23 +195,23 @@ export default function DecisionWheelPage() {
 
         {/* Informational Content Sections */}
         <div className="max-w-4xl mx-auto space-y-8">
-          {/* Section 1: Spin the Wheel Online */}
+          {/* Section 1: How to Use the Decision Wheel */}
           <article className="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-6 shadow-sm">
             <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white">
-              Spin the Wheel Online
+              How to Use the Decision Wheel Online
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              When facing a tough dilemma, overthinking is usually the enemy. An online <strong>wheel spinner</strong> eliminates decision fatigue by turning your options into an impartial, visual random picker. Here is how you can use this <strong>decision wheel</strong> in seconds:
+              When facing choice paralysis, overthinking drains mental energy. An online <strong>wheel spinner</strong> eliminates decision fatigue by transforming your options into an impartial, visual random picker. Follow these four simple steps:
             </p>
 
             <ol className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <li className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 space-y-1.5">
                 <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
                   <span className="w-5 h-5 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-[11px]">1</span>
-                  Add Choices
+                  Add Your Choices
                 </div>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Type your options line-by-line, paste a comma-separated list, or select one of 10 ready-made presets.
+                  Type your options line-by-line, paste a comma-separated list from a spreadsheet, or click any of the 10 ready-made presets above.
                 </p>
               </li>
 
@@ -215,65 +221,65 @@ export default function DecisionWheelPage() {
                   Spin the Wheel
                 </div>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Click the center <strong>SPIN</strong> button or press <strong>Ctrl+Enter</strong> (Cmd+Enter on Mac) to start spinning.
+                  Click the center <strong>SPIN</strong> button or press <strong>Ctrl+Enter</strong> (Cmd+Enter on Mac) to start spinning immediately.
                 </p>
               </li>
 
               <li className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 space-y-1.5">
                 <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
                   <span className="w-5 h-5 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-[11px]">3</span>
-                  Get Random Result
+                  Get Your Random Winner
                 </div>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  The wheel smoothly decelerates and lands on the selected winner, complete with sound and confetti.
+                  The wheel smoothly decelerates and lands on the selected winner, accompanied by audio tick synthesis and celebratory confetti.
                 </p>
               </li>
 
               <li className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 space-y-1.5">
                 <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
                   <span className="w-5 h-5 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-[11px]">4</span>
-                  Manage or Share
+                  Manage Winner or Share
                 </div>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Copy the winner, enable Elimination Mode to remove winners after each spin, or share your custom wheel via link.
+                  Copy the winning outcome, enable Elimination Mode to remove winners after each turn, or share your custom wheel via link.
                 </p>
               </li>
             </ol>
           </article>
 
-          {/* Section 2: Random Name Picker & Wheel of Names */}
+          {/* Section 2: Random Name Picker & Classroom Use */}
           <article className="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-6 shadow-sm">
             <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white">
-              Random Name Picker & Wheel of Names
+              Random Name Picker &amp; Wheel of Names for Classrooms
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              A <strong>wheel of names</strong> is one of the most widely used applications for this tool. By entering a roster of people, you can turn any random draw into an exciting, transparent visual event. Common ways teachers, managers, and creators use it include:
+              A <strong>wheel of names</strong> is one of the most popular ways teachers, meeting facilitators, and community organizers use our decision wheel. By loading a roster of participants, you turn any random selection into an engaging, transparent event:
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-4 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-900/40 space-y-1">
-                <h3 className="font-bold text-slate-900 dark:text-white text-sm">Classroom Student Names</h3>
+                <h3 className="font-bold text-slate-900 dark:text-white text-sm">Classroom Student Calling</h3>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Call on students randomly for questions or reading turns. Turn on <em>&quot;Remove winner after each spin&quot;</em> so every student gets a turn before anyone repeats.
+                  Call on students randomly for questions or reading assignments. Turn on <em>&quot;Remove winner after each spin&quot;</em> so every student gets a turn before anyone repeats.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-purple-50/60 dark:bg-purple-950/30 border border-purple-100 dark:border-purple-900/40 space-y-1">
-                <h3 className="font-bold text-slate-900 dark:text-white text-sm">Giveaways & Raffles</h3>
+                <h3 className="font-bold text-slate-900 dark:text-white text-sm">Giveaways &amp; Raffles</h3>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Paste contest entrant handles or ticket numbers into the entries box and spin live on stream to reveal lucky prize winners.
+                  Paste contest entrant handles or ticket numbers into the entries box and spin live on stream or during events to draw lucky prize winners.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-blue-50/60 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/40 space-y-1">
-                <h3 className="font-bold text-slate-900 dark:text-white text-sm">Team Standups & Speakers</h3>
+                <h3 className="font-bold text-slate-900 dark:text-white text-sm">Team Standups &amp; Speakers</h3>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Eliminate awkward silence during agile meetings by letting the random picker wheel choose who gives their update or leads the retrospective next.
+                  Eliminate awkward silence during agile standups by letting the random picker wheel choose who gives their update or leads the retrospective next.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-100 dark:border-emerald-900/40 space-y-1">
-                <h3 className="font-bold text-slate-900 dark:text-white text-sm">Volunteers & Chore Duty</h3>
+                <h3 className="font-bold text-slate-900 dark:text-white text-sm">Volunteers &amp; Chore Duty</h3>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                   Fairly assign household chores, event volunteers, or task responsibilities without favoritism or arguments.
                 </p>
@@ -281,26 +287,39 @@ export default function DecisionWheelPage() {
             </div>
           </article>
 
-          {/* Section 3: Decision Wheel Use Cases */}
-          <article className="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-6 shadow-sm">
+          {/* Section 3: Yes / No Decision Wheel Mode */}
+          <article className="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
             <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white">
-              Decision Wheel Use Cases
+              Yes or No Decision Wheel: Fast 50/50 Tie Breaking
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              Whether you need a quick choice picker for personal decisions or a fun group activity, here are practical ways our users put the wheel to work every day:
+              When you are stuck between two choices, flip-flopping wastes valuable time. Clicking the <strong>Yes / No</strong> tab instantly loads a two-slice wheel with an exact 50% probability for each outcome. We also include a <strong>Yes / No / Maybe</strong> mode (33.3% probability each) for decisions that require an open-ended middle ground.
+            </p>
+            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              <em>Note:</em> The Yes/No wheel provides recreational random chance. It does not replace sound judgment, financial planning, or professional consultation on serious personal dilemmas.
+            </p>
+          </article>
+
+          {/* Section 4: What to Eat & What to Watch Presets */}
+          <article className="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-6 shadow-sm">
+            <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white">
+              Everyday Decision Presets: Food, Movies, and Games
+            </h2>
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              We have pre-programmed 10 instant presets to solve the most common daily debates without typing:
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
               {[
-                { title: "🍕 What to Eat?", desc: "Pick between pizza, sushi, tacos, burgers, or home cooking." },
-                { title: "🎬 What to Watch?", desc: "Select movie genres, watchlist titles, or TV series." },
-                { title: "🎮 What to Play?", desc: "Choose board games, multiplayer titles, or video game genres." },
-                { title: "🎒 Classroom Turns", desc: "Select students for presentations, trivia, and team captains." },
-                { title: "🎁 Giveaways & Contests", desc: "Draw giveaway winners impartially on streams or events." },
-                { title: "🎉 Party Games & Dares", desc: "Spin for Truth or Dare, Charades, or funny party challenges." },
-                { title: "✈️ Travel Destinations", desc: "Settle on weekend road trips, vacation spots, or hiking trails." },
-                { title: "🏋️ Workout Routines", desc: "Pick daily exercises, muscle groups, or interval routines." },
-                { title: "⚖️ Yes or No Dilemmas", desc: "Quickly break 50/50 ties using the dedicated Yes/No mode." },
+                { title: "🍕 What to Eat?", desc: "Pizza, Tacos, Sushi, Burger, Ramen, Salad, Pasta." },
+                { title: "🎬 What to Watch?", desc: "Action, Comedy, Sci-Fi, Horror, Romance, Documentary, Thriller." },
+                { title: "🎮 What to Play?", desc: "Board Game, Video Game, Card Game, Charades, Trivia." },
+                { title: "🎉 Party Games", desc: "Truth or Dare, Charades, Never Have I Ever, Freeze Dance." },
+                { title: "💼 Work Tasks", desc: "Reply to Emails, Review Docs, Team Standup, Plan Sprint, Clean Inbox." },
+                { title: "🏋️ Workout Routines", desc: "Push-ups, Squats, Plank, Jumping Jacks, Rest Day." },
+                { title: "✈️ Travel Destinations", desc: "Beach, Mountains, City Trip, Road Trip, Stay Home." },
+                { title: "☕ Coffee & Drinks", desc: "Latte, Cold Brew, Espresso, Tea, Hot Chocolate." },
+                { title: "🎲 Random Numbers", desc: "Virtual 6-sided die roll (1 through 6)." },
               ].map((c, i) => (
                 <div key={i} className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800 space-y-1">
                   <h3 className="font-bold text-slate-900 dark:text-white text-sm">{c.title}</h3>
@@ -310,19 +329,19 @@ export default function DecisionWheelPage() {
             </div>
           </article>
 
-          {/* Section 4: Fairness / Randomness Technical Explanation */}
+          {/* Section 5: Fairness & Randomness Technical Reality */}
           <article className="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-6 shadow-sm">
             <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white">
-              Is the Decision Wheel Random?
+              Is the Decision Wheel Truly Random? (Mathematical Fairness)
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              <strong>Yes, the wheel is powered by a standard mathematical pseudo-random selection process.</strong> Here is the exact technical reality behind each spin:
+              <strong>Yes. The wheel is governed by standard mathematical pseudo-random selection with equal angular probability.</strong> Here is how the selection engine works under the hood:
             </p>
 
             <div className="space-y-4 text-sm text-slate-600 dark:text-slate-400">
               <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
                 <h3 className="font-bold text-slate-900 dark:text-white text-sm">
-                  How the Math Works
+                  1-in-N Equal Probability Formula
                 </h3>
                 <p className="text-xs leading-relaxed">
                   When you initiate a spin, the tool calls the JavaScript environment&apos;s standard pseudo-random number generator (<code className="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-700 font-mono text-xs">Math.random()</code>). The winning index is determined by:
@@ -337,23 +356,23 @@ export default function DecisionWheelPage() {
 
               <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
                 <h3 className="font-bold text-slate-900 dark:text-white text-sm">
-                  Visual Synchronization
+                  Visual Angle Synchronization
                 </h3>
                 <p className="text-xs leading-relaxed">
-                  The wheel does not stop on a random angle and then read whatever slice happens to be beneath the needle. Instead, the winner is determined <em>first</em>, and the CSS rotation angle is mathematically calculated so that the wheel rotates multiple full revolutions before coming to rest precisely on the winning segment. The visual result always matches the selected winner.
+                  The wheel does not stop on a random angle and then read whatever slice happens to land beneath the needle. Instead, the winning slice is determined <em>first</em>, and the CSS rotation angle is mathematically calculated so that the wheel rotates 5 full revolutions before coming to rest precisely on the winning segment.
                 </p>
               </div>
 
               <div className="p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 text-xs text-amber-800 dark:text-amber-300">
-                <strong>Honest Transparency:</strong> This tool uses standard browser pseudo-randomness. It is not a hardware-generated or cryptographically certified random number generator (CSPRNG) audited by state gaming commissions. It is designed for fair, recreational everyday decisions, games, classroom activities, and community giveaways.
+                <strong>Honest Disclosure:</strong> This tool uses standard browser pseudo-randomness (Math.random()). It is not a hardware-generated or cryptographically certified random number generator (CSPRNG) audited by state gaming commissions. It is designed for fair everyday decisions, games, classroom activities, and community giveaways.
               </div>
             </div>
           </article>
 
-          {/* Section 5: Privacy & Local Storage */}
+          {/* Section 6: Privacy, Local Storage & URL Sharing */}
           <article className="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
             <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white">
-              Are My Choices Saved or Stored on a Server?
+              Privacy, Local Storage &amp; URL Sharing
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
               <strong>Your choices remain private on your own device.</strong> The Decision Wheel operates entirely within your browser:
@@ -369,7 +388,7 @@ export default function DecisionWheelPage() {
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                <span><strong>URL-Based Sharing:</strong> When you click &quot;Share Wheel&quot;, your choices are encoded into the URL parameters client-side (<code className="px-1 py-0.5 rounded bg-slate-100 dark:bg-slate-800 font-mono">?items=...</code>) so you can share your exact wheel with friends without server uploads.</span>
+                <span><strong>URL-Based Sharing:</strong> When you click &quot;Share Wheel&quot;, your choices are encoded into the URL parameters client-side (<code className="px-1 py-0.5 rounded bg-slate-100 dark:bg-slate-800 font-mono">?items=...</code>) so you can share your exact wheel with friends without server uploads. Note that anyone with the link can view the encoded choices.</span>
               </li>
             </ul>
           </article>
@@ -385,7 +404,7 @@ export default function DecisionWheelPage() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
               <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white">
-                Related Random, Chance & Calculation Tools
+                Related Random, Chance &amp; Calculation Tools
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                 Explore more interactive calculators and viral tools on GetFunTools.
@@ -395,7 +414,7 @@ export default function DecisionWheelPage() {
               href="/categories/random"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline"
             >
-              Explore All Random & Luck Tools <ArrowRight className="w-3.5 h-3.5" />
+              Explore All Random &amp; Luck Tools <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
@@ -410,4 +429,3 @@ export default function DecisionWheelPage() {
     </>
   );
 }
-
