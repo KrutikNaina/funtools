@@ -7,6 +7,8 @@ import AdBanner from "@/components/AdBanner";
 import RandomNumberGenerator from "@/components/tools/RandomNumberGenerator";
 import ToolFAQSection from "@/components/seo/ToolFAQSection";
 import BookmarkButton from "@/components/BookmarkButton";
+import ToolPageHeader from "@/components/ToolPageHeader";
+import ToolTrustBar from "@/components/ToolTrustBar";
 import { SITE_URL } from "@/lib/site";
 import {
   Dices,
@@ -153,40 +155,23 @@ export default function RandomNumberGeneratorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-24 space-y-12 pt-2">
-        {/* Breadcrumb */}
-        <Breadcrumb
-          items={[
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-24 pt-2">
+        {/* Compact Tool Header */}
+        <ToolPageHeader
+          title="Random Number Generator"
+          description="Generate random numbers instantly with a custom range, multiple results, and optional duplicate numbers. Free to use with no signup."
+          breadcrumbItems={[
             { label: "Tools", href: "/tools" },
             { label: "Random & Luck", href: "/categories/random" },
             { label: "Random Number Generator" },
           ]}
+          toolSlug="random-number-generator"
+          categoryBadge={{
+            label: "Random & Luck",
+            icon: <Dices className="w-3.5 h-3.5" aria-hidden="true" />,
+            colorClass: "bg-blue-500/10 text-blue-600 dark:text-blue-400",
+          }}
         />
-
-        {/* Hero */}
-        <header className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="flex items-center justify-center gap-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider">
-              <Dices className="w-3.5 h-3.5" aria-hidden="true" />
-              Random &amp; Luck
-            </div>
-            {tool && <BookmarkButton slug="random-number-generator" />}
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
-            Random Number Generator
-          </h1>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-            Generate random numbers instantly with a custom range, multiple results, and optional duplicate numbers.
-            Free to use with no signup.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-500 dark:text-slate-400 mt-4">
-            <span className="flex items-center gap-1"><ShieldCheck className="w-4 h-4 text-emerald-500" aria-hidden="true" /> No signup required</span>
-            <span className="flex items-center gap-1"><Zap className="w-4 h-4 text-amber-500" aria-hidden="true" /> Instant results</span>
-            <span className="flex items-center gap-1"><Users className="w-4 h-4 text-blue-500" aria-hidden="true" /> Works on all devices</span>
-          </div>
-        </header>
 
         {/* Interactive Tool */}
         <section id="interactive-tool" aria-label="Random number generator tool" className="max-w-3xl mx-auto space-y-8">
@@ -194,6 +179,17 @@ export default function RandomNumberGeneratorPage() {
           {tool && <WhatsNext currentTool={tool} />}
           <CategoryDiscovery currentCategory="random" />
         </section>
+
+        {/* Trust Badges & Metadata */}
+        <div className="max-w-3xl mx-auto pt-6">
+          <ToolTrustBar
+            items={[
+              { icon: <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" aria-hidden="true" />, label: "No signup required" },
+              { icon: <Zap className="w-3.5 h-3.5 text-amber-500" aria-hidden="true" />, label: "Instant results" },
+              { icon: <Users className="w-3.5 h-3.5 text-blue-500" aria-hidden="true" />, label: "Works on all devices" },
+            ]}
+          />
+        </div>
 
         {/* Ad Slot — after tool, before content */}
         <AdBanner slot="7788990011" format="horizontal" label="In-Article Ad" />

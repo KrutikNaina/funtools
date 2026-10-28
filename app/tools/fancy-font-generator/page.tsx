@@ -7,6 +7,8 @@ import AdBanner from "@/components/AdBanner";
 import FancyFontGenerator from "@/components/tools/FancyFontGenerator";
 import ToolFAQSection from "@/components/seo/ToolFAQSection";
 import BookmarkButton from "@/components/BookmarkButton";
+import ToolPageHeader from "@/components/ToolPageHeader";
+import ToolTrustBar from "@/components/ToolTrustBar";
 import ToolComments from "@/components/ToolComments";
 import { SITE_URL } from "@/lib/site";
 import { fancyFontGeneratorContent as module } from "@/lib/content/fancy-font-generator";
@@ -92,42 +94,22 @@ export default function FancyFontGeneratorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <div className="max-w-7xl mx-auto px-6 pb-24 space-y-12 pt-2">
-        {/* Breadcrumb */}
-        <Breadcrumb
-          items={[
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-24 pt-2">
+        {/* Compact Tool Header */}
+        <ToolPageHeader
+          title="Fancy Font Generator – Stylish Copy & Paste Fonts"
+          description="Enter normal text, choose a Unicode style, and copy the result to paste into Instagram bios, TikTok captions, Discord usernames, or any other app."
+          breadcrumbItems={[
             { label: "Tools", href: "/tools" },
             { label: "Social", href: "/categories/social" },
             { label: "Fancy Font Generator" },
           ]}
+          toolSlug="fancy-font-generator"
+          categoryBadge={{
+            label: "Unicode Text Tool",
+            colorClass: "bg-fuchsia-500/10 text-fuchsia-600 dark:text-fuchsia-400",
+          }}
         />
-
-        {/* Hero */}
-        <header className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="flex items-center justify-center gap-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-fuchsia-500/10 text-fuchsia-600 dark:text-fuchsia-400 text-xs font-bold uppercase tracking-wider">
-              Unicode Text Tool
-            </div>
-            <BookmarkButton slug="fancy-font-generator" />
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
-            Fancy Font Generator – Stylish Copy &amp; Paste Fonts
-          </h1>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-            Enter normal text, choose a Unicode style, and copy the result to paste into
-            Instagram bios, TikTok captions, Discord usernames, or any other app.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-500 dark:text-slate-400 mt-4">
-            <span className="flex items-center gap-1">
-              <ShieldCheck className="w-4 h-4 text-emerald-500" /> No signup required
-            </span>
-            <span className="flex items-center gap-1">
-              <Zap className="w-4 h-4 text-amber-500" /> 20 Unicode styles
-            </span>
-          </div>
-        </header>
 
         {/* Interactive Tool */}
         <section id="interactive-tool" className="max-w-4xl mx-auto space-y-8">
@@ -135,6 +117,16 @@ export default function FancyFontGeneratorPage() {
           <WhatsNext currentTool={tool} />
           <CategoryDiscovery currentCategory="social" />
         </section>
+
+        {/* Trust Badges & Metadata */}
+        <div className="max-w-4xl mx-auto pt-6">
+          <ToolTrustBar
+            items={[
+              { icon: <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />, label: "No signup required" },
+              { icon: <Zap className="w-3.5 h-3.5 text-amber-500" />, label: "20 Unicode styles" },
+            ]}
+          />
+        </div>
 
         <AdBanner slot="7788990011" format="horizontal" label="In-Article Ad" />
 

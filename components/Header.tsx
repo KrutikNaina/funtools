@@ -90,12 +90,15 @@ export default function Header() {
         />
       )}
 
+      {/* Top viewport subtle gradient to gracefully fade content scrolling under floating header */}
+      <div className="fixed top-0 left-0 right-0 h-6 z-40 bg-gradient-to-b from-[#F8FAFF] dark:from-[#0B1120] to-transparent pointer-events-none" />
+
       <header
         className={`fixed top-2.5 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] sm:w-[92%] max-w-7xl transition-all duration-300 ${
           mobileMenuOpen ? "rounded-3xl" : "rounded-full"
         } ${
           scrolled
-            ? "glass-header shadow-2xl py-2 px-3 sm:px-4 lg:px-5 xl:px-6 border-slate-200/80 dark:border-slate-800/80 scale-[0.99]"
+            ? "glass-header shadow-2xl py-2 px-3 sm:px-4 lg:px-5 xl:px-6 scale-[0.99]"
             : "glass-header shadow-lg py-2 sm:py-2.5 px-3 sm:px-4 lg:px-5 xl:px-6"
         }`}
       >

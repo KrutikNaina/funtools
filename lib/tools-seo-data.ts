@@ -12,8 +12,8 @@ export const TOOLS_SEO_DATABASE: Record<string, ToolSEOData> = {
     ],
     lsiKeywords: ["romantic synergy", "name numerology", "astrological harmony", "relationship chemistry", "soulmate score"],
     semanticKeywords: ["couples compatibility", "romance meter", "flirt quiz", "affinity test", "astrology match"],
-    definition: "A Love Calculator is a digital compatibility tool that analyzes the acoustic, numerological, and energetic alignment of two names alongside zodiac vibes to compute a romantic compatibility percentage score.",
-    quickAnswer: "Enter two names into the Love Calculator to instantly calculate a percentage score representing name numerology harmony, energetic synergy, and cosmic relationship compatibility.",
+    definition: "A Love Calculator is a digital entertainment tool that converts the letters of two names into a fun compatibility percentage score using a deterministic browser algorithm.",
+    quickAnswer: "Enter two names into the Love Calculator to instantly calculate a fun percentage score and relationship vibe for couples, crushes, and friends with 100% browser privacy.",
     howToSteps: [
       { name: "Enter First Person's Name", text: "Type the full or nickname of the first person into the 'First Person' input field." },
       { name: "Enter Second Person's Name", text: "Type the partner, crush, or friend's name into the 'Second Person' field." },

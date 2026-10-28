@@ -57,21 +57,21 @@ export const loveCalculatorContent: DomainToolModule = {
     ]
   },
   metadata: {
-    metaTitle: "Love Calculator by Name – Free Love Compatibility Test | GetFunTools",
-    metaDescription: "Calculate your love compatibility by name instantly. Enter two names to get a fun love percentage, relationship vibe, and shareable result card. Free, private, and no signup required.",
+    metaTitle: "Love Calculator by Name – Free Love Percentage Test | GetFunTools",
+    metaDescription: "Calculate a fun love percentage using two names with our free love calculator. Try it for your crush, partner or best friend, then share your result. No signup required.",
     slug: "love-calculator",
     canonicalUrl: "https://www.getfuntools.app/tools/love-calculator",
     robots: "index, follow",
     openGraph: {
-      title: "Love Calculator by Name – Free Love Compatibility Test",
-      description: "Calculate your love compatibility by name instantly. Enter two names to get a fun love percentage, relationship vibe, and shareable result card. Free, private, and no signup required.",
+      title: "Love Calculator by Name – Free Love Percentage Test | GetFunTools",
+      description: "Calculate a fun love percentage using two names with our free love calculator. Try it for your crush, partner or best friend, then share your result. No signup required.",
       url: "https://www.getfuntools.app/tools/love-calculator",
       type: "website"
     },
     twitterCard: {
       card: "summary_large_image",
-      title: "Love Calculator by Name | GetFunTools",
-      description: "Enter two names to calculate your love compatibility percentage instantly. 100% free, private, and entertainment-focused."
+      title: "Love Calculator by Name – Free Love Percentage Test | GetFunTools",
+      description: "Calculate a fun love percentage using two names with our free love calculator. Try it for your crush, partner or best friend, then share your result. No signup required."
     }
   },
   aiOverview: {
@@ -261,10 +261,10 @@ export const loveCalculatorContent: DomainToolModule = {
     readTime: "3 min read"
   },
   relatedTools: [
-    { title: "Ultimate Decision Wheel", slug: "decision-wheel", category: "random", relationReason: "Can't decide on a date night plan? Spin the wheel to decide instantly." },
-    { title: "Viral Fancy Font Generator", slug: "fancy-font-generator", category: "social", relationReason: "Create aesthetic text and cute fonts for relationship posts and bios." },
+    { title: "Ultimate Decision Wheel", slug: "decision-wheel", category: "random", relationReason: "Can't decide on a date night plan or activity? Spin the wheel to decide instantly." },
+    { title: "Viral Fancy Font Generator", slug: "fancy-font-generator", category: "social", relationReason: "Create aesthetic text and cute fonts for relationship bios and couple posts." },
     { title: "Reaction Time Test", slug: "reaction-time-test", category: "gaming", relationReason: "Challenge your partner or friends to a fast-paced reflex duel." },
-    { title: "Coffee to Wealth Calculator", slug: "coffee-to-wealth", category: "finance", relationReason: "Calculate fun financial savings and date night budgets over time." }
+    { title: "Cosmic Age Calculator", slug: "cosmic-age-clock", category: "age", relationReason: "Discover your age in seconds and compare your planetary birthdays together." }
   ]
 };
 

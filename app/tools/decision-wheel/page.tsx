@@ -7,6 +7,8 @@ import AdBanner from "@/components/AdBanner";
 import DecisionWheel from "@/components/tools/DecisionWheel";
 import ToolFAQSection from "@/components/seo/ToolFAQSection";
 import BookmarkButton from "@/components/BookmarkButton";
+import ToolPageHeader from "@/components/ToolPageHeader";
+import ToolTrustBar from "@/components/ToolTrustBar";
 import { SITE_URL } from "@/lib/site";
 import {
   Dices,
@@ -133,53 +135,23 @@ export default function DecisionWheelPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-24 space-y-12 pt-2">
-        {/* Breadcrumb Navigation */}
-        <Breadcrumb
-          items={[
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-24 pt-2">
+        {/* Compact Tool Header: Breadcrumbs + Title + Description */}
+        <ToolPageHeader
+          title="Decision Wheel – Free Online Spin the Wheel Tool"
+          description="Add your choices and spin the wheel to pick a random result. Create custom wheels, pick random names, or choose Yes/No."
+          breadcrumbItems={[
             { label: "Tools", href: "/tools" },
             { label: "Random & Luck", href: "/categories/random" },
             { label: "Decision Wheel" },
           ]}
+          toolSlug="decision-wheel"
+          categoryBadge={{
+            label: "Random & Luck",
+            icon: <Dices className="w-3.5 h-3.5" />,
+            colorClass: "bg-blue-500/10 text-blue-600 dark:text-blue-400",
+          }}
         />
-
-        {/* Hero Section — Primary Search Intent */}
-        <header className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="flex items-center justify-center gap-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider">
-              <Dices className="w-3.5 h-3.5" />
-              Free Online Random Picker
-            </div>
-            <BookmarkButton slug="decision-wheel" />
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight tracking-tight">
-            Decision Wheel – Free Online Spin the Wheel Tool
-          </h1>
-
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto">
-            Spin the wheel online with this free decision maker and random picker. Add your custom options, choose from 10 ready-made presets, pick random names, or switch to Yes/No mode for fast, unbiased decisions.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400 pt-1">
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-500" />
-              100% Free &amp; No Signup
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Zap className="w-4 h-4 text-amber-500" />
-              Instant Browser Results
-            </span>
-            <span className="flex items-center gap-1.5">
-              <RotateCw className="w-4 h-4 text-indigo-500" />
-              Up to 500 Choices
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Lock className="w-4 h-4 text-purple-500" />
-              Zero Server Storage
-            </span>
-          </div>
-        </header>
 
         {/* Interactive Tool — Kept immediately visible above the fold */}
         <section id="interactive-tool" aria-label="Interactive Decision Wheel" className="max-w-6xl mx-auto space-y-8">
@@ -187,6 +159,18 @@ export default function DecisionWheelPage() {
           <WhatsNext currentTool={tool} />
           <CategoryDiscovery currentCategory="random" />
         </section>
+
+        {/* Trust Badges & Metadata — Positioned contextually below the tool */}
+        <div className="max-w-4xl mx-auto pt-6">
+          <ToolTrustBar
+            items={[
+              { icon: <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />, label: "100% Free & No Signup" },
+              { icon: <Zap className="w-3.5 h-3.5 text-amber-500" />, label: "Instant Browser Results" },
+              { icon: <RotateCw className="w-3.5 h-3.5 text-indigo-500" />, label: "Up to 500 Choices" },
+              { icon: <Lock className="w-3.5 h-3.5 text-purple-500" />, label: "Zero Server Storage" },
+            ]}
+          />
+        </div>
 
         {/* AdSense Container — Stable Min-Height to Prevent CLS */}
         <div className="max-w-4xl mx-auto min-h-[120px] flex items-center justify-center">

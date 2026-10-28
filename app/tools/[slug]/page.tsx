@@ -12,6 +12,8 @@ import DynamicToolRenderer from "./DynamicToolRenderer";
 import AEOOverviewBox from "@/components/seo/AEOOverviewBox";
 import FeaturedSnippetBox from "@/components/seo/FeaturedSnippetBox";
 import ToolFAQSection from "@/components/seo/ToolFAQSection";
+import ToolPageHeader from "@/components/ToolPageHeader";
+import ToolTrustBar from "@/components/ToolTrustBar";
 
 import BookmarkButton from "@/components/BookmarkButton";
 import ToolComments from "@/components/ToolComments";
@@ -195,51 +197,41 @@ export default async function ToolDetailPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
-      <div className="max-w-7xl mx-auto px-6 pb-24 space-y-12 pt-2">
-        {/* SECTION 1: Breadcrumb */}
-        <Breadcrumb
-          items={[
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-24 pt-2">
+        {/* SECTION 1: Compact Tool Header */}
+        <ToolPageHeader
+          title={module.content.heroHeadline || tool.title}
+          description={module.content.heroSubheading || tool.description}
+          breadcrumbItems={[
             { label: "Tools", href: "/tools" },
             { label: categoryObj?.name || tool.category, href: `/categories/${tool.category}` },
             { label: tool.title },
           ]}
+          toolSlug={tool.slug}
+          categoryBadge={{
+            label: `${categoryObj?.name || tool.category} Tool`,
+            icon: <Sparkles className="w-3.5 h-3.5" />,
+          }}
         />
 
-        {/* SECTION 2: Hero Section */}
-        <header className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="flex items-center justify-center gap-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5" />
-              {categoryObj?.name || tool.category} Tool
-            </div>
-            <BookmarkButton slug={tool.slug} />
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
-            {module.content.heroHeadline}
-          </h1>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-            {module.content.heroSubheading}
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-500 dark:text-slate-400 mt-4">
-            <span className="flex items-center gap-1"><ShieldCheck className="w-4 h-4 text-emerald-500" /> Free & Secure</span>
-            <span className="flex items-center gap-1"><Zap className="w-4 h-4 text-amber-500" /> Instant Results</span>
-            <span className="flex items-center gap-1"><Clock className="w-4 h-4 text-indigo-500" /> {module.eeat?.readTime || "5 min read"}</span>
-            <span className="flex items-center gap-1"><User className="w-4 h-4 text-purple-500" /> By {module.eeat?.authorName || "GetFunTools"}</span>
-            <span className="flex items-center gap-1"><Calendar className="w-4 h-4 text-pink-500" /> Updated {module.eeat?.lastUpdated || "2026"}</span>
-          </div>
-
-
-        </header>
-
-        {/* SECTION 3: Interactive Tool Component */}
+        {/* SECTION 2: Primary Interactive Tool Component — Immediately visible above the fold */}
         <section id="interactive-tool" className="max-w-4xl mx-auto">
           <DynamicToolRenderer tool={tool} />
         </section>
 
+        {/* SECTION 3: EEAT & Trust Signals — Positioned contextually below the tool */}
+        <div className="max-w-4xl mx-auto pt-6">
+          <ToolTrustBar
+            readTime={module.eeat?.readTime || "5 min read"}
+            authorName={module.eeat?.authorName || "GetFunTools"}
+            lastUpdated={module.eeat?.lastUpdated || "2026"}
+          />
+        </div>
+
         {/* Top Banner Ad Container */}
-        <AdBanner slot="7788990011" format="horizontal" label="In-Article Ad" />
+        <div className="max-w-4xl mx-auto pt-4">
+          <AdBanner slot="7788990011" format="horizontal" label="In-Article Ad" />
+        </div>
 
         {/* SECTION 4: Quick Answer & AI Overview Box */}
         <section id="aeo-overview" className="max-w-4xl mx-auto">

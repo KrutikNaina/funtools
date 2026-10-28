@@ -7,6 +7,8 @@ import AdBanner from "@/components/AdBanner";
 import DateDifferenceCalculator from "@/components/tools/DateDifferenceCalculator";
 import ToolFAQSection from "@/components/seo/ToolFAQSection";
 import BookmarkButton from "@/components/BookmarkButton";
+import ToolPageHeader from "@/components/ToolPageHeader";
+import ToolTrustBar from "@/components/ToolTrustBar";
 import ToolComments from "@/components/ToolComments";
 import { SITE_URL } from "@/lib/site";
 import {
@@ -214,46 +216,23 @@ export default function DateDifferenceCalculatorPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-24 space-y-12 pt-2">
-        {/* Breadcrumb */}
-        <Breadcrumb
-          items={[
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-24 pt-2">
+        {/* Compact Tool Header */}
+        <ToolPageHeader
+          title="Date Difference Calculator"
+          description="Calculate the time between two dates in days, weeks, months, and hours. Enter your dates below to get an instant result."
+          breadcrumbItems={[
             { label: "Tools", href: "/tools" },
             { label: "Age & Cosmic", href: "/categories/age" },
             { label: "Date Difference Calculator" },
           ]}
+          toolSlug="date-difference-calculator"
+          categoryBadge={{
+            label: "Calendar Utility",
+            icon: <Clock className="w-3.5 h-3.5" aria-hidden="true" />,
+            colorClass: "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400",
+          }}
         />
-
-        {/* Hero Section */}
-        <header className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="flex items-center justify-center gap-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider">
-              <Clock className="w-3.5 h-3.5" aria-hidden="true" />
-              Calendar Utility
-            </div>
-            {tool && <BookmarkButton slug="date-difference-calculator" />}
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
-            Date Difference Calculator
-          </h1>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-            Calculate the time between two dates in days, weeks, months, and hours. Enter your dates
-            below to get an instant result.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-500 dark:text-slate-400 mt-4">
-            <span className="flex items-center gap-1">
-              <ShieldCheck className="w-4 h-4 text-emerald-500" aria-hidden="true" /> Free &amp; Secure
-            </span>
-            <span className="flex items-center gap-1">
-              <Zap className="w-4 h-4 text-amber-500" aria-hidden="true" /> Instant Results
-            </span>
-            <span className="flex items-center gap-1">
-              <Users className="w-4 h-4 text-indigo-500" aria-hidden="true" /> No Signup Required
-            </span>
-          </div>
-        </header>
 
         {/* Interactive Tool Component */}
         <section
@@ -265,6 +244,17 @@ export default function DateDifferenceCalculatorPage() {
           {tool && <WhatsNext currentTool={tool} />}
           <CategoryDiscovery currentCategory="age" />
         </section>
+
+        {/* Trust Badges & Metadata */}
+        <div className="max-w-3xl mx-auto pt-6">
+          <ToolTrustBar
+            items={[
+              { icon: <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" aria-hidden="true" />, label: "100% Free & Secure" },
+              { icon: <Zap className="w-3.5 h-3.5 text-amber-500" aria-hidden="true" />, label: "Instant Results" },
+              { icon: <Users className="w-3.5 h-3.5 text-indigo-500" aria-hidden="true" />, label: "No Signup Required" },
+            ]}
+          />
+        </div>
 
         {/* Ad Slot */}
         <AdBanner slot="7788990011" format="horizontal" label="In-Article Ad" />

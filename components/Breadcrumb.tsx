@@ -6,7 +6,12 @@ interface BreadcrumbItem {
   href?: string;
 }
 
-export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
+interface BreadcrumbProps {
+  items: BreadcrumbItem[];
+  className?: string;
+}
+
+export default function Breadcrumb({ items, className = "py-1.5" }: BreadcrumbProps) {
   // BreadcrumbList JSON-LD Schema
   const schemaData = {
     "@context": "https://schema.org",
@@ -33,7 +38,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
-      <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-slate-500 font-medium py-3">
+      <nav aria-label="Breadcrumb" className={`flex items-center flex-wrap gap-1.5 text-xs text-slate-500 font-medium ${className}`}>
         <Link href="/" className="flex items-center gap-1 hover:text-indigo-600 dark:hover:text-indigo-400 transition">
           <Home className="w-3.5 h-3.5" />
           <span>Home</span>

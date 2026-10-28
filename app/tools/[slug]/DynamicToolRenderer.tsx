@@ -110,23 +110,6 @@ export default function DynamicToolRenderer({ tool }: { tool: Tool }) {
 
   return (
     <div className="space-y-4">
-      {/* Header bar above tool */}
-      <div className="flex items-center justify-between px-2">
-        <div className="flex items-center gap-2">
-          <span className="text-[10px] uppercase font-extrabold px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
-            {tool.category} Tool
-          </span>
-        </div>
-
-        <button
-          onClick={() => setShareOpen(true)}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition cursor-pointer"
-        >
-          <Share2 className="w-3.5 h-3.5" />
-          <span>Share</span>
-        </button>
-      </div>
-
       {/* Interactive Tool Component */}
       {renderTool()}
 

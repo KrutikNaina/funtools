@@ -7,6 +7,8 @@ import AdBanner from "@/components/AdBanner";
 import CountdownTimer from "@/components/tools/CountdownTimer";
 import ToolFAQSection from "@/components/seo/ToolFAQSection";
 import BookmarkButton from "@/components/BookmarkButton";
+import ToolPageHeader from "@/components/ToolPageHeader";
+import ToolTrustBar from "@/components/ToolTrustBar";
 import ToolComments from "@/components/ToolComments";
 import { SITE_URL } from "@/lib/site";
 import {
@@ -188,46 +190,23 @@ export default function CountdownTimerPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-24 space-y-12 pt-2">
-        {/* Breadcrumb: Home > Tools > Productivity > Countdown Timer */}
-        <Breadcrumb
-          items={[
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-24 pt-2">
+        {/* Compact Tool Header */}
+        <ToolPageHeader
+          title="Countdown Timer – Free Online Event Countdown"
+          description="Create a live countdown to any event, birthday, vacation, launch, or holiday. Set the date and time and watch the timer count down instantly."
+          breadcrumbItems={[
             { label: "Tools", href: "/tools" },
             { label: "Productivity", href: "/categories/productivity" },
             { label: "Countdown Timer" },
           ]}
+          toolSlug="countdown-timer"
+          categoryBadge={{
+            label: "Productivity Tool",
+            icon: <Clock className="w-3.5 h-3.5" aria-hidden="true" />,
+            colorClass: "bg-purple-500/10 text-purple-600 dark:text-purple-400",
+          }}
         />
-
-        {/* Hero Section */}
-        <header className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="flex items-center justify-center gap-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider">
-              <Clock className="w-3.5 h-3.5" aria-hidden="true" />
-              Productivity Tool
-            </div>
-            {tool && <BookmarkButton slug="countdown-timer" />}
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
-            Countdown Timer
-          </h1>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-            Create a live countdown to any event, birthday, vacation, launch, holiday, or important
-            date. Set the date and time and watch the timer count down instantly.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-500 dark:text-slate-400 mt-4">
-            <span className="flex items-center gap-1">
-              <ShieldCheck className="w-4 h-4 text-emerald-500" aria-hidden="true" /> Free &amp; Secure
-            </span>
-            <span className="flex items-center gap-1">
-              <Zap className="w-4 h-4 text-amber-500" aria-hidden="true" /> Instant Results
-            </span>
-            <span className="flex items-center gap-1">
-              <Users className="w-4 h-4 text-purple-500" aria-hidden="true" /> No Signup Required
-            </span>
-          </div>
-        </header>
 
         {/* Interactive Tool Component */}
         <section
@@ -239,6 +218,17 @@ export default function CountdownTimerPage() {
           {tool && <WhatsNext currentTool={tool} />}
           <CategoryDiscovery currentCategory="productivity" />
         </section>
+
+        {/* Trust Badges & Metadata */}
+        <div className="max-w-3xl mx-auto pt-6">
+          <ToolTrustBar
+            items={[
+              { icon: <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" aria-hidden="true" />, label: "100% Free & Secure" },
+              { icon: <Zap className="w-3.5 h-3.5 text-amber-500" aria-hidden="true" />, label: "Instant Results" },
+              { icon: <Users className="w-3.5 h-3.5 text-purple-500" aria-hidden="true" />, label: "No Signup Required" },
+            ]}
+          />
+        </div>
 
         {/* Ad Slot */}
         <AdBanner slot="7788990011" format="horizontal" label="In-Article Ad" />

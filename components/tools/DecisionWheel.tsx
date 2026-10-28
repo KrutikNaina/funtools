@@ -449,73 +449,31 @@ export default function DecisionWheel() {
   }
 
   return (
-    <div className="w-full max-w-6xl mx-auto space-y-6">
-      {/* Mode Selector */}
-      <div className="flex flex-wrap items-center gap-2 justify-center">
-        {([
-          { key: "custom", label: "Custom Wheel" },
-          { key: "yesno", label: "Yes / No" },
-          { key: "yesnomaybe", label: "Yes / No / Maybe" },
-        ] as { key: Mode; label: string }[]).map((m) => (
-          <button
-            key={m.key}
-            type="button"
-            onClick={() => {
-              setMode(m.key);
-              setWinner(null);
-            }}
-            aria-pressed={mode === m.key}
-            className={`px-4 py-2 rounded-xl text-xs font-bold border transition cursor-pointer ${
-              mode === m.key
-                ? "bg-indigo-600 border-indigo-600 text-white shadow-md shadow-indigo-500/20"
-                : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-indigo-400"
-            }`}
-          >
-            {m.label}
-          </button>
-        ))}
-      </div>
-
-      {/* Preset Library */}
-      {mode === "custom" && (
-        <div className="w-full flex flex-wrap gap-2 justify-center">
-          {PRESETS.map((p, i) => (
-            <button
-              key={i}
-              type="button"
-              onClick={() => handlePresetClick(p)}
-              className="px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 transition cursor-pointer shadow-sm whitespace-nowrap"
-            >
-              {p.name}
-            </button>
-          ))}
-        </div>
-      )}
-
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+    <div className="w-full max-w-6xl mx-auto space-y-4">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-start">
         {/* LEFT COLUMN: THE WHEEL */}
         <div
           ref={wheelPanelRef}
           className={`lg:col-span-7 flex flex-col items-center rounded-3xl relative ${
             isFullscreen
               ? "bg-slate-950"
-              : "p-6 md:p-10 bg-white/50 dark:bg-slate-900/50 backdrop-blur-xl border border-slate-200/50 dark:border-slate-800/50 shadow-2xl overflow-hidden"
+              : "p-4 sm:p-6 md:p-7 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/60 shadow-xl overflow-hidden"
           }`}
         >
           {/* Inner wrapper — in fullscreen this creates the centred, scrollable layout */}
           <div className={isFullscreen ? "flex flex-col items-center justify-center min-h-screen w-full max-w-2xl mx-auto px-6 py-8" : "flex flex-col items-center w-full h-full"}>
-          <div className="w-full flex justify-between items-center mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider">
-              <Dices className="w-4 h-4" aria-hidden="true" />
+          <div className="w-full flex justify-between items-center mb-3 sm:mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider">
+              <Dices className="w-3.5 h-3.5" aria-hidden="true" />
               Decision Wheel
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-1.5 sm:gap-2">
               <button
                 type="button"
                 onClick={() => setConfettiEnabled((v) => !v)}
                 aria-pressed={confettiEnabled}
                 aria-label={confettiEnabled ? "Disable confetti" : "Enable confetti"}
-                className={`p-2 rounded-full border transition ${confettiEnabled ? "bg-indigo-50 dark:bg-indigo-900/30 border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400" : "bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-500"}`}
+                className={`p-2 rounded-full border transition cursor-pointer ${confettiEnabled ? "bg-indigo-50 dark:bg-indigo-900/30 border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400" : "bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-500"}`}
                 title="Toggle confetti"
               >
                 <Sparkles className="w-4 h-4" aria-hidden="true" />
@@ -525,7 +483,7 @@ export default function DecisionWheel() {
                 onClick={() => setSoundEnabled((v) => !v)}
                 aria-pressed={soundEnabled}
                 aria-label={soundEnabled ? "Mute sound" : "Enable sound"}
-                className={`p-2 rounded-full border transition ${soundEnabled ? "bg-indigo-50 dark:bg-indigo-900/30 border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400" : "bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-500"}`}
+                className={`p-2 rounded-full border transition cursor-pointer ${soundEnabled ? "bg-indigo-50 dark:bg-indigo-900/30 border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400" : "bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-500"}`}
                 title="Toggle sound"
               >
                 {soundEnabled ? <Volume2 className="w-4 h-4" aria-hidden="true" /> : <VolumeX className="w-4 h-4" aria-hidden="true" />}
@@ -534,7 +492,7 @@ export default function DecisionWheel() {
                 type="button"
                 onClick={toggleFullscreen}
                 aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
-                className="p-2 rounded-full border bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-500 hover:text-indigo-600 transition"
+                className="p-2 rounded-full border bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-500 hover:text-indigo-600 transition cursor-pointer"
                 title="Toggle fullscreen"
               >
                 {isFullscreen ? <Minimize className="w-4 h-4" aria-hidden="true" /> : <Maximize className="w-4 h-4" aria-hidden="true" />}
@@ -626,7 +584,7 @@ export default function DecisionWheel() {
           </div>
 
           {/* Winner / status */}
-          <div className={`w-full mt-6 flex items-center justify-center relative ${isFullscreen ? "min-h-[120px]" : "h-36"}`}>
+          <div className={`w-full mt-3 sm:mt-4 flex items-center justify-center relative transition-all ${isFullscreen ? "min-h-[120px]" : winner ? "min-h-[120px]" : "min-h-[44px]"}`}>
             <AnimatePresence mode="wait">
               {winner ? (
                 <motion.div
@@ -634,18 +592,18 @@ export default function DecisionWheel() {
                   initial={{ opacity: 0, scale: 0.5, y: 20 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.9, y: -10 }}
-                  className="w-full bg-indigo-500 text-white p-6 rounded-3xl shadow-xl shadow-indigo-500/20 text-center relative overflow-hidden"
+                  className="w-full bg-indigo-500 text-white p-4 sm:p-5 rounded-3xl shadow-xl shadow-indigo-500/20 text-center relative overflow-hidden"
                   role="status"
                   aria-live="polite"
                 >
-                  <span className="text-indigo-200 text-xs font-bold uppercase tracking-widest block mb-1">🎉 Winner</span>
-                  <h3 className="text-2xl md:text-3xl font-black break-words">{winner}</h3>
+                  <span className="text-indigo-200 text-[11px] font-bold uppercase tracking-widest block mb-0.5">🎉 Winner</span>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black break-words">{winner}</h3>
 
-                  <div className="flex items-center justify-center gap-3 mt-4 flex-wrap">
+                  <div className="flex items-center justify-center gap-2 mt-3 flex-wrap">
                     <button
                       type="button"
                       onClick={copyResult}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white text-xs font-bold transition"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white text-xs font-bold transition cursor-pointer"
                     >
                       {copied ? <Check className="w-3.5 h-3.5" aria-hidden="true" /> : <Copy className="w-3.5 h-3.5" aria-hidden="true" />}
                       {copied ? "Copied" : "Copy Result"}
@@ -653,7 +611,7 @@ export default function DecisionWheel() {
                     <button
                       type="button"
                       onClick={removeWinner}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-500/80 hover:bg-rose-500 text-white text-xs font-bold transition"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-500/80 hover:bg-rose-500 text-white text-xs font-bold transition cursor-pointer"
                     >
                       <Trash2 className="w-3.5 h-3.5" aria-hidden="true" /> Remove Winner
                     </button>
@@ -661,22 +619,22 @@ export default function DecisionWheel() {
                       type="button"
                       onClick={spinWheel}
                       disabled={entries.length < 2}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-indigo-700 hover:bg-indigo-50 text-xs font-bold transition disabled:opacity-50"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-indigo-700 hover:bg-indigo-50 text-xs font-bold transition cursor-pointer disabled:opacity-50"
                     >
                       <RotateCw className="w-3.5 h-3.5" aria-hidden="true" /> Spin Again
                     </button>
                   </div>
                 </motion.div>
               ) : (
-                <motion.p key="empty" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-slate-400 dark:text-slate-500 text-sm font-medium text-center">
-                  {statusMessage ?? "Randomly selects one option from your wheel."}
+                <motion.p key="empty" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm font-medium text-center py-1">
+                  {statusMessage ?? "Click SPIN or press Ctrl+Enter"}
                 </motion.p>
               )}
             </AnimatePresence>
           </div>
 
           {/* Elimination toggle + Share */}
-          <div className="w-full flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-slate-200/60 dark:border-slate-800/60">
+          <div className="w-full flex flex-wrap items-center justify-between gap-3 pt-3.5 mt-2 border-t border-slate-200/60 dark:border-slate-800/60">
             <label className="inline-flex items-center gap-2 text-xs font-semibold text-slate-600 dark:text-slate-300 cursor-pointer">
               <input
                 type="checkbox"
@@ -690,7 +648,7 @@ export default function DecisionWheel() {
             <button
               type="button"
               onClick={shareWheel}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-xs font-bold transition cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-xs font-bold transition cursor-pointer"
             >
               {linkCopied ? <Check className="w-3.5 h-3.5 text-emerald-500" aria-hidden="true" /> : <Share2 className="w-3.5 h-3.5" aria-hidden="true" />}
               <span>{linkCopied ? "Link Copied!" : "Share Wheel"}</span>
@@ -699,24 +657,72 @@ export default function DecisionWheel() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: ENTRIES */}
-        <div className="lg:col-span-5 flex flex-col gap-6">
-          <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-xl flex-1 flex flex-col">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                <ListRestart className="w-5 h-5 text-indigo-500" aria-hidden="true" />
+        {/* RIGHT COLUMN: CONTROLS & ENTRIES */}
+        <div className="lg:col-span-5 flex flex-col gap-4">
+          <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-3xl p-4 sm:p-5 border border-slate-200/70 dark:border-slate-800/70 shadow-lg flex-1 flex flex-col">
+            {/* Integrated Mode Selector */}
+            <div className="flex items-center gap-1 p-1 rounded-2xl bg-slate-100 dark:bg-slate-800/80 mb-3.5">
+              {([
+                { key: "custom", label: "Custom Wheel" },
+                { key: "yesno", label: "Yes / No" },
+                { key: "yesnomaybe", label: "Yes / No / Maybe" },
+              ] as { key: Mode; label: string }[]).map((m) => (
+                <button
+                  key={m.key}
+                  type="button"
+                  onClick={() => {
+                    setMode(m.key);
+                    setWinner(null);
+                  }}
+                  aria-pressed={mode === m.key}
+                  className={`flex-1 py-1.5 px-2 rounded-xl text-xs font-bold transition cursor-pointer text-center ${
+                    mode === m.key
+                      ? "bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-sm"
+                      : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
+                  }`}
+                >
+                  {m.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Quick Presets for Custom Wheel */}
+            {mode === "custom" && (
+              <div className="mb-3 space-y-1.5">
+                <div className="flex items-center justify-between text-[11px] font-bold text-slate-400 uppercase tracking-wider px-0.5">
+                  <span>Quick Presets</span>
+                  <span className="text-[10px] lowercase font-normal text-slate-400">scroll for more →</span>
+                </div>
+                <div className="flex items-center gap-1.5 overflow-x-auto pb-1.5 scrollbar-none">
+                  {PRESETS.map((p, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={() => handlePresetClick(p)}
+                      className="shrink-0 px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-400 transition cursor-pointer border border-slate-200/60 dark:border-slate-700/60 whitespace-nowrap"
+                    >
+                      {p.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <ListRestart className="w-4 h-4 text-indigo-500" aria-hidden="true" />
                 Entries ({entries.length})
               </h3>
               {mode === "custom" && (
-                <div className="flex gap-2">
-                  <button type="button" onClick={pasteFromClipboard} aria-label="Paste list from clipboard" className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition" title="Paste List">
-                    <ClipboardPaste className="w-4 h-4" aria-hidden="true" />
+                <div className="flex gap-1.5">
+                  <button type="button" onClick={pasteFromClipboard} aria-label="Paste list from clipboard" className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition cursor-pointer" title="Paste List">
+                    <ClipboardPaste className="w-3.5 h-3.5" aria-hidden="true" />
                   </button>
-                  <button type="button" onClick={shuffleOptions} aria-label="Shuffle entries" className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition" title="Shuffle">
-                    <Shuffle className="w-4 h-4" aria-hidden="true" />
+                  <button type="button" onClick={shuffleOptions} aria-label="Shuffle entries" className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition cursor-pointer" title="Shuffle">
+                    <Shuffle className="w-3.5 h-3.5" aria-hidden="true" />
                   </button>
-                  <button type="button" onClick={clearOptions} aria-label="Clear all entries" className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/30 transition" title="Clear">
-                    <Trash className="w-4 h-4" aria-hidden="true" />
+                  <button type="button" onClick={clearOptions} aria-label="Clear all entries" className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/30 transition cursor-pointer" title="Clear">
+                    <Trash className="w-3.5 h-3.5" aria-hidden="true" />
                   </button>
                 </div>
               )}
@@ -751,7 +757,7 @@ export default function DecisionWheel() {
                 )}
 
                 {statusMessage && <p className="text-xs text-amber-600 dark:text-amber-400 mt-3 text-center font-medium">{statusMessage}</p>}
-                {duplicatesDetected && <p className="text-xs text-slate-400 mt-1 text-center">Duplicate choices detected — that's fine, they'll each get their own slice.</p>}
+                {duplicatesDetected && <p className="text-xs text-slate-400 mt-1 text-center">Duplicate choices detected — that&apos;s fine, they&apos;ll each get their own slice.</p>}
               </>
             ) : (
               <div className="space-y-2">
@@ -764,7 +770,7 @@ export default function DecisionWheel() {
                   </div>
                 ))}
                 {statusMessage && <p className="text-xs text-amber-600 dark:text-amber-400 text-center font-medium">{statusMessage}</p>}
-                <p className="text-xs text-slate-400 text-center pt-2">Switch to "Custom Wheel" to build your own list.</p>
+                <p className="text-xs text-slate-400 text-center pt-2">Switch to &ldquo;Custom Wheel&rdquo; to build your own list.</p>
               </div>
             )}
 
@@ -829,7 +835,7 @@ export default function DecisionWheel() {
             >
               <h3 className="font-bold text-slate-900 dark:text-white mb-2">Replace your current choices?</h3>
               <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
-                Loading "{presetConfirm.name}" will overwrite your existing entries.
+                Loading &ldquo;{presetConfirm.name}&rdquo; will overwrite your existing entries.
               </p>
               <div className="flex gap-3 justify-end">
                 <button type="button" onClick={() => setPresetConfirm(null)} className="px-4 py-2 rounded-xl text-sm font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
