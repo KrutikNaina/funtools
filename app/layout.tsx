@@ -25,20 +25,26 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "GetFunTools – Free Online Tools, AI Tools, Calculators & Generators",
+    default: "GetFunTools – Free Online Tools, Calculators & Generators",
     template: "%s | GetFunTools",
   },
   description:
-    "GetFunTools offers free online calculators, generators, converters, AI tools, image tools, developer utilities, productivity tools, and fun interactive tools. Fast, secure, mobile-friendly, and free to use.",
+    "Explore free online calculators, generators, converters, AI tools and interactive utilities on GetFunTools. Find useful tools for everyday tasks, creativity and fun.",
   keywords: [
-    "fun tools",
+    "getfuntools",
+    "get fun tools",
+    "free online tools",
+    "free online calculators",
+    "online generators",
+    "interactive web tools",
     "love calculator",
     "fancy font generator",
-    "reaction speed test",
     "decision wheel",
-    "coffee wealth calculator",
-    "ai bio generator",
-    "personality quiz",
+    "reaction speed test",
+    "percentage calculator",
+    "bmi calculator",
+    "cosmic age clock",
+    "fun tools online"
   ],
   authors: [{ name: "GetFunTools Team" }],
   metadataBase: new URL(SITE_URL),
@@ -57,8 +63,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "GetFunTools – Free Online Tools, AI Tools, Calculators & Generators",
-    description: "GetFunTools offers free online calculators, generators, converters, AI tools, image tools, developer utilities, productivity tools, and fun interactive tools. Fast, secure, mobile-friendly, and free to use.",
+    title: "GetFunTools – Free Online Tools, Calculators & Generators",
+    description:
+      "Explore free online calculators, generators, converters, AI tools and interactive utilities on GetFunTools. Find useful tools for everyday tasks, creativity and fun.",
     url: SITE_URL,
     siteName: "GetFunTools",
     locale: "en_US",
@@ -68,14 +75,15 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "GetFunTools",
+        alt: "GetFunTools – Free Online Tools, Calculators & Generators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GetFunTools – Free Online Tools, AI Tools, Calculators & Generators",
-    description: "GetFunTools offers free online calculators, generators, converters, AI tools, image tools, developer utilities, productivity tools, and fun interactive tools.",
+    title: "GetFunTools – Free Online Tools, Calculators & Generators",
+    description:
+      "Explore free online calculators, generators, converters, AI tools and interactive utilities on GetFunTools. Find useful tools for everyday tasks, creativity and fun.",
     images: [`${SITE_URL}/og-image.jpg`],
   },
   verification: {
@@ -105,19 +113,22 @@ export default function RootLayout({
         name: "GetFunTools",
         url: SITE_URL,
         logo: `${SITE_URL}/logo.png`,
+        description:
+          "GetFunTools is a modern online directory of free calculators, generators, interactive micro-tools, and playful utilities.",
       },
       {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
         name: "GetFunTools",
         url: SITE_URL,
-        description: "GetFunTools offers free online calculators, generators, converters, AI tools, image tools, developer utilities, productivity tools, and fun interactive tools. Fast, secure, mobile-friendly, and free to use.",
+        description:
+          "Explore free online calculators, generators, converters, AI tools and interactive utilities on GetFunTools. Find useful tools for everyday tasks, creativity and fun.",
         publisher: {
           "@id": `${SITE_URL}/#organization`,
         },
         potentialAction: {
           "@type": "SearchAction",
-          target: `${SITE_URL}/search?q={search_term_string}`,
+          target: `${SITE_URL}/tools?q={search_term_string}`,
           "query-input": "required name=search_term_string",
         },
       }

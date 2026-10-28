@@ -28,6 +28,7 @@ import { TOOLS, CATEGORIES, BLOG_POSTS, HOME_FAQS } from "@/lib/tools-data";
 import { COLLECTIONS } from "@/lib/collections-data";
 import { getToolOfTheDay, getToolsBySlugs, getRecentlyAddedTools } from "@/lib/recommendations";
 import { useUserStore } from "@/lib/user-store";
+import { SITE_URL } from "@/lib/site";
 import ToolCard from "@/components/ToolCard";
 import CategoryCard from "@/components/CategoryCard";
 import AdBanner from "@/components/AdBanner";
@@ -55,8 +56,48 @@ export default function HomePage() {
     setFaqOpenIndex(faqOpenIndex === idx ? null : idx);
   };
 
+  const homeJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${SITE_URL}/#webpage`,
+        url: SITE_URL,
+        name: "GetFunTools – Free Online Tools, Calculators & Generators",
+        description:
+          "Explore free online calculators, generators, converters, AI tools and interactive utilities on GetFunTools. Find useful tools for everyday tasks, creativity and fun.",
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": `${SITE_URL}/#website`,
+        },
+        about: {
+          "@type": "Organization",
+          "@id": `${SITE_URL}/#organization`,
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${SITE_URL}/#faq`,
+        mainEntity: HOME_FAQS.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="space-y-16 md:space-y-24 pb-16">
+      {/* STRUCTURED DATA SCRIPT (JSON-LD) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+      />
+
       {/* HERO SECTION */}
       <section className="relative pt-8 md:pt-16 pb-8 px-6 max-w-7xl mx-auto overflow-hidden">
         {/* Background Ambient Glow */}
@@ -70,7 +111,7 @@ export default function HomePage() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-indigo-200 dark:border-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs font-bold shadow-sm"
           >
             <Sparkles className="w-4 h-4 text-purple-500 animate-spin" />
-            <span>50+ Free Interactive Micro-Tools & Generators</span>
+            <span>50+ Free Online Tools, Calculators &amp; Generators</span>
           </motion.div>
 
           <motion.h1
@@ -79,8 +120,8 @@ export default function HomePage() {
             transition={{ delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1]"
           >
-            Explore, Play & Create with{" "}
-            <span className="gradient-text-primary">Modern Fun Tools</span>
+            Explore Free Online Tools,{" "}
+            <span className="gradient-text-primary">Calculators &amp; Generators</span>
           </motion.h1>
 
           <motion.p
@@ -89,7 +130,7 @@ export default function HomePage() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed"
           >
-            A premium collection of viral font generators, love calculators, reaction speed tests, decision wheels & wealth visualizers designed for instant delight.
+            Discover a curated collection of viral font styles, mathematical calculators, love matchers, decision wheels &amp; interactive utilities designed for everyday use and instant fun. 100% free, private, and no signup needed.
           </motion.p>
 
           {/* Global Search Bar */}
@@ -130,6 +171,19 @@ export default function HomePage() {
                 🎡 Spin Wheel
               </Link>
               <SurpriseMeButton variant="pill" className="py-1 px-3" />
+            </div>
+
+            {/* Trust and Key Value Proposition Badges */}
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-4 text-[11px] font-semibold text-slate-500 dark:text-slate-400">
+              <span className="inline-flex items-center gap-1">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> 100% Free &amp; Unlimited
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <ShieldCheck className="w-3.5 h-3.5 text-indigo-500" /> Client-Side Privacy
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <Zap className="w-3.5 h-3.5 text-amber-500" /> No Signup Required
+              </span>
             </div>
           </motion.div>
         </div>
@@ -251,7 +305,7 @@ export default function HomePage() {
             Browse Tools by Category
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
-            Every category features custom HSL gradients and interactive tools tailored for your vibe.
+            Explore calculators, decision tools, creative text utilities, and arcade challenges across 11 focused directories.
           </p>
         </div>
 

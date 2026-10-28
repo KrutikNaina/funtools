@@ -844,18 +844,30 @@ export const BLOG_POSTS: BlogPost[] = [
 export const HOME_FAQS = [
   {
     question: "What is GetFunTools?",
-    answer: "GetFunTools is a premium, lightweight platform of interactive micro-apps, fun calculators, personality quizzes, AI prompt tools, and utility games designed for entertainment and quick answers."
+    answer: "GetFunTools is a modern online directory of free interactive micro-tools, mathematical calculators, creative generators, personality quizzes, and utility games built for everyday tasks, productivity, and instant entertainment."
   },
   {
-    question: "Are all tools on GetFunTools free?",
-    answer: "Yes! Every single tool on GetFunTools is 100% free with unlimited usage, no registration required, and no hidden fees."
+    question: "Are all tools on GetFunTools completely free to use?",
+    answer: "Yes. Every tool and calculator on GetFunTools is 100% free with unlimited usage. There are no paywalls, premium tiers, or hidden subscriptions."
   },
   {
-    question: "Is my data private when using tools?",
-    answer: "Absolutely. All calculations, text transformations, and quiz processing happen client-side right inside your browser. We never store or transmit your private text or inputs."
+    question: "Do I need to create an account or download an app?",
+    answer: "No. All GetFunTools apps run directly inside any standard desktop or mobile web browser. No software installation, mobile app download, or user registration is required."
   },
   {
-    question: "Can I embed or share these tools with friends?",
-    answer: "Yes! Every tool includes a share button to copy links or post results on Twitter, WhatsApp, Discord, and social media."
+    question: "Is my personal data and input private?",
+    answer: "Yes, completely. All calculations, randomizations, text formatting, and interactive wheel spins run locally client-side in your web browser. Your inputs are never transmitted, stored, or logged on our servers."
+  },
+  {
+    question: "What types of tools and calculators can I find on GetFunTools?",
+    answer: "GetFunTools organizes tools across 11 categories including mathematical calculators (like BMI and percentage calculators), random selection tools (such as decision wheels and coin flippers), social font styles, relationship compatibility matchers, and gaming speed tests."
+  },
+  {
+    question: "How do I search for a specific tool?",
+    answer: "You can type in the global search bar on the homepage, press Ctrl+K (or Cmd+K) to open the instant search modal from any page, or browse by curated categories and themed tool bundles."
+  },
+  {
+    question: "Can I share my results or custom wheels with others?",
+    answer: "Yes. Most GetFunTools utilities feature 1-click copy and native Web Share integration to easily share custom URLs, formatted results, and summaries on WhatsApp, X (Twitter), Discord, or social media."
   }
 ];
