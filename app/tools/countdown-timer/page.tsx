@@ -618,6 +618,30 @@ export default function CountdownTimerPage() {
           </div>
         </section>
 
+        {/* Relevant Blog Integration */}
+        <section className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <Clock className="w-5 h-5 text-indigo-500" /> Relevant Guides &amp; Deep Dives
+            </h3>
+            <Link href="/blog" className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+              View All Articles
+            </Link>
+          </div>
+
+          <Link href="/blog/how-many-days-in-a-lifetime">
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 hover:bg-purple-50 dark:hover:bg-slate-800 transition space-y-2 border border-slate-200/60 dark:border-slate-700/60 group cursor-pointer">
+              <span className="text-[10px] font-bold uppercase text-purple-500">6 min read</span>
+              <h4 className="font-extrabold text-sm text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition">
+                How Many Days Are in a Lifetime? Life Expectancy in Days
+              </h4>
+              <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">
+                An 80-year life is 29,220 days. See average lifespan in days for the US, UK, Canada and Australia, and why “life expectancy minus your age” gets your days left wrong.
+              </p>
+            </div>
+          </Link>
+        </section>
+
         {/* Community Comments */}
         <section className="max-w-4xl mx-auto">
           <ToolComments toolSlug="countdown-timer" />

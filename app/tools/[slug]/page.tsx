@@ -107,7 +107,9 @@ export default async function ToolDetailPage({ params }: PageProps) {
   const popularInCategoryTools = getPopularInCategory(tool.category, slug, 4);
 
   // Relevant blog posts
-  const relevantPosts = BLOG_POSTS.slice(0, 2);
+  const matchingPosts = BLOG_POSTS.filter((p) => p.relatedTools.includes(tool.slug));
+  const fallbackPosts = BLOG_POSTS.filter((p) => !p.relatedTools.includes(tool.slug));
+  const relevantPosts = [...matchingPosts, ...fallbackPosts].slice(0, 2);
 
   const orgSchema = {
     "@context": "https://schema.org",

@@ -113,9 +113,11 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
+  metaDescription?: string;
   category: string;
   readTime: string;
   date: string;
+  updated?: string;
   author: {
     name: string;
     avatar: string;

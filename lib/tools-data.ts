@@ -838,6 +838,64 @@ export const BLOG_POSTS: BlogPost[] = [
       "The difference between feeling financially stuck and building serious long-term momentum often comes down to understanding the quiet power of consistency. You don't need to completely eliminate all joy from your budget, but being aware of the math gives you complete control over your own destiny. Are you ready to see exactly what your daily habits are worth? Head over to our [Coffee to Wealth Calculator] right now, plug in your daily spend, and prepare to be genuinely surprised by the massive potential hiding in your wallet!"
     ],
     relatedTools: ["coffee-to-wealth", "decision-wheel"]
+  },
+  {
+    slug: "how-many-days-in-a-lifetime",
+    title: "How Many Days Are in a Lifetime? Life Expectancy in Days",
+    metaDescription:
+      "The average person lives about 29,000 days. See life expectancy in days for the US, UK, Canada and Australia, and how to work out your own number.",
+    excerpt:
+      "An 80-year life is 29,220 days. See average lifespan in days for the US, UK, Canada and Australia, and why “life expectancy minus your age” gets your days left wrong.",
+    category: "Time & Life Stats",
+    readTime: "6 min read",
+    date: "October 29, 2026",
+    updated: "October 29, 2026",
+    author: {
+      name: "GetFunTools Team",
+      avatar: "/favicon.ico",
+      role: "Editorial Team",
+    },
+    relatedTools: [
+      "death-calculator",
+      "date-difference-calculator",
+      "cosmic-age-clock",
+      "countdown-timer",
+    ],
+    content: [
+      "An 80-year life is 29,220 days. That is the quick answer. The rest of this guide shows where that number comes from, how long people in the US, UK, Canada and Australia live on average (in days), and why “life expectancy minus my age” is a poor way to count the days you have left.",
+      "Turning years into days makes time feel concrete. Ten years sounds like a lot or a little depending on the day, but 3,652 days is a number you can picture crossing off a calendar. Here is how to do the maths properly, with figures taken from official statistics agencies.",
+      "## How many days are in a lifetime?",
+      "Multiply the number of years by 365.25. The extra quarter day covers leap years, which add a day roughly every four years. The solar year is about 365.2422 days long, so 365.25 is a close average over a lifetime. Here are common lifespans converted:",
+      "| Age in years | Days | Weeks | Hours |\n|---|---|---|---|\n| 60 | 21,915 | 3,131 | 525,960 |\n| 70 | 25,568 | 3,652 | 613,620 |\n| 75 | 27,394 | 3,913 | 657,450 |\n| 80 | 29,220 | 4,174 | 701,280 |\n| 85 | 31,046 | 4,435 | 745,110 |\n| 90 | 32,873 | 4,696 | 788,940 |\n| 100 | 36,525 | 5,218 | 876,600 |",
+      "A handy way to remember it: ten years is about 3,652 days, and a lifespan of 80 years is about 29,220 days.",
+      "## Average lifespan in days: US, UK, Canada and Australia",
+      "Life expectancy at birth is the average number of years a newborn would live if today’s death rates stayed the same for their whole life. Official figures differ by country and by sex, so here they are side by side, converted to days with the 365.25 rule.",
+      "| Country (period) | Males: years | Males: days | Females: years | Females: days |\n|---|---|---|---|---|\n| United States (2024) | 76.5 | 27,942 | 81.4 | 29,731 |\n| United Kingdom (2022–2024) | 79.1 | 28,891 | 83.0 | 30,316 |\n| Canada (2024, preliminary) | 80.03 | 29,231 | 84.29 | 30,787 |\n| Australia (2022–2024) | 81.1 | 29,622 | 85.1 | 31,083 |",
+      "For the whole US population, life expectancy at birth in 2024 was 79.0 years, about 28,855 days, the highest level on record according to the CDC. Canada’s overall figure for 2024 was 82.16 years, about 30,009 days, based on Statistics Canada’s preliminary data.",
+      "Women outlive men in all four countries. The gap is 3.9 years in the UK, 4.0 in Australia, about 4.3 in Canada and 4.9 in the US. That is somewhere between 1,400 and 1,800 days. These figures are revised as new data arrives, and agencies use different methods (the UK and Australia average three years of deaths, while the US uses a single year), so treat small differences between countries with care.",
+      "## Why “life expectancy minus my age” is the wrong way to count your days left",
+      "It feels logical. If life expectancy is 79 and you are 40, you have 39 years left. But life expectancy at birth includes everyone who died as a baby, a child or a young adult. Once you have already reached 40, or 65, those early risks are behind you, so your remaining time is usually longer than the simple subtraction suggests.",
+      "The CDC’s 2024 data shows this clearly. Life expectancy at birth in the US was 79.0 years, yet a person who reaches 65 can expect about 19.7 more years on average. That puts the average 65-year-old at roughly 84.7 years old, almost six years past the headline number. In days, 19.7 years is about 7,195 days. For men aged 65 it is 18.4 years (about 6,721 days) and for women 20.8 years (about 7,597 days).",
+      "The UK shows the same pattern. The ONS reports that a 65-year-old man can expect another 18.7 years and a woman another 21.2 years, based on 2022 to 2024 data.",
+      "The better method is to use remaining life expectancy at your current age, which official life tables publish for every age.",
+      "## How to estimate your own number, step by step",
+      "1. Look up the remaining life expectancy for your age and sex in your country’s official life table (the CDC’s US life tables, the ONS national life tables, Statistics Canada’s life tables or the ABS life tables).\n\n2. Multiply that number of years by 365.25 to convert it to days.\n\n3. To see how many days you have already lived, enter your birth date and today’s date into our free [Date Difference Calculator](https://www.getfuntools.app/tools/date-difference-calculator), which also gives weeks, months and hours.\n\n4. Treat the answer as a population average for people like you, not a forecast about you.",
+      "## What an average cannot tell you",
+      "Life expectancy is a statistic about groups. It cannot say how long any one person will live. Genetics, health history, income, where you live and access to healthcare all move the number for individuals, and national figures hide large differences within each country. ONS local-area estimates for England, for example, put male life expectancy at birth at 73.7 years in Blackpool and 83.7 years in Hart, a gap of 10 years, or about 3,650 days.",
+      "If you searched for this because of a diagnosis or because you are struggling, an average is not the right tool. A doctor can talk through your actual situation, and if you are feeling hopeless, please reach out to someone you trust or a local crisis line.",
+      "## Try the fun version: the Death Calculator",
+      "If you would rather play than read tables, our free [Death Calculator](https://www.getfuntools.app/tools/death-calculator) turns your age and a few daily habits (coffee, sleep, laughter and chaos) into a remaining-days count and a silly longevity badge.",
+      "Be clear about what it is. The formula is satirical, starts from a made-up 82-year baseline and has no medical or statistical validity. Use it for a laugh and use the official figures above for real numbers.",
+      "For more ways to play with time, the [Cosmic Age Calculator](https://www.getfuntools.app/tools/cosmic-age-clock) shows your age in seconds and on other planets, and the [Countdown Timer](https://www.getfuntools.app/tools/countdown-timer) counts down to any date you choose.",
+      "## Frequently asked questions",
+      "### How many days are in 80 years?\n\nAbout 29,220 days (80 × 365.25), which is roughly 4,174 weeks or 701,280 hours.",
+      "### How many days are in 100 years?\n\nBetween 36,524 and 36,525 days. The 365.25 average gives 36,525, but the real count depends on the span, because century years such as 2100 are not leap years unless divisible by 400.",
+      "### How many days does the average American live?\n\nAbout 28,855 days, based on the CDC’s 2024 life expectancy at birth of 79.0 years. For men it is about 27,942 days and for women about 29,731 days.",
+      "### Is life expectancy the same as how long I will live?\n\nNo. It is an average across a population, calculated from current death rates. It cannot predict an individual’s lifespan, and the remaining years for an adult are usually higher than simple subtraction suggests.",
+      "### Why do different websites show different life expectancy figures?\n\nThey use different years, different agencies and different methods, such as single-year versus three-year averages. This article uses the latest official releases available in October 2026.",
+      "## Sources",
+      "- [CDC National Center for Health Statistics: Mortality in the United States, 2024](https://www.cdc.gov/nchs/products/databriefs/db548.htm)\n- [Office for National Statistics: National life tables, UK, 2022 to 2024](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/lifeexpectancies/bulletins/nationallifetablesunitedkingdom/2022to2024)\n- [Statistics Canada: Deaths, 2024 (The Daily, 13 January 2026)](https://www150.statcan.gc.ca/n1/daily-quotidien/260113/dq260113b-eng.htm)\n- [Australian Bureau of Statistics: Life expectancy, 2022–2024](https://www.abs.gov.au/statistics/people/population/life-expectancy/latest-release)"
+    ]
   }
 ];
 

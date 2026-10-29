@@ -27,7 +27,7 @@ export default function BlogHubPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {BLOG_POSTS.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl transition space-y-4 cursor-pointer h-full flex flex-col justify-between group">
