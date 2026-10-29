@@ -67,11 +67,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: module.metadata.openGraph.url,
       type: "website",
       siteName: "GetFunTools",
+      images: [
+        {
+          url: `${SITE_URL}/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `${tool.title} | GetFunTools`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: module.metadata.twitterCard.title,
       description: module.metadata.twitterCard.description,
+      images: [`${SITE_URL}/og-image.jpg`],
     },
     alternates: {
       canonical: module.metadata.canonicalUrl,
@@ -162,6 +171,37 @@ export default async function ToolDetailPage({ params }: PageProps) {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Tools",
+        item: `${SITE_URL}/tools`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: categoryObj?.name || tool.category,
+        item: `${SITE_URL}/categories/${tool.category}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: tool.title,
+        item: module.metadata.canonicalUrl,
+      },
+    ],
+  };
+
   function renderParagraphWithLinks(text: string) {
     const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
     const parts: (string | React.ReactNode)[] = [];
@@ -196,6 +236,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-24 pt-2">
         {/* SECTION 1: Compact Tool Header */}

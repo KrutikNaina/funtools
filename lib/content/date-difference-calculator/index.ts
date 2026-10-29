@@ -199,7 +199,10 @@ export const dateDifferenceCalculatorContent: DomainToolModule = {
       "Check 'Include end date' when counting total inclusive days for vacations or hotel stays.",
       "Use the presets to quickly test standard 30-day, 90-day, or 1-year intervals.",
     ],
-    expertTips: ["Bookmark this page on your smartphone home screen for fast date math anytime."],
+    expertTips: [
+      "Bookmark this page on your smartphone home screen for fast date math anytime.",
+      "Looking for a live second-by-second ticking clock down to an upcoming milestone? Try our free [Countdown Timer](/tools/countdown-timer)."
+    ],
     disclaimer: {
       type: "general",
       text: "This calculator measures calendar time. Always verify legal and contractual deadlines against official jurisdiction rules.",

@@ -1,11 +1,16 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback } from "react";
-import { Clock, Calendar, Share2, RefreshCw, Check, Sparkles, AlertCircle } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { Clock, Share2, RefreshCw, Check } from "lucide-react";
 
 export default function CountdownTimer() {
   // Initialize sensible future date (30 days from now at 09:00 local time)
   const getDefaultTarget = () => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const sharedDate = params.get("date");
+      if (sharedDate) return sharedDate;
+    }
     const d = new Date();
     d.setDate(d.getDate() + 30);
     d.setHours(9, 0, 0, 0);
@@ -17,7 +22,16 @@ export default function CountdownTimer() {
     return `${y}-${m}-${day}T${h}:${min}`;
   };
 
-  const [eventName, setEventName] = useState("Vacation Countdown");
+  const getDefaultEventName = () => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const sharedEvent = params.get("event");
+      if (sharedEvent) return sharedEvent;
+    }
+    return "Vacation Countdown";
+  };
+
+  const [eventName, setEventName] = useState(getDefaultEventName);
   const [targetDate, setTargetDate] = useState(getDefaultTarget);
   const [timeLeft, setTimeLeft] = useState<{
     days: number;
@@ -27,17 +41,6 @@ export default function CountdownTimer() {
   } | null>(null);
   const [isFinished, setIsFinished] = useState(false);
   const [copied, setCopied] = useState(false);
-
-  // Read URL query params on mount for shared countdown links
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const params = new URLSearchParams(window.location.search);
-      const sharedEvent = params.get("event");
-      const sharedDate = params.get("date");
-      if (sharedEvent) setEventName(sharedEvent);
-      if (sharedDate) setTargetDate(sharedDate);
-    }
-  }, []);
 
   // Tick calculation logic
   const calculate = useCallback(() => {
@@ -73,9 +76,12 @@ export default function CountdownTimer() {
   }, [targetDate]);
 
   useEffect(() => {
-    calculate();
+    const timeout = setTimeout(calculate, 0);
     const interval = setInterval(calculate, 1000);
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(interval);
+    };
   }, [calculate]);
 
   // Dispatch completion for gamification
@@ -265,10 +271,11 @@ export default function CountdownTimer() {
       {/* Input Controls */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
+          <label htmlFor="countdown-event-name" className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 cursor-pointer">
             Event Name
           </label>
           <input
+            id="countdown-event-name"
             type="text"
             value={eventName}
             onChange={(e) => setEventName(e.target.value)}
@@ -280,10 +287,11 @@ export default function CountdownTimer() {
         </div>
 
         <div>
-          <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
+          <label htmlFor="countdown-target-date" className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 cursor-pointer">
             Target Date &amp; Time
           </label>
           <input
+            id="countdown-target-date"
             type="datetime-local"
             value={targetDate}
             onChange={(e) => setTargetDate(e.target.value)}

@@ -585,8 +585,8 @@ export const TOOLS: Tool[] = [
     id: "countdown-timer-tool",
     slug: "countdown-timer",
     title: "Countdown Timer",
-    subtitle: "Create live ticking countdown timers for any event",
-    description: "Create a free countdown timer for birthdays, vacations, events, launches, holidays and important dates. Set a date and time and watch the countdown update live.",
+    subtitle: "Live event countdown clock with days, hours, minutes & seconds",
+    description: "Create a free online countdown timer for birthdays, holidays, vacations, events and deadlines. Set your date and time and watch the days, hours, minutes and seconds update live.",
     category: "productivity",
     iconName: "Clock",
     isPopular: false,
@@ -637,25 +637,25 @@ export const TOOLS: Tool[] = [
     id: "nickname-gen",
     slug: "nickname-generator",
     title: "Cool Nickname Generator",
-    subtitle: "Generate 40+ epic nicknames for gaming, socials & alter-egos",
-    description: "Find epic aliases and cool nicknames for Discord, Roblox, Valorant, and social profiles with vibe filters.",
+    subtitle: "Generate cool, cute & gaming nicknames for Discord, Roblox & socials",
+    description: "Generate cool, cute, funny and gaming nicknames with our free nickname generator. Personalize ideas with your name, explore different styles and copy your favorite in one click.",
     category: "social",
     iconName: "Share2",
     isPopular: true,
     isTrending: true,
     isFeatured: true,
     gradient: "from-pink-500 to-rose-600",
-    tags: ["nickname generator", "gamer tags", "discord names", "cool nicknames"],
+    tags: ["nickname generator", "cool nickname generator", "gamer tags", "discord nicknames", "cute nicknames"],
     features: [
-      "4 distinct vibe modes (Cyberpunk, Mythic, Cute, VIP)",
-      "1-click copy with toast notifications",
-      "Name rating meter & popularity badges",
-      "Custom keyword blender"
+      "4 distinct aesthetic vibe modes (Cyberpunk, Mythic, Cute & Cozy, VIP)",
+      "Instant 1-click individual copy & Copy All button",
+      "Shuffle & fresh ideas generator with custom seed or random keywords",
+      "Character length indicator for Discord, Roblox & gaming rules"
     ],
     faq: [
       {
         question: "Can I use these nicknames on Discord and games?",
-        answer: "Yes! All generated nicknames are formatted for social media and gaming profiles."
+        answer: "Yes! All generated nicknames use standard alphanumeric characters, underscores, and dots compatible with Discord, Roblox, Valorant, and Steam."
       }
     ]
   },
@@ -783,7 +783,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "## Ready to Give Your Profile a Massive Upgrade?",
       "It is officially time to stop settling for a boring, default aesthetic that completely fails to capture how genuinely awesome and creative you actually are in real life. Elevating your digital footprint and upgrading your overall social media presence has literally never been easier. Head directly over to our [Fancy Font Generator] right this very second! Type in your absolute favorite motivational quote, your professional introduction, or a hilarious joke, and instantly discover dozens of the most cute fonts for Instagram 2026. Copy your favorite design, paste it into your profile, and eagerly watch your follower engagement reach entirely new heights!"
     ],
-    relatedTools: ["fancy-font-generator", "ai-bio-generator"]
+    relatedTools: ["fancy-font-generator", "ai-bio-generator", "nickname-generator"]
   },
   {
     slug: "how-small-daily-habits-build-huge-wealth",
